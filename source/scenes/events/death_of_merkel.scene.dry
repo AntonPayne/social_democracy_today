@@ -1,0 +1,17 @@
+title: The Death of Merkel
+subtitle: The four-time chancellor has died...
+new-page: true
+view-if: year >= 2028 and month >= 5 and not ww3
+on-arrival: merkel_dead = 1
+max-visits: 1
+tags: event
+face-image: img/Hindenburg_head.jpg
+go-to: game_over_2028
+
+= The Death of Merkel
+
+Angela Merkel has passed away at age 73.
+
+The nation engages in an outpouring of grief for its stateswoman and former chancellor. Even for committed socialists, this is a bittersweet moment. Even though she was a manifestation of conservatism and imperialism, she still led the nation through difficult times, without destroying democracy. It could always have been worse.
+
+With the passing of Merkel, it seems as if an era of history is closing. The worst years of crisis are over, and neo-Nazism's days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
