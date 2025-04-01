@@ -9,7 +9,7 @@ new-page: true
 
 # reference:  "Mitgliederbefragung für den CDU-Vorsitz". Cdu.de; "Merz und Röttgen für CDU-Parteivorsitz nominiert". 15 November 2021
 
-Armin Laschet, former CDU chancellor candidate, has chosen to resign from leadership after the Union's disastrous electoral performance in 2021. Now, the party holds a convention to replace him.
+Armin Laschet, former CDU chancellor candidate, has chosen to resign from leadership after the Union's dysmal electoral performance in 2021. Now, the party holds a convention to replace him.
 
 The consensus candidate on the right is Friedrich Merz, a staunch anti-communist and warhawk who represents the party's traditionalists. On the other hand, there is Norbert Röttgen, the [? if environment_minister_party = "CDU": current ?][? if environment_minister_party != "CDU": former ?] Environment Minister, who has been more supportive of cooperation with the SPD than most of the Union. Helge Braun is a physician and party insider who represents the CDU's moderate wing; his campaign may serve as a "spoiler" and steal votes from Röttgen.
 
@@ -26,16 +26,16 @@ Friedrich Merz has been selected as the chairman of the CDU with a wide majority
 @rottgen
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Röttgen is likely to be friendlier to us than Merz.
-choose-if: (cdu_relation >= 70 if environment_minister_party != "CDU" or (cdu_relation >= 65 if environment_minister_party = "CDU" and spd_in_government))
+choose-if: cdu_relation >= 70
 on-arrival: cdu_party_leader = "Röttgen"; catholics_spd += 5; workers_cdu += 3
 
 With our grassroots connections, we have been able to convince Helge Braun to step down and influence multiple CDU delegates to support Norbert Röttgen as the new CDU chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Merz. He also increases the appeal of the CDU to the working class.
 
 @rottgen_campaign
-choose-if: (cdu_relation >= 62 if environment_minister_party != "CDU" or (cdu_relation >= 60 if environment_minister_party = "CDU" and spd_in_government)) and resources >= 1 
-view-if: cdu_relation < 64
+choose-if: cdu_relation >= 62
+view-if: cdu_relation < 70
 unavailable-subtitle: [? if cdu_relation < 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
-subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
+subtitle: -1 resource. Röttgen is likely to be friendlier to us than Merz.
 on-arrival: resources -= 1; cdu_party_leader = "Röttgen"; catholics_spd += 5; workers_cdu += 3
 
 With our grassroots connections as well as a professional campaign, we have been able to convince Helge Braun to step down and influence the CDU delegates to support Norbert Röttgen as the new CDU chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the CDU to the working class.
