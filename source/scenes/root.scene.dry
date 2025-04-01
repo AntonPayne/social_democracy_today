@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 2021;
+Q.month = 5;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -46,22 +46,22 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'seeheimer', 'neorevisionist'];
+Q.factions = ['left', 'center', 'labor', 'seeheimer', 'modernist'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
+Q.neolib_strength = 30;
+Q.neolib_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
 Q.seeheimer_strength = 25;
 Q.seeheimer_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.modernist_strength = 5;
+Q.modernist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
-Q.neolibs_resign = 0;
+Q.neolib_resign = 0;
 Q.left_split = 0;
 Q.seeheimers_resigned = 0;
 
@@ -103,14 +103,13 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.cdu_relation = 50;
 Q.linke_relation = 25;
+Q.bsw_relation = 5
 Q.fdp_relation = 60;
 Q.greens_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
+// AfD are invariably hostile
 Q.afd_relation = 0;
 
 Q.linke_leader = "Wissler";
-// alternative is the Conciliators as party leader
 Q.linke_party_leader = "Wagenknecht";
 // party leader - can be Friedrich Merz or Norbert Röttgen after the 1928_ December convention. Norbert Röttgen will be most friendly to the SPD.
 Q.cdu_party_leader = "Laschet";
@@ -122,7 +121,6 @@ Q.hindenburg_relation = 25;
 
 // Does the SPD lead in Saxony?
 Q.spd_saxony = 1;
-// Options: spd, z, dnvp, papen, nsdap
 Q.saxon_government = "SPD";
 
 // The array of forces - paramilitary groups
@@ -207,10 +205,10 @@ Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
+Q.inflation = 3.1;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 2.7;
 
 // economic expansion timer
 Q.economic_expansion = 0;
@@ -222,7 +220,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics', 'muslims'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'bsw' later on
@@ -232,55 +230,51 @@ Q.bsw_formed = 0;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 60;
 Q.workers_linke = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
+Q.workers_cdu = 5;
+Q.workers_fdp = 0;
+Q.workers_greens = 0;
 Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
+Q.workers_afd = 0;
 Q.workers_other = 10;
 
 Q.old_middle_spd = 5;
 Q.old_middle_linke = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
+Q.old_middle_cdu = 5;
+Q.old_middle_fdp= 10;
+Q.old_middle_greens = 25;
+Q.old_middle_afd = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
 Q.new_middle_linke = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
+Q.new_middle_cdu = 10;
+Q.new_middle_fdp = 25;
+Q.new_middle_greens = 25;
+Q.new_middle_afd = 5;
 Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
 Q.rural_linke = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
+Q.rural_cdu = 5;
+Q.rural_fdp = 5;
+Q.rural_greens = 15;
+Q.rural_afd = 5;
 Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
 Q.unemployed_linke = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
+Q.unemployed_cdu = 1;
+Q.unemployed_fdp = 0;
+Q.unemployed_greens = 0;
+Q.unemployed_afd = 15;
 Q.unemployed_other = 9;
 
 Q.catholics_spd = 15;
 Q.catholics_linke = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_nsdap = 0;
+Q.catholics_cdu = 50;
+Q.catholics_fdp = 0;
+Q.catholics_greens = 5;
+Q.catholics_afd = 0;
 Q.catholics_other = 12;
 
 
@@ -309,7 +303,7 @@ Q.old_other_r = 9;
 Q.bsw_r = 0;
 Q.old_bsw_r = 0;
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), spd: 10, linke: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -335,7 +329,7 @@ Q.in_jamaica_coalition = 0;
 // Germany coalition = SPD + Z + FDP
 Q.in_germany_coalition = 0;
 // Grand coalition = SPD + CDU + CSU
-Q.in_grand_coalition = 1;
+Q.in_grand_coalition = 0;
 // Kenya coalition = SPD + CDU + CSU + Greens
 Q.in_kenya_coalition = 0;
 // Red-Red-Green = SPD + Linke + Greens
@@ -586,17 +580,17 @@ For more information on the politics and government of the German Republic, see 
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
 - @1928_hard: Begin (hard difficulty)
-# - @1928_historical: Begin (historical mode)
+- @1928_historical: Begin (historical mode)
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; linke_relation = 29; cdu_relation = 54; greens_relation = 49; budget = 5;
 go-to: 1928_main
 
-@hard
+@1928_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; seeheimer_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
 go-to: 1928_main
 
-# @1928_historical
+@1928_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
