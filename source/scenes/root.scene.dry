@@ -493,8 +493,8 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
-Q.next_election_month = 5;
+Q.next_election_year = 2021;
+Q.next_election_month = 10;
 Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
@@ -523,7 +523,6 @@ Q.ja_ban_timer = 0;
 Q.linke_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
-
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller
@@ -543,7 +542,7 @@ Q.seydewitz_advisor = 0; // Max Seydewitz
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// seeheimer advisors
+// Reformist advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
