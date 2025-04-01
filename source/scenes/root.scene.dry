@@ -112,7 +112,7 @@ Q.afd_relation = 0;
 Q.linke_leader = "Wissler";
 // alternative is the Conciliators as party leader
 Q.linke_party_leader = "Wagenknecht";
-// party leader - can be Friedrich Merz or Norbert Röttgen after the 2021 December convention. Norbert Röttgen will be most friendly to the SPD.
+// party leader - can be Friedrich Merz or Norbert Röttgen after the 1928_ December convention. Norbert Röttgen will be most friendly to the SPD.
 Q.cdu_party_leader = "Laschet";
 Q.afd_leader = "Weidel";
 
@@ -126,7 +126,7 @@ Q.spd_saxony = 1;
 Q.saxon_government = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 2021 (in thousands)
+// Number of members in 1928_ (in thousands)
 // Reichsbanner, Young Alternative, Deutsche Alternative (speculative AfD org), Linksjugend
 Q.rb_strength = 200;
 Q.rb_militancy = 0;
@@ -285,7 +285,7 @@ Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in May 2021
+// % of Reichstag in May 1928_
 // source: wikipedia
 // note: the Z figures also include the BVP (Bavarian people's party)
 Q.spd_r = 20;
@@ -367,8 +367,8 @@ Q.foreign_minister = 'Maas';
 Q.foreign_minister_party = 'SPD';
 Q.interior_minister = 'Seehofer';
 Q.interior_minister_party = 'CDU';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
+Q.justice_minister = 'Lambrecht';
+Q.justice_minister_party = 'SPD';
 Q.labor_minister = 'Heil';
 Q.labor_minister_party = 'SPD';
 Q.bundeswehr_minister = 'Kramp-Karrenbauer';
@@ -436,7 +436,7 @@ Q.nato_left = 0
 Q.science = 0;
 Q.education_science = 0;
 
-// Tax rates relative to 2021 baseline
+// Tax rates relative to 1928_ baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
@@ -583,20 +583,20 @@ This is a game of future speculation. While realism is a major concern, keep in 
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @2021_easy: Begin (easy difficulty)
-- @2021main: Begin (normal difficulty)
-- @2021hard: Begin (hard difficulty)
-# - @2021historical: Begin (historical mode)
+- @1928_easy: Begin (easy difficulty)
+- @1928_main: Begin (normal difficulty)
+- @1928_hard: Begin (hard difficulty)
+# - @1928_historical: Begin (historical mode)
 
-@2021easy
+@1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; linke_relation = 29; cdu_relation = 54; greens_relation = 49; budget = 5;
-go-to: 2021main
+go-to: 1928_main
 
-@2021hard
+@hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; seeheimer_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
-go-to: 2021main
+go-to: 1928_main
 
-# @2021historical
+# @1928_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
@@ -614,16 +614,16 @@ Q.greens_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
-go-to: 2021main
+go-to: 1928_main
 
-@2021main
+@1928__main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2021
 
-It is a bright time for German democracy. After a period of struggle, the COVID-19 pandemic is under control and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Russian Federation that might make genuine peace a reality. 
+It is a bright time for German democracy. After a period of struggle, the COVID-19 pandemic is finally under control and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Russian Federation that might make genuine peace a reality. 
 
 Now, the task of Social Democracy is to prepare for the next election. The current grand coalition of Angela Merkel is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
 
