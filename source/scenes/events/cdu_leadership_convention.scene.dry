@@ -19,7 +19,7 @@ The consensus candidate on the right is Friedrich Merz, a staunch anti-communist
 
 @merz
 on-arrival: cdu_party_leader = "Merz"; cdu_relation -= 10; afd_old_middle -= 2; cdu_old_middle += 2; afd_new_middle -= 3; cdu_new_middle += 3
-subtitle: This does not bode well for the CDU Left.
+subtitle: This would not bode well for the CDU Left.
 
 Friedrich Merz has been selected as the chairman of the CDU with a wide majority. He seems to represent a rightward turn from Merkel and Laschet, and proposes regressive pivots to win over AfD voters.
 
@@ -32,10 +32,10 @@ on-arrival: cdu_party_leader = "Röttgen"; catholics_spd += 5; workers_cdu += 3
 With our grassroots connections, we have been able to convince Helge Braun to step down and influence multiple CDU delegates to support Norbert Röttgen as the new CDU chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Merz. He also increases the appeal of the CDU to the working class.
 
 @rottgen_campaign
-choose-if: cdu_relation >= 62
+choose-if: cdu_relation >= 62 and resources >= 1
 view-if: cdu_relation < 70
 unavailable-subtitle: [? if cdu_relation < 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
 subtitle: -1 resource. Röttgen is likely to be friendlier to us than Merz.
 on-arrival: resources -= 1; cdu_party_leader = "Röttgen"; catholics_spd += 5; workers_cdu += 3
 
-With our grassroots connections as well as a professional campaign, we have been able to convince Helge Braun to step down and influence the CDU delegates to support Norbert Röttgen as the new CDU chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the CDU to the working class.
+With our grassroots connections as well as a professional campaign, we have been able to convince Helge Braun to step down and influence the CDU delegates to support Norbert Röttgen as the new CDU chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Merz. He also increases the appeal of the CDU to the working class.
