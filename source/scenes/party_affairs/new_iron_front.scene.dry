@@ -1,33 +1,33 @@
-title: The Iron Front
+title: The New Iron Front
 new-page: true
 is-card: true
-view-if: iron_front_formed == 1 and iron_front_timer = 0
+view-if: new_iron_front_formed == 1 and iron_front_timer = 0
 on-arrival: iron_front_timer = 7; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
 card-image: img/iron_front.png
 frequency: 200
 tags: party_affairs, antifascism
 
-= The Iron Front
+= The New Iron Front
 
-The Iron Front is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
+The New Iron Front is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
-[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
+[? if workers_spd < 45 or workers_spd < workers_afd or workers_spd < workers_linke + workers_bsw : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @defense: Rally for defense against the fascists with the Reichsbanner.
 - @pacifism: Rally for pacifism, against nationalism and war.
 - @republic: Rally to save the democratic republic against dictatorship.
 - @wtb: Rally for economic change and the WTB-Plan.
-- @antisemitism
+- @islamophobia
 - @easy_discard
 
 @defense
 subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
+on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; cdu_relation -= 5 if historical_mode
 
 The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner and Iron Front, and its members are leaving the republican organization. ?]
+[? if historical_mode : The CDU decries the militarization of the Reichsbanner and New Iron Front, and its members are leaving the republican organization. ?]
 
 
 @pacifism
@@ -48,10 +48,10 @@ on-arrival: workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); new_m
 
 The WTB-Plan is the rallying point for the entire SPD and its affiliated organizations, including the Iron Front.
 
-@antisemitism
-title: Rally against antisemitism and in defense of Jewish Germans.
-view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
+@islamophobia
+title: Rally against Islamophobia and in defense of immigrant Germans.
+view-if: confronting_islamophobia > 1
+on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_islamophobia += 1; workers_afd -= 4*(1-dissent); unemployed_afd -= 4*(1-dissent);
 
 # TODO
-The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.
+The Nazis and other far-right political movements are increasingly turning their hatred against the Muslims of Germany. The Iron Front rallies in defense of individual Muslims and the broader community against violence.
