@@ -1,0 +1,30 @@
+title: Confronting Islamophobia
+new-page: true
+is-card: true
+view-if: new_iron_front_formed == 1 and nazi_urgency >= 3
+on-arrival: confronting_islamophobia += 1; month_actions += 1
+card-image: img/iron_front.png
+tags: party_affairs, antifascism
+max-visits: 1
+
+= Confronting Islamophobia
+
+Islamophobia has long been a latent feature of German society, but since the beginning of the refugee crisis, it has grown to a horrifying extent. The neo-Nazis are the worst of it, but all the right-wing parties promote Islamophobia to some degree. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Muslim comrades, magnifying criticism of any minor transgression, and they claim the SPD wishes to convert the entire population of Germany to Islam. We are a favorite target of their invectives.
+
+- @right_divert: Islamophobia is the Right's attempt to divert our attention from the failings of capitalism. We will show off their misgivings.
+- @nif: Islamophobia is a crisis. Direct the full force of the New Iron Front against Islamophobia.
+- @all: All Germans will suffer from fascism, not just the Muslims. We do not need a separate policy for them.
+
+@right_divert
+on-arrival: workers_afd -= 3*(1-dissent)
+
+The best policy to deal with this sort of irrational, senseless hatred is to ignore it. Few are swayed by racist rhetoric; the best way to combat it is to provide economic security so that people do not turn to Islamophobia.
+
+@if
+on-arrival: confronting_islamophobia += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_afd -= 6*(1-dissent);
+
+We develop an entire campaign against Islamophobia under the auspices of the Iron Front. Hopefully our campaign can sway the workers away from Nazism.
+
+@all
+
+We do not need any special treatment for minorities.
