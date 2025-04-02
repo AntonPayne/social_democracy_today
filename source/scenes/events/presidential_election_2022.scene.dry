@@ -1,0 +1,93 @@
+title: Presidential Election
+subtitle: Steinmeier runs for re-election...
+view-if: year = 2022 and (month = 2) and presidential_election_seen = 0
+frequency: 1000
+max-visits: 1
+new-page: true
+on-arrival: steinmeier_votes = cdu_r + greens_r + fdp_r + others_r; otte_votes = afd_r; trabert_votes = linke_r; presidential_election_seen = 1; afd_candidate = "Otte"; linke_candidate = "Trabert"; 
+tags: event
+go-to: election_algorithm
+set-jump: pres_election
+face-image: img/steinmeier_election.jpg
+
+@pres_election
+
+The presidential election is coming up soon. Frank-Walter Steinmeier is running for a second term. Meanwhile, the AfD has endorsed Max Otte of the CDU. Die Linke is campaigning behind the independent Gerhard Trabert.
+
+# this is supposed to be a Steinmeier landslide victory
+
+- @support_steinmeier: Support Frank-Walter Steinmeier
+
+@support_steinmeier
+subtitle: Steinmeier is the obvious choice.
+on-arrival:
+
+Frank-Walter Steinmeier is a fellow SPD member and our obvious candidate. The CDU, Greens, and FDP back him[? if spd_in_government = 0: even though we are in the opposition ?].
+
+- @final_election: The final vote...
+
+@final_election
+on-arrival: election_round = 0
+go-to: election_algorithm
+set-jump: post_election
+
+
+@post_election
+on-arrival: {!
+
+// check for majority
+Q.steinmeier_votes = Math.round(Q.steinmeier_votes*1000)/10;
+Q.otte_votes = Math.round(Q.otte_votes*1000)/10;
+Q.trabert_votes = Math.round(Q.trabert_votes*1000)/10;
+
+Q.steinmeier_majority = (Q.steinmeier_votes >= 50);
+Q.trabert_majority = (Q.trabert_votes >= 50);
+Q.otte_majority = (Q.otte_votes >= 50);
+Q.any_majority = Q.steinmeier_majority | Q.trabert_majority | Q.otte_majority;
+
+// check for plurality
+Q.steinmeier_plurality = (Q.steinmeier_votes >= Q.otte_votes && Q.steinmeier_votes >= Q.trabert_votes);
+Q.trabert_plurality = (Q.trabert_votes >= Q.steinmeier_votes && Q.trabert_votes >= Q.braun_votes && Q.trabert_votes >= Q.otte_votes);
+Q.otte_plurality = (Q.otte_votes >= Q.steinmeier_votes && Q.otte_votes >= Q.braun_votes && Q.otte_votes >= Q.trabert_votes);
+// If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
+Q.election_round += 1;
+
+// making the vote numbers nicer for the display
+Q.steinmeier_votes_disp = Q.steinmeier_votes.toFixed(1);
+Q.otte_votes_disp = Q.otte_votes.toFixed(1);
+Q.trabert_votes_disp = Q.trabert_votes.toFixed(1);
+!}
+go-to: steinmeier_wins if steinmeier_majority == 1; trabert_wins if trabert_majority == 1; otte_wins if otte_majority == 1
+
+Results:
+
+Steinmeier - [+ steinmeier_votes_disp +]%
+
+[+ afd_candidate +] - [+ otte_votes_disp +]%
+
+Trabert - [+ trabert_votes_disp +]%
+
+
+@steinmeier_wins
+on-arrival: president = "Steinmeier"; workers_spd += 3; rural_spd += 3
+
+As expected, the incumbent Steinmeier wins the presidency. Let's hope he continues to keep the neo-Nazis out of power.
+
+@otte_wins
+on-arrival: president = "Steinmeier"; pro_republic -= 10; afd_workers += 8; cdu_catholics -= 5; afd_rural += 8; afd_new_middle += 5
+
+Somehow, Max Otte manages to emerge victorious in the presidential elections. The CDU revokes his membership owing to his collusion with the AfD, triggering a constitutional crisis. However, a convenient assasination forces Steinmeier to maintain his position. The people's trust in the democratic system has been shaken by this whole ordeal.
+
+What have you done, Player?
+
+@trabert_wins
+on-arrival: president = "Trabert"; linke_workers += 15; linke_rural += 5; linke_new_middle += 5; pro_republic -= 5
+on-departure: chancellor = "Wissler"; chancellor_party = "Linke"; vice_chancellor = "Mützenich"; vice_chancellor_party = "SPD"
+
+Somehow, Gerhard Trabert manages to emerge victorious in the presidential elections. Die Linke is immediately energized by this news. Chancellor [+ chancellor +] has resigned in protest and Janine Wissler has been promoted to the position. Rolf Mützenich has been sworn in as the new Vice Chancellor for this strange minority government.
+
+Immediately, Wissler authorizes the construction of an "anti-fascist rampart". The whereabouts of Alice Weidel, Tino Chrupalla, Max Otte, and Frank-Walter Steinmeier are unknown.
+
+What have you done, Comrade?
+
+- @game_over
