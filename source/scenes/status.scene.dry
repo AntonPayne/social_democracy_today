@@ -25,7 +25,7 @@ SPD position: [? if spd_toleration : Toleration ?][? if spd_in_government : In G
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): Linke coalition dissent: [+ linke_coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and (in_left_front or in_red_red_green): Linke coalition dissent: [+ linke_coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -34,6 +34,8 @@ Internal dissent: [+ dissent_percent : dissent +]
 President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
+
+Vice Chancellor: [+ vice_chancellor +] ([+ vice_chancellor_party +])
 
 Reichstag composition:
 
@@ -80,7 +82,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="German People's Party">Greens</span>!}: [+ greens_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">Linke</span>!}: [+ linke_relation : relationships +]
+{!<span class="tooltip-text" title="The Left">Linke</span>!}: [+ linke_relation : relationships +]
 
 [? if bsw_formed: {!<span class="tooltip-text" title="Sahra Wagenknecht Alliance">BSW</span>!}: [+ bsw_relation : relationships +] ?]
 
@@ -94,7 +96,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Labour supports a unified trade union and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Seeheimers are pragmatic and undogmatic participants in government who seek to expand the welfare state and defend democracy.">Seeheim</span>!} strength: [+ seeheim_strength : strength +], dissent: [+ seeheim_dissent : dissent +]
+{!<span class="tooltip-text" title="Seeheimers are pragmatic and undogmatic participants in government who seek to expand the welfare state and defend democracy.">Seeheimer</span>!} strength: [+ seeheimer_strength : strength +], dissent: [+ seeheimer_dissent : dissent +]
 
 [? if modernism > 0 : Modernist strength: [+ modernist_strength : strength +], dissent: [+ modernist_dissent : dissent +] ?]
 
