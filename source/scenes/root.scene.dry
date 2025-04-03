@@ -46,18 +46,18 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['left', 'neoliberal', 'labor', 'seeheimer', 'modernist'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
+Q.neoliberal_strength = 30;
+Q.neoliberal_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.seeheimer_strength = 25;
+Q.seeheimer_dissent = 5;
+Q.modernist_strength = 5;
+Q.modernist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
@@ -595,7 +595,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 250; linke_r
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 180; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 180; seeheimer_dissent = 25; left_dissent = 30; labor_dissent = 25; neoliberal_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -606,10 +606,10 @@ Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 200;
-Q.reformist_dissent = 25;
+Q.seeheimer_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
-Q.center_dissent = 25;
+Q.neoliberal_dissent = 25;
 Q.cdu_relation = 41;
 Q.linke_relation = 16;
 Q.greens_relation = 31;
