@@ -577,11 +577,11 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Because, as Primo Levi, who was born in Turin 100 years ago and who survived Auschwitz as a forced labourer in Monowitz, later wrote: “It happened, therefore it can happen again.” So we cannot close our eyes and ears when people are being verbally abused, humiliated or marginalised. We must confront those who stir up prejudice and incite hatred against people of different faiths or origins."*
+> "*Because, as Primo Levi, who was born in Turin 100 years ago and who survived Auschwitz as a forced labourer in Monowitz, later wrote: “It happened, therefore it can happen again.” So we cannot close our eyes and ears when people are being verbally abused, humiliated or marginalised. We must confront those who stir up prejudice and incite hatred against people of different faiths or origins.*"
 
  - Angela Merkel, *Speech To The Auschwitz-Birkenau Foundation*, 2019
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of future speculation. While realism is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
@@ -591,11 +591,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; linke_relation = 29; cdu_relation = 54; greens_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 250; linke_relation = 29; cdu_relation = 54; greens_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 180; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; greens_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -605,7 +605,7 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
-Q.rb_strength = 2000;
+Q.rb_strength = 200;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
