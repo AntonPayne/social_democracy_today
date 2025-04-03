@@ -371,22 +371,24 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Merkel cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'greens';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.bundeswehr_minister = 'Groener';
-Q.bundeswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'greens';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.foreign_minister = 'Maas';
+Q.foreign_minister_party = 'SPD';
+Q.interior_minister = 'Seehofer';
+Q.interior_minister_party = 'CSU';
+Q.justice_minister = 'Lambrecht';
+Q.justice_minister_party = 'SPD';
+Q.labor_minister = 'Heil';
+Q.labor_minister_party = 'SPD';
+Q.bundeswehr_minister = 'Kramp-Karrenbauer';
+Q.bundeswehr_minister_party = 'CDU';
+Q.economic_minister = 'Altmaier';
+Q.economic_minister_party = 'CDU';
+Q.environment_minister = 'Schulze';
+Q.environment_minister_party = 'SPD';
+Q.finance_minister = 'Scholz';
+Q.finance_minister_party = 'SPD';
+Q.agriculture_minister = 'Klöckner';
+Q.agriculture_minister_party = 'CDU';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
