@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 2021;
+Q.month = 4;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -500,8 +500,8 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
-Q.next_election_month = 5;
+Q.next_election_year = 2021;
+Q.next_election_month = 9;
 Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
