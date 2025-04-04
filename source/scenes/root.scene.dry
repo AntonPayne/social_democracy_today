@@ -133,7 +133,7 @@ Q.rb_militancy = 0;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.ja_strength = 2;
-Q.ja_militancy = 0.1;
+Q.ja_militancy = 0.2;
 Q.ja_banned = 0;
 Q.ja_banned_saxony = 0;
 Q.pj_strength = 0;
@@ -294,23 +294,21 @@ Q.muslims_other = 5;
 // % of bundestag in May 2021
 // source: wikipedia
 // note: the CDU figures also include the CSU (Christian Social Union)
-Q.spd_r = 26;
-Q.linke_r = 9;
-Q.cdu_r = 17;
-Q.fdp_r = 6;
-Q.greens_r = 10;
-Q.dnvp_r = 20;
-Q.afd_r = 3;
+Q.spd_r = 22;
+Q.linke_r = 10;
+Q.cdu_r = 35;
+Q.fdp_r = 11;
+Q.greens_r = 9;
+Q.afd_r = 13;
 Q.other_r = 0;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_linke_r = 9;
-Q.old_z_r = 17;
-Q.old_fdp_r = 6;
-Q.old_greens_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_afd_r = 3;
+Q.old_spd_r = 22;
+Q.old_linke_r = 10;
+Q.old_cdu_r = 35;
+Q.old_fdp_r = 11;
+Q.old_greens_r = 9;
+Q.old_afd_r = 13;
 Q.old_other_r = 0;
 
 // bsw isn't formed yet, but it may be formed
