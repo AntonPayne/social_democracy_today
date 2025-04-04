@@ -1,0 +1,97 @@
+title: The Saxon Bulwark
+new-page: true
+is-card: true
+view-if: spd_saxony = 1 and saxon_affairs_timer <= 0
+on-arrival: saxon_affairs_timer += 6; month_actions += 1
+tags: govt_affairs
+card-image: img/braun.jpg
+#subtitle: The state government of saxony is a bulwark of democracy...
+
+= Saxon Affairs
+
+The Free State of Saxony, the sixth most populous state in Germany, is governed by our party, in a coalition with the CDU[? if month >= 9 or year > 2021 : and Greens?]. It is the most stable and democratic state government in Germany, led by the controversial Michael Kretschmer.
+
+We can enact various policies in Saxony.
+
+- @police_loyalty: Bolster the loyalty of the police.
+- @police_strength: Recruit additional police.
+- @bureaucracy: Purge the bureaucracy of reactionary elements.
+- @ban_pj: Ban the PJ the neo-Nazi paramilitary group.
+- @unban_pj: Reverse the PJ ban.
+- @ban_lj: Ban the Left Youth, the communist paramilitary.
+- @unban_lj: Reverse the Left Youth ban.
+- @ban_ja: Ban the Alternative Youth, the far-right paramilitary.
+- @unban_ja: Reverse the Alternative Youth ban.
+# - @negotiate_concordat: Negotiate a concordat with the Vatican.
+# - @sign_concordat: Sign a concordat with the Vatican.
+- @root: No new policies are needed.
+- @easy_discard
+- @cancel_advisor_action
+
+@police_loyalty
+view-if: saxon_police_loyalty < 1
+on-arrival: saxon_police_loyalty += 0.1
+
+# increase police loyalty
+The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
+
+Current police loyalty: [+ saxon_police_loyalty : loyalty +].
+
+@police_strength
+on-arrival: saxon_police_strength += 20
+
+We have increased the size of the saxon police.
+
+@bureaucracy
+on-arrival: saxon_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_spd += 2*(1-dissent) if democratization >= 3; new_middle_spd += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
+
+The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
+
+@ban_pj
+view-if: nazi_urgency >= 3 and pj_banned == 0 and pj_formed == 1
+on-arrival: pj_strength *= 0.9; pj_strength *= 0.75 if saxon_police_loyalty >= 0.75; pj_banned = 1; greens_relation -= 3; saxon_police_loyalty -= 0.05; pj_militancy -= 0.05; pj_ban_timer = 6;
+
+As it turns out, the neo-Nazi PJ has many allies in the police and bureaucracy. Our relationship with the police weakens, and the PJ can still organize illegally, right under the police's noses. [? if saxon_police_loyalty >= 0.7 : Nevertheless, the PJ is substantially weakened by our ban. ?] 
+
+@unban_pj
+view-if: pj_banned = 1
+on-arrival: pj_banned = 0; pj_strength += 100; pj_militancy += 0.05
+
+The PJ is no longer banned. They immediately go on a recruiting spree.
+
+@ban_ja
+on-arrival: ja_strength *= 0.85; ja_strength *= 0.7 if saxon_police_loyalty >= 0.75; ja_banned = 1; greens_relation -= 5; saxon_police_loyalty -= 0.1; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; ja_ban_timer = 6;
+view-if: ja_banned == 0
+
+[? if president == "Steinmeier": Banning the Alternative Youth weakens our relationship with President Steinmeier, as well as the political right and the police. ?][? if president != "Hindenburg": Banning the Stahlhelm weakens our relationship with the political right and the police. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : It also weakens our coalition due to the influence of Hindenburg on the right wing of our coalition. ?] In addition, the Alternative Youth still operates out of public sight. 
+
+@unban_ja
+view-if: ja_banned = 1
+on-arrival: ja_banned = 0
+
+The Alternative Youth is no longer banned. However, without a mother party, it is greatly weakened.
+
+
+@ban_lj
+view-if: communist_coalition < 3 and lj_banned = 0
+on-arrival: linke_relation -= 15; lj_strength -= 50; lj_banned = 1; communist_coalition -= 1; cdu_relation += 5; greens_relation += 5; saxon_police_loyalty += 0.1
+
+The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The Communists take this as one more reason why the Socialists are traitors to the left. However, the moderate and center-right parties approve, as do the police.
+
+@unban_lj
+view-if: lj_banned = 1
+on-arrival: lj_banned = 0; lj_strength += 50; saxon_police_loyalty -= 0.1
+
+The Communist Left Youth is no longer banned.
+
+# @negotiate_concordat
+view-if: saxon_concordat_progress < 1
+on-arrival: prussian_concordat_progress += 1; cdu_relation += 2*(1-dissent);
+
+We are making progress towards negotiating a concordat between Saxony and the Catholic church.
+
+# @sign_concordat
+view-if: prussian_concordat_progress >= 1 and prussian_concordat = 0
+on-arrival: prussian_concordat = 1; cdu_relation += 5; catholics_spd += 3*(1-dissent)
+
+We have signed a Concordat between the Free State of Saxony and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Saxony. This sets the stage for the negotiation of a national Concordat covering all of Germany.
