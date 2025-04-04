@@ -7,19 +7,19 @@ new-page: true
 
 = Carl Severing
 
-Severing has been Interior Minister for both the German Republic and for the state of Prussia, and his priority is using the security services to target the enemies of the republic.
+Severing has been Interior Minister for both the German Republic and for the state of Saxony, and his priority is using the security services to target the enemies of the republic.
 
-- @prussian_bulwark
+- @saxon_bulwark
 - @police_affairs
 - @root: Return to main
 
-@prussian_bulwark
-title: Prussian Bulwark
-subtitle: Severing has influence over Prussian politics.
-choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_prussia : The SPD is not in control of Prussia. ?]
-on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
-go-to: prussian_affairs
+@saxon_bulwark
+title: Saxon Bulwark
+subtitle: Severing has influence over Saxon politics.
+choose-if: advisor_action_timer <= 0 and spd_saxony = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_saxony : The SPD is not in control of Saxony. ?]
+on-arrival: advisor_action_timer = 6; saxon_affairs_timer -= 6; last_advisor_action = 1
+go-to: saxon_affairs
 
 
 @police_affairs
