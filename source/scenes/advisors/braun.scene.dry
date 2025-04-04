@@ -7,29 +7,29 @@ new-page: true
 
 = Otto Braun
 
-Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+Braun [? if spd_saxony = 1 : is ?][? if spd_saxony = 0 : was ?] the Minister-President of Saxony, the sixth most populous state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
 
 - @coalition
-- @prussian_bulwark
+- @saxon_bulwark
 - @snap_election
 - @root: Return to main
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
-choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The SPD does not control the Prussian government. ?]
+subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in saxony as well as in the Reichstag.
+choose-if: advisor_action_timer <= 0 and (spd_saxony or in_weimar_coalition or in_grand_coalition or in_popular_front)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_saxony : The SPD does not control the saxon government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
 
 We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition.
 
-@prussian_bulwark
-title: The Prussian Bulwark
-subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
-choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_prussia == 0 : The SPD does not control Prussia. ?]
-on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
-go-to: prussian_affairs
+@saxon_bulwark
+title: The Saxon Bulwark
+subtitle: As the Minister-President of Saxony, Braun has power over the Saxon bureaucracy and security services.
+choose-if: advisor_action_timer <= 0 and spd_saxony = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_saxony == 0 : The SPD does not control Saxony. ?]
+on-arrival: advisor_action_timer = 6; saxon_affairs_timer -= 6; last_advisor_action = 1
+go-to: saxon_affairs
 
 @snap_election
 title: Snap Election
