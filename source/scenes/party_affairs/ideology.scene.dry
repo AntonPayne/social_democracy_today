@@ -20,27 +20,27 @@ The SPD is torn between many different ideological currents. What should be our 
 - @reform: Following Gesine Schwan, we should work for pragmatic reforms, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
-@class_struggle
+@revival
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
+on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; cdu_relation -= 3; greens_relation -= 5; nationalization_support += 1; linke_relation += 3
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+The left wing of the party supports a return to our social democratic roots, and potentially a reconcilliation with the Communists.
 
-@centrist
+@neoliberal
 on-arrival: {!
-if (Q.ideology && Q.ideology != "centrist") {
+if (Q.ideology && Q.ideology != "neoliberal") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; seeheimer_dissent -= 5
+on-departure: ideology = "neoliberal"; neoliberal_strength += 10; neoliberal_dissent -= 10; left_dissent -= 5; seeheimer_dissent -= 5
 
-The Neo-liberals, represented by Scholz and Geywitz, support a middle course of preparing for revolution while building up the consciousness of the working class.
+The Neo-liberals, represented by Scholz and Geywitz, eschew ideology and uphold the capitalist system.
 
 @labor
 on-arrival: {!
@@ -60,11 +60,11 @@ if (Q.ideology && Q.ideology != "seeheimer") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "seeheimer"; seeheimer_strength += 10; democratization += 1; seeheimer_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "seeheimer"; seeheimer_strength += 10; democratization += 1; seeheimer_dissent -= 5; cdu_relation += 5; greens_relation += 5; linke_relation -= 8; moderate_plan_support += 1
 
-The Seeheimer wing of the party forgoes socialism in order to preserve the Republic and the liberal democratic system of governmen. This wing is most supportive of coalitions with the other pro-democracy parties.
+The Seeheimer wing of the party forgoes socialism in order to preserve the Republic and the liberal democratic system of governmen. This wing is most supportive of coalitions with the other bourgeoise parties.
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; seeheimer_dissent += 5
+on-arrival: left_dissent += 5; neoliberal_dissent += 5; labor_dissent += 5; seeheimer_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
