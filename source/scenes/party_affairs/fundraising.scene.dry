@@ -4,7 +4,7 @@ view-if: fundraising_timer <= 0 and (not historical_mode)
 on-arrival: fundraising_timer = 6; month_actions += 1
 frequency: 300
 is-card: true
-card-image: img/IlariaBite.png
+card-image: img/poster2.jpg
 tags: party_affairs
 
 = Fundraising
