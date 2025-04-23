@@ -60,7 +60,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
 
-[? if year = 2021 : Fred Redmond ?][? if year >= 2022 : Liz Shuler ?] appreciates our aid but the Trade Union Confederation of the Americas is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+Fred Redmond appreciates our aid but the Trade Union Confederation of the Americas is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
 
 @reduce
 
