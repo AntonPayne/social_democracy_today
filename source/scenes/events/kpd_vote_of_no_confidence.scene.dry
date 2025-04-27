@@ -12,15 +12,15 @@ The KPD has called a vote of no confidence against us, due to our various polici
 @menu
 
 - @try_assuage: Try to assuage them somehow.
-- @support_center: Could we form a new government based on the Center Party and [+ ddp_name +] (and possibly DVP)?
+- @support_center: Could we form a new government based on the CDU and FDP?
 - @let_it_happen: Let the vote happen.
 
 @try_assuage
 
-How do we assuage the KPD?
+How do we assuage the Left Party?
 
 - @resources: Use our resources to reduce dissent within the coalition.
-- @thalmann: Appoint Thälmann as chancellor instead of [+ chancellor +].
+- @thalmann: Appoint Wissler as chancellor instead of [+ chancellor +].
 - @support_center: Could we form a new government based on the Center Party and [+ ddp_name +] (and possibly DVP)?
 - @let_it_happen: Never mind. Let the vote happen.
 
@@ -28,13 +28,13 @@ How do we assuage the KPD?
 choose-if: president == "Braun"
 subtitle: This would be pretext for a right-wing coup.
 unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
-on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"
+on-arrival: chancellor = "Wissler"; chancellor_party = "Linke"
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 
 Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the KPD, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the KPD from taking power. We are forced to be on the same side as the KPD, whether we want to or not.
+In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the KPD from taking power. We are forced to be on the same side as the Left Party, whether we want to or not.
 
 - @civil_war
 
