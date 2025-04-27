@@ -566,9 +566,9 @@ go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; n
 # either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Hitler.
 
 @no_majority_spd
-on-arrival: chancellor = "Günther"; chancellor_party = "CDU"; vice_chancellor = "Lidner" if fdp_r > 0; vice_chancellor_party = "FDP" if fdp_r > 0; vice_chancellor = "Habeck" if fdp_r = 0; vice_chancellor_party = "Greens" if fdp_r = 0; 
+on-arrival: chancellor = "Günther"; chancellor_party = "CDU"; vice_chancellor = "Lidner" if votes_fdp >= electoral_threshold; vice_chancellor_party = "FDP" if votes_fdp >= electoral_threshold; vice_chancellor = "Habeck" if votes_fdp < electoral_threshold; vice_chancellor_party = "Greens" if votes_fdp < electoral_threshold; 
 
-There is no path to an obviously workable majority. Since President Steinmeier refuses to set forth a dangerous precedent, his is forced to tolerate a temporary [? if if fdp_r > 0: Black-Yellow ?][? if if fdp_r = 0: Black-Green ?] coalition under Daniel Günther of the CDU, who could lead a "presidential" government.
+There is no path to an obviously workable majority. Since President Steinmeier refuses to set forth a dangerous precedent, he is forced to tolerate a temporary [? if if votes_fdp >= electoral_threshold: Black-Yellow ?][? if votes_fdp < electoral_threshold: Black-Green ?] coalition under Daniel Günther of the CDU, who could lead a "presidential" government.
 
 - @toleration_bruning: We will tolerate Günther.
 - @germany_coalition: We will try to form a Germany coalition.
