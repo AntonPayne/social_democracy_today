@@ -194,10 +194,10 @@ Q.budget = 4;
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
 Q.workers = 50; // industry and trade
-Q.old_middle = 5; // "old mittelstand"
+Q.old_middle = 6; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 8; // "new mittelstand"
-Q.rural = 1; // agriculture and forestry employment... but many of those are proletarians so...
+Q.new_middle = 22; // "new mittelstand"
+Q.rural = 13; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 3.6;
 Q.catholics = 26;
@@ -210,10 +210,10 @@ Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
+Q.inflation = 3.1;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 2.7;
 
 // economic expansion timer
 Q.economic_expansion = 0;
@@ -233,45 +233,45 @@ Q.bsw_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_linke = 20;
-Q.workers_cdu = 5;
-Q.workers_fdp = 0;
-Q.workers_greens = 0;
-Q.workers_afd = 0;
-Q.workers_other = 10;
+Q.workers_spd = 32;
+Q.workers_linke = 10;
+Q.workers_cdu = 18;
+Q.workers_fdp = 5;
+Q.workers_greens = 8;
+Q.workers_afd = 24;
+Q.workers_other = 5;
 
-Q.old_middle_spd = 5;
-Q.old_middle_linke = 0;
-Q.old_middle_cdu = 5;
-Q.old_middle_fdp= 10;
-Q.old_middle_greens = 25;
-Q.old_middle_afd = 10;
-Q.old_middle_other = 10;
+Q.old_middle_spd = 15;
+Q.old_middle_linke = 2;
+Q.old_middle_cdu = 35;
+Q.old_middle_fdp= 20;
+Q.old_middle_greens = 10;
+Q.old_middle_afd = 15;
+Q.old_middle_other = 3;
 
-Q.new_middle_spd = 5;
-Q.new_middle_linke = 1;
-Q.new_middle_cdu = 10;
-Q.new_middle_fdp= 25;
+Q.new_middle_spd = 22;
+Q.new_middle_linke = 3;
+Q.new_middle_cdu = 25;
+Q.new_middle_fdp= 15;
 Q.new_middle_greens = 25;
 Q.new_middle_afd = 5;
-Q.new_middle_other = 15;
+Q.new_middle_other = 5;
 
-Q.rural_spd = 10;
-Q.rural_linke = 0;
-Q.rural_cdu = 5;
-Q.rural_fdp= 5;
-Q.rural_greens = 15;
-Q.rural_afd = 5;
-Q.rural_other = 10;
+Q.rural_spd = 20;
+Q.rural_linke = 2;
+Q.rural_cdu = 35;
+Q.rural_fdp= 10;
+Q.rural_greens = 10;
+Q.rural_afd = 22;
+Q.rural_other = 3;
 
-Q.unemployed_spd = 25;
-Q.unemployed_linke = 55;
-Q.unemployed_cdu = 1;
-Q.unemployed_fdp = 0;
-Q.unemployed_greens = 0;
+Q.unemployed_spd = 38;
+Q.unemployed_linke = 18;
+Q.unemployed_cdu = 12;
+Q.unemployed_fdp = 6;
+Q.unemployed_greens = 9;
 Q.unemployed_afd = 15;
-Q.unemployed_other = 9;
+Q.unemployed_other = 2;
 
 Q.catholics_spd = 16;
 Q.catholics_linke = 8;
@@ -341,7 +341,7 @@ Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + fdp
 Q.in_weimar_coalition = 0;
 // Grand coalition = SPD + CDU + CSU
-// also includes the "new grand coalition" of SPD + Z + BVP + fdp + greens + Others
+// also includes the "Kenya Coalition" of SPD + CDU + CSU + Greens
 Q.in_grand_coalition = 1;
 // Popular front = SPD + linke + Z + fdp
 Q.in_popular_front = 0;
