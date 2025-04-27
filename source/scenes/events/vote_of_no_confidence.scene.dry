@@ -11,7 +11,7 @@ go-to: vonc_menu
 
 = Vote of No Confidence
 
-[? if in_grand_coalition : The DVP ?][? if in_weimar_coalition or in_popular_front or in_minority_government: The Center Party ?] has called for a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
+[? if in_grand_coalition or in_minority_government : The CDU have ?][? if in_germany_coalition or in_traffic_light_coalition or in_social_liberal_coalition: The FDP has ?][? if in_red_red_green or in_red_green_coalition : The Greens have ?] called for a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
 
 @vonc_menu
 
@@ -71,13 +71,13 @@ The KPD is not interested in a "toleration" arrangement; they will only support 
 
 @support_kpd_grand
 
-- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
-- @election_1928.left_coalition
+- @election_1928.red_red_green: Form a "Red-Red-Green" coalition?
+- @election_1928.left_front
 - @try_assuage: Never mind. We must deal with this some other way.
 
 @support_kpd_weimar
 
-- @election_1928.left_coalition
+- @election_1928.left_front
 - @try_assuage: Never mind. We must deal with this some other way.
 
 
