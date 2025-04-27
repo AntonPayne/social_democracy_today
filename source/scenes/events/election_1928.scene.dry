@@ -534,7 +534,7 @@ There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DN
 
 - @jamaica_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
 - @grand_coalition: Actually, we wish to form another grand coalition after all.
-- @grand_coalition: Actually, we wish to form a Germany coalition after all.
+- @germany_coalition: Actually, we wish to form a Germany coalition after all.
 
 @no_jamaica_coalition
 go-to: no_majority
