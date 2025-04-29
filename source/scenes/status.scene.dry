@@ -151,6 +151,7 @@ Lower Saxon Police Loyalty: [+ lower_saxon_police_loyalty : loyalty +]
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
+Q.merkelism_disp = Math.round(Q.merkelism);
 Q.socialism_disp = Math.round(Q.socialism);
 !}
 
@@ -170,24 +171,28 @@ FDP: [+ fdp_votes +]%
 
 Greens: [+ greens_votes +]%
 
-AfD: [+ nsdap_votes +]%
+AfD: [+ afd_votes +]%
 
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, Linke: [+ workers_linke_display +]%, Greens: [+ workers_greens_display +]%, DVP: [+ workers_dvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if bsw_formed: BSW: [+ workers_bsw_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, Linke: [+ workers_linke_display +]%, Greens: [+ workers_greens_display +]%, AfD: [+ workers_afd_display +]%, Others: [+ workers_other_display +]% [? if bsw_formed: BSW: [+ workers_bsw_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, Linke: [+ new_middle_linke_display +]%, Greens: [+ new_middle_greens_display +]%, DVP: [+ new_middle_dvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if bsw_formed: BSW: [+ new_middle_bsw_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, Linke: [+ new_middle_linke_display +]%, Greens: [+ new_middle_greens_display +]%, AfD: [+ new_middle_afd_display +]%, Others: [+ new_middle_other_display +]% [? if bsw_formed: BSW: [+ new_middle_bsw_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, Linke: [+ old_middle_linke_display +]%, Greens: [+ old_middle_greens_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if bsw_formed: BSW: [+ old_middle_bsw_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, Linke: [+ old_middle_linke_display +]%, Greens: [+ old_middle_greens_display +]%, AfD: [+ old_middle_afd_display +]%, Others: [+ old_middle_other_display +]% [? if bsw_formed: BSW: [+ old_middle_bsw_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, Linke: [+ rural_linke_display +]%, Greens: [+ rural_greens_display +]%, DVP: [+ rural_dvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if bsw_formed: BSW: [+ rural_bsw_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, Linke: [+ rural_linke_display +]%, Greens: [+ rural_greens_display +]%, AfD: [+ rural_afd_display +]%, Others: [+ rural_other_display +]% [? if bsw_formed: BSW: [+ rural_bsw_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, Linke: [+ unemployed_linke_display +]%, Greens: [+ unemployed_greens_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if bsw_formed: BSW: [+ unemployed_bsw_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, Linke: [+ unemployed_linke_display +]%, Greens: [+ unemployed_greens_display +]%, AfD: [+ unemployed_afd_display +]%, Others: [+ unemployed_other_display +]% [? if bsw_formed: BSW: [+ unemployed_bsw_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, Linke: [+ catholics_linke_display +]%, Greens: [+ catholics_greens_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if bsw_formed: BSW: [+ catholics_bsw_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, Linke: [+ catholics_linke_display +]%, Greens: [+ catholics_greens_display +]%, AfD: [+ catholics_afd_display +]%, Others: [+ catholics_other_display +]% [? if bsw_formed: BSW: [+ catholics_bsw_display +]% ?]
 
-Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, Linke: [+ muslims_linke_display +]%, Greens: [+ muslims_greens_display +]%, NSDAP: [+ muslims_nsdap_display +]%, Others: [+ muslims_other_display +]%[? if bsw_formed:, BSW: [+ muslims_bsw_display +]% ?]
+Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, Linke: [+ muslims_linke_display +]%, Greens: [+ muslims_greens_display +]%, AfD: [+ muslims_afd_display +]%, Others: [+ muslims_other_display +]%[? if bsw_formed:, BSW: [+ muslims_bsw_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
+
+Socialist Activity: [+ socialism_disp +]%
+
+Relevancy of Merkelism: [+ merkelism_disp +]%
