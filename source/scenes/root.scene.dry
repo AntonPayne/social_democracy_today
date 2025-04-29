@@ -103,8 +103,8 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.cdu_relation = 50;
 Q.linke_relation = 25;
-Q.fdp_relation = 60;
-Q.greens_relation = 35;
+Q.fdp_relation = 37;
+Q.greens_relation = 60;
 //AfD is invariably hostile
 Q.afd_relation = 1;
 
@@ -168,6 +168,8 @@ Q.nationalism = 50;
 Q.socialism = 30;
 // pro-republic vs anti-republic
 Q.pro_republic = 65;
+// merkelism or firebrand politics
+Q.merkelism = 58;
 
 Q.emergency_rule = 0;
 
