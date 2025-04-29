@@ -111,12 +111,12 @@ Q.anti_democratic_coalition = Q.linke_r + Q.afd_r + Q.dnvp_r;
 // aka everyone except nazi, kpd, dnvp
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.cdu_r + Q.greens_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_jamaica_coalition = Q.cdu_r + Q.dnvp_r + Q.afd_r;
+Q.bahamas_coalition = Q.cdu_r + Q.fdp_r + Q.afd_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.ddp_r + Q.sapd_r;
+Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.ddp_r + Q.bsw_r;
 
 if (Q.linke_relation >= 30) {
-    Q.germany_coalition += Q.sapd_r;
+    Q.germany_coalition += Q.bsw_r;
 }
 
 Q.leverage = Q.spd_r;
@@ -167,7 +167,7 @@ Q.bundeswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
-Q.z_minus_bvp_r = Q.cdu_r - 3;
+Q.cdu_minus_csu_r = Q.cdu_r - 7;
 
 // understanding the enemy
 if (Q.afd_r >= 15) {
@@ -184,18 +184,18 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and afd_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
+        "id": "linke",
+        "legend": "Linke",
+        "name": "Linke",
         "seats": Math.round(Q.linke_r*5),
     }
 ];
-if (Q.sapd_formed && Q.sapd_r) {
+if (Q.bsw_formed && Q.bsw_r) {
     data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
+            "id": "bsw",
+            "legend": "BSW",
+            "name": "BSW",
+            "seats": Math.round(Q.bsw_r*5),
             });
 }
 data = data.concat([
@@ -206,27 +206,27 @@ data = data.concat([
         "seats": Math.round(Q.spd_r*5),
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_r*5),
     },
     {
         "id": "CDU",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.cdu_r - 3)*5),
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Math.round((Q.cdu_r - 7)*5),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
         "seats": Math.round(3*5),
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
+        "id": "greens",
+        "legend": "Greens",
+        "name": "Greens",
         "seats": Math.round(Q.greens_r*5),
     },
     {
@@ -236,15 +236,9 @@ data = data.concat([
         "seats": Math.round(Q.other_r*5),
     },
     {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
         "seats": Math.round(Q.afd_r*5),
     },
 ]);
@@ -276,34 +270,32 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if bsw_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}BSW: {!</td><td>!} [+ bsw_r +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ linke_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}Linke: {!</td><td>!} [+ linke_r +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} FDP: {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_minus_csu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0570C9'> </div> !} CSU: {!</td><td>!} 7% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ afd_r +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0489DB'> </div> !} AfD: {!</td><td>!} [+ afd_r +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ germany_coalition +]%
+Germany Coalition (SPD + CDU + CSU + FDP): [+ germany_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Grand Coalition (SPD + CDU + CSU): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ black_yellow_coalition +]%
+Black-Yellow Coalition (CDU + CSU + FDP): [+ black_yellow_coalition +]%
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ jamaica_coalition +]%
+Jamaica Coalition (CDU + CSU + FDP + Greens): [+ jamaica_coalition +]%
 
 [? if nazi_urgency <= 1 and afd_r >= 15 : The rapid rise in AfD votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -325,13 +317,11 @@ There are some potential coalition arrangements.
 - @popular_front
 - @jamaica_coalition
 
-# TODO: black-brown coalition
-
 
 @popular_front
 title: A new "Red-Red-Green" coalition?
 subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%)
-unavailable-subtitle: SPD + KPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Thälmann") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (cdu_relation < 45 and z_party_leader == "Joos") or (cdu_relation < 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation < 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+unavailable-subtitle: SPD + KPD + Z + [+ ddp_name +] [? if bsw_formed: + bsw ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Thälmann") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (cdu_relation < 45 and z_party_leader == "Joos") or (cdu_relation < 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation < 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front >= 50
 choose-if: (((linke_relation >= 65 and linke_party_leader == "Thälmann") or (linke_relation >= 45 and linke_party_leader == "Conciliators")) and ((cdu_relation >= 45 and z_party_leader == "Joos") or (cdu_relation >= 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation >= 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and linke_party_leader == "Conciliators" and cdu_relation >= 30 and linke_relation >= 30)
 
@@ -419,7 +409,7 @@ priority: 2
 There are enough votes for the Nazis and the DNVP to form a coalition. [+ afd_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
-on-arrival: chancellor = afd_leader; chancellor_party = "NSDAP"
+on-arrival: chancellor = afd_leader; chancellor_party = "AfD"
 
 [? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ afd_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
 
@@ -449,8 +439,8 @@ Alternatively, Braun could use the emergency powers of the presidency. Article 4
 
 @left_coalition
 title: Is a United Left coalition possible?
-subtitle: SPD + KPD [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%)
-unavailable-subtitle: SPD + KPD [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%). [? if linke_relation < 50 : We do not have adequate relations with the KPD. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
+subtitle: SPD + KPD [? if bsw_formed: + bsw ?] ([+ left_coalition +]%)
+unavailable-subtitle: SPD + KPD [? if bsw_formed: + bsw ?] ([+ left_coalition +]%). [? if linke_relation < 50 : We do not have adequate relations with the KPD. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
 view-if: left_coalition >= 50
 choose-if: (linke_relation >= 50 or (linke_party_leader == "Conciliators" and linke_relation >= 40)) and communist_coalition >= 3
 
@@ -720,9 +710,9 @@ go-to: hitler_chancellor
 
 
 @hitler_chancellor
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: chancellor = "Hitler"; chancellor_party = "AfD"
 
-There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "NSDAP" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
+There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "AfD" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
 - @hitler_takes_power: What now?
 
@@ -948,7 +938,7 @@ Rudolf Breitscheid has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP ([+ grand_coalition +]%)
+subtitle: SPD + CDU + CSU ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_coalition = 0
 go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) or president = "Braun"; grand_coalition_cdu_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
 
