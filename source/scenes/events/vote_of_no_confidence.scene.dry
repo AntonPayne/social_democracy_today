@@ -2,7 +2,7 @@ title: The Right calls a vote of no confidence against the current government!
 subtitle: We have angered our coalition partners too much...
 new-page: true
 on-arrival: tried_supporting_kpd = 0
-view-if: spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50 and not constructive_vonc
+view-if: spd_in_government = 1 and ((in_grand_coalition = 1 or in_germany_coalition = 1 or in_popular_front = 1 or in_social_liberal_coalition = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_red_green_coalition = 1 and coalition_dissent >= 4) and spd_r < 50 and not constructive_vonc
 tags: event
 go-to: vonc_menu
 
@@ -23,17 +23,17 @@ go-to: vonc_menu
 
 How do we assuage our partners?
 
-- @give_up_prussia: Give up on leadership of Prussia.
+- @give_up_saxony: Give up on leadership of Saxony.
 - @austerity: Enact a massive austerity plan.
 - @resources: Use our resources to reduce dissent within the coalition.
 - @support_kpd: Could we get the KPD to abstain?
 - @let_it_happen: Never mind. Let the vote happen.
 
-@give_up_prussia
-view-if: spd_prussia == 1
-on-arrival: coalition_dissent = 0; spd_prussia = 0; prussian_government = "I"; reformist_dissent += 10; centrist_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; rural_spd -= 5; 
+@give_up_saxony
+view-if: spd_saxony == 1
+on-arrival: coalition_dissent = 0; spd_saxony = 0; saxon_government = "I"; reformist_dissent += 10; centrist_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; rural_spd -= 5; 
 
-Fine. We no longer control the government of Prussia. The vote has been called off.
+Fine. We no longer control the government of Saxony. The vote has been called off.
 
 @austerity
 view-if: welfare >= 0 and not secularized
@@ -71,13 +71,13 @@ The KPD is not interested in a "toleration" arrangement; they will only support 
 
 @support_kpd_grand
 
-- @election_1928.red_red_green: Form a "Red-Red-Green" coalition?
-- @election_1928.left_front
+- @election_1928.popular_front: Form a "Red-Red-Green" coalition?
+- @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
 @support_kpd_weimar
 
-- @election_1928.left_front
+- @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
 
