@@ -1,0 +1,45 @@
+title: Marie Juchacz
+is-pinned-card: true
+tags: advisor, reformist
+card-image: img/portraits/EskenSaskia.jpg
+view-if: juchacz_advisor = 1
+new-page: true 
+
+= Saskia Esken
+
+Esken has been the co-leader of the party since 2019[ if chancellor = "Esken":  as well as the current Chancellor ?][ if vice_chancellor = "Esken":  as well as the current Vice Chancellor ?]. She has been a member of the Bundestag since 2013 and was an IT specialist in the early 1990s. She rose to fame by championing labour law[ if chancellor != "Esken" and vice_chancellor != "Esken":  but has ruled out the prospect of chancellorship ?].
+
+- @emergency_fundraising
+- @building_the_left
+- @organizing_women
+- @root: Return to main
+
+@emergency_fundraising
+title: Emergency Fundraising
+subtitle: An emergency infusion of resources.
+view-if: difficulty < 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources.
+
+@building_the_left
+title: Building the Left
+subtitle: Push the SPD to the left.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; left_strength += 10; left_dissent -= 8; seeheimer_dissent += 3
+
+We have increased the strength of the left faction with the SPD. This raised concern among the moderates in the party.
+
+@organizing_women
+title: Organizing women
+subtitle: Juchacz's strategies are aimed at second wave feminists.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: womens_rights += 1; workers_spd += 4*(1-dissent); rural_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); advisor_action_timer = 6
+
+Esken's strategies for organizing women are aimed at second wave feminists, focusing on workplace rights and the gender pay gap. We argue that our economic welfare programs will improve the livelihoods of women and their families.
+
+[? if spd_r < 50 or votes_spd < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
