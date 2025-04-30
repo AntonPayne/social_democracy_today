@@ -1,8 +1,8 @@
 title: Marie Juchacz
 is-pinned-card: true
-tags: advisor, reformist
+tags: advisor, left
 card-image: img/portraits/EskenSaskia.jpg
-view-if: juchacz_advisor = 1
+view-if: esken_advisor = 1
 new-page: true 
 
 = Saskia Esken
