@@ -339,9 +339,9 @@ Q.greens_in_government = 0;
 Q.linke_in_government = 0;
 Q.afd_in_government = 0;
 
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + fdp
-Q.in_weimar_coalition = 0;
+Q.in_jamaica_coalition = 0;
+// Germany coalition = SPD + CDU + CSU + FDP
+Q.in_germany_coalition = 0;
 // Grand coalition = SPD + CDU + CSU
 // also includes the "Kenya Coalition" of SPD + CDU + CSU + Greens
 Q.in_grand_coalition = 1;
@@ -532,30 +532,29 @@ Q.linke_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
 
-// all the initial advisors are centrists.
+// starting advisors: two neoliberals, one leftist
 Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
-Q.muller_dead = 0;
+Q.scholz_advisor = 1; // Olaf Scholz
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.hilferding_advisor = 0; // Rudolf Hilferding
 
 // left advisors
-Q.sender_advisor = 0; // Toni Sender
+Q.esken_advisor = 1; // Saskia Esken
+Q.sender_advisor = 0;
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitz_advisor = 0; // Max Seydewitz
 
-// centrist alternate advisors
-Q.pfulf_advisor = 0; // Antonie Pfülf
+// neoliberal alternate advisors
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// Reformist advisors
+// Seeheimer advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
+Q.pfulf_advisor = 0; // Antonie Pfülf
 
 // Labor advisors
 Q.leipart_advisor = 0; // Theodor Leipart
@@ -563,7 +562,7 @@ Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
-// Revisionist advisors
+// Modernist advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
 
 Q.leber_advisor = 0; // Julius Leber (post-1930)
