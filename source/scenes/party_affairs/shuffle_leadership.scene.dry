@@ -152,7 +152,7 @@ go-to: rm_main
 Levi has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_esken
-title: Remove esken
+title: Remove Esken
 view-if: esken_advisor = 1
 tags: remove_advisor
 on-arrival: esken_advisor = 0; left_dissent += 5; n_advisors -= 1
@@ -395,18 +395,6 @@ go-to: advisor_menu
 
 Otto Braun is now an advisor.
 
-@add_esken
-title: Saskia Esken
-subtitle: Saskia Esken is the co-leader of the party alongside [if year = 2021: Norbert Walter-Borjans ?][if year > 2021: Lars Klingbeil ?]. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
-is-card: true
-card-image: img/portraits/eskenMarie.jpg
-view-if: esken_advisor = 0 and n_advisors < 3
-on-arrival: esken_advisor = 1; n_advisors += 1; seeheimer_strength += 5
-go-to: advisor_menu
-tags: seeheimer_advisor
-
-Saskia Esken is now an advisor.
-
 @add_pfulf
 title: Antonie Pfülf
 subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
@@ -446,6 +434,18 @@ go-to: advisor_menu
 tags: left_advisor
 
 Toni Sender is now an advisor.
+
+@add_esken
+title: Saskia Esken
+subtitle: Saskia Esken is the co-leader of the party alongside [? if year = 2021: Norbert Walter-Borjans ?][? if year > 2021: Lars Klingbeil ?]. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Left, Organizing Women ?]
+is-card: true
+card-image: img/portraits/EskenSaskia.jpg
+view-if: esken_advisor = 0 and n_advisors < 3
+on-arrival: esken_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
+
+Saskia Esken is now an advisor.
 
 @add_rosenfeld
 title: Kurt Rosenfeld
