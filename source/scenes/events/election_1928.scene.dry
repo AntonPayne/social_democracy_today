@@ -320,9 +320,9 @@ There are some potential coalition arrangements.
 @popular_front
 title: A new "Red-Red-Green" coalition?
 subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%)
-unavailable-subtitle: SPD + KPD + Z + [+ ddp_name +] [? if bsw_formed: + bsw ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Thälmann") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (cdu_relation < 45 and z_party_leader == "Joos") or (cdu_relation < 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation < 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+unavailable-subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Thälmann") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with Die Linke. ?][? if (greens_relation < 45 and z_party_leader == "Joos") or (greens_relation < 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (greens_relation < 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Greens. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front >= 50
-choose-if: (((linke_relation >= 65 and linke_party_leader == "Thälmann") or (linke_relation >= 45 and linke_party_leader == "Conciliators")) and ((cdu_relation >= 45 and z_party_leader == "Joos") or (cdu_relation >= 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation >= 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and linke_party_leader == "Conciliators" and cdu_relation >= 30 and linke_relation >= 30)
+choose-if: (((linke_relation >= 65 and linke_party_leader == "Thälmann") or (linke_relation >= 45 and linke_party_leader == "Conciliators")) and ((greens_relation >= 45 and z_party_leader == "Joos") or (cdu_relation >= 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (cdu_relation >= 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (greens_party_leader == "Joos" and linke_party_leader == "Conciliators" and greens_relation >= 30 and linke_relation >= 30)
 
 Could we really form a coalition that included both the Greens and the Communists? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
 
@@ -334,7 +334,7 @@ The far-right might attempt a coup, if such a coalition were formed.
 @popular_front_2
 view-if: cdu_party_leader != "Röttgen" or linke_party_leader != "Conciliators"
 
-Somehow, both the Communists and Center are at the very least willing to entertain negotiations. Of course, KPD radicals and Center conservatives derail the negotiations almost immediately. The KPD demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if spd_r > linke_r : despite our higher vote share, ?]while the Center is offended by the prospect of helping Bolsheviks enter government. *Something* must be done to restore balance.
+Somehow, both the Communists and Center are at the very least willing to entertain negotiations. Of course, Left Party radicals and Green realists derail the negotiations almost immediately. The KPD demands leadership of the coalition for themselves and their chairwoman Janine Wissler, [? if spd_r > linke_r : despite our higher vote share, ?]while the Greens are offended by the prospect of helping Bolsheviks enter government. *Something* must be done to restore balance.
 
 - @popular_front_resources
 - @popular_front_democracy
