@@ -4,7 +4,7 @@ view-if: year = 2022 and (month = 2) and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: steinmeier_votes = cdu_r + greens_r + fdp_r + others_r; otte_votes = afd_r; trabert_votes = linke_r; presidential_election_seen = 1; afd_candidate = "Otte"; linke_candidate = "Trabert"; 
+on-arrival: steinmeier_votes = zimbabwe_coalition + others_r; otte_votes = afd_r; trabert_votes = linke_r; presidential_election_seen = 1; afd_candidate = "Otte"; linke_candidate = "Trabert"; 
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -20,7 +20,6 @@ The presidential election is coming up soon. Frank-Walter Steinmeier is running 
 
 @support_steinmeier
 subtitle: Steinmeier is the obvious choice.
-on-arrival:
 
 Frank-Walter Steinmeier is a fellow SPD member and our obvious candidate. The CDU, Greens, and FDP back him[? if spd_in_government = 0: even though we are in the opposition ?].
 
@@ -36,9 +35,9 @@ set-jump: post_election
 on-arrival: {!
 
 // check for majority
-Q.steinmeier_votes = Math.round(Q.steinmeier_votes*1000)/10;
-Q.otte_votes = Math.round(Q.otte_votes*1000)/10;
-Q.trabert_votes = Math.round(Q.trabert_votes*1000)/10;
+Q.steinmeier_votes = Math.round(Q.steinmeier_votes);
+Q.otte_votes = Math.round(Q.otte_votes);
+Q.trabert_votes = Math.round(Q.trabert_votes);
 
 Q.steinmeier_majority = (Q.steinmeier_votes >= 50);
 Q.trabert_majority = (Q.trabert_votes >= 50);
