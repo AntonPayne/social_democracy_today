@@ -7,7 +7,7 @@ view-if: muller_advisor = 1
 
 = Olaf Scholz
 
-Scholz is a former [? if chancellor = "Scholz": and current ?] Chancellor, and is a long-time Social Democratic leader.
+Scholz is the former [? if vice_chancellor = "Scholz": and current ?] Vice Chancellor[ if chancellor = "Scholz:  as well as the current Chancellor ?], and is a long-time Social Democratic leader.
 
 - @coalition
 - @toleration
