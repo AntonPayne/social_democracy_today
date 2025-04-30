@@ -1,13 +1,13 @@
 title: Olaf Scholz
 is-pinned-card: true 
-tags: advisor, centrist
-card-image: img/portraits/ScholzHermann.jpg
+tags: advisor, neoliberal
+card-image: img/portraits/ScholzOlaf.jpg
 new-page: true
 view-if: scholz_advisor = 1
 
 = Olaf Scholz
 
-Scholz is the former [? if vice_chancellor = "Scholz": and current ?] Vice Chancellor[ if chancellor = "Scholz:  as well as the current Chancellor ?], and is a long-time Social Democratic leader.
+Scholz is the former [? if vice_chancellor = "Scholz": and current ?] Vice Chancellor[? if chancellor = "Scholz:  as well as the current Chancellor ?], and is a long-time Social Democratic leader.
 
 - @coalition
 - @toleration
