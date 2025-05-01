@@ -1,7 +1,7 @@
 title: Olaf Scholz
 is-pinned-card: true 
 tags: advisor, neoliberal
-card-image: img/portraits/ScholzOlaf.jpg
+card-image: portraits/ScholzOlaf.jpg
 new-page: true
 view-if: scholz_advisor = 1
 
