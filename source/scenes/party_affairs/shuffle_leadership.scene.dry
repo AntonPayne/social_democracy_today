@@ -43,7 +43,7 @@ go-to: rm_main
 Hilferding has been removed as an advisor. The neo-liberal faction disapproves.
 
 @remove_weil
-title: Remove weil
+title: Remove Weil
 view-if: weil_advisor = 1
 tags: remove_advisor
 on-arrival: weil_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
@@ -281,7 +281,7 @@ tags: neoliberal_advisor, left_advisor, seeheimer_advisor, labor_advisor, neorev
 frequency: 1
 
 
-- @centrist: Add Centrists
+- @neoliberal: Add Neoliberals
 - @left: Add Leftists
 - @Seeheimer: Add Seeheimers
 - @labor: Add Labor
@@ -290,7 +290,7 @@ frequency: 1
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
-@centrist
+@neoliberal
 view-if: n_advisors < 3
 
 - #neoliberal_advisor
@@ -348,7 +348,7 @@ Stephan Weil is now an advisor.
 title: Olaf Scholz
 subtitle: Olaf Scholz is most popular candidate for Chancellorship. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
-card-image: img/portraits/ScholzHermann.jpg
+card-image: portraits/ScholzOlaf.jpg
 tags: neoliberal_advisor
 view-if: scholz_advisor = 0 and scholz_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: scholz_advisor = 1; n_advisors += 1
