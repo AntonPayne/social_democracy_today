@@ -99,6 +99,7 @@ if (Q.cdu_r >= Q.spd_r && Q.cdu_r >= Q.afd_r) {
 // coalitions
 Q.germany_coalition = Q.spd_r + Q.fdp_r + Q.cdu_r;
 Q.grand_coalition = Q.spd_r + Q.cdu_r;
+Q.traffic_light_coalition = Q.spd_r + Q.greens_r + Q.fdp_r;
 Q.black_yellow_coalition = Q.fdp_r + Q.cdu_r;
 Q.jamaica_coalition = Q.cdu_r + Q.greens_r + Q.fdp_r;
 Q.midnight_coalition = Q.cdu_r + Q.afd_r;
@@ -292,7 +293,7 @@ go-to: coalition_menu
 
 Germany Coalition (SPD + CDU + CSU + FDP): [+ germany_coalition +]%
 
-Grand Coalition (SPD + CDU + CSU): [+ grand_coalition +]%
+Traffic Light Coalition (SPD + Greens + FDP): [+ traffic_light_coalition +]%
 
 Black-Yellow Coalition (CDU + CSU + FDP): [+ black_yellow_coalition +]%
 
