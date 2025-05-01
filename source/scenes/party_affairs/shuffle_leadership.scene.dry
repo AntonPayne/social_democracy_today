@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, seeheimer_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: neoliberal_advisor, left_advisor, seeheimer_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -36,39 +36,39 @@ tags: remove_advisor
 @remove_hilferding
 title: Remove Hilferding
 view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: hilferding_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Hilferding has been removed as an advisor. The neo-liberal faction disapproves.
 
-@remove_wels
-title: Remove Wels
-view-if: wels_advisor = 1
+@remove_weil
+title: Remove weil
+view-if: weil_advisor = 1
 tags: remove_advisor
-on-arrival: wels_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: weil_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Wels has been removed as an advisor. The Centrist faction disapproves.
+Weil has been removed as an advisor. The neo-liberal faction disapproves.
 
 @remove_scholz
 title: Remove Scholz
 view-if: scholz_advisor = 1
 tags: remove_advisor
-on-arrival: scholz_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: scholz_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Scholz has been removed as an advisor. The Centrist faction disapproves.
+Scholz has been removed as an advisor. The neo-liberal faction disapproves.
 
 
 @remove_breitscheid
 title: Remove Breitscheid
 view-if: breitscheid_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: breitscheid_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Breitscheid has been removed as an advisor. The neo-liberal faction disapproves.
 
 # Seeheimers
 
@@ -277,7 +277,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, seeheimer_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: neoliberal_advisor, left_advisor, seeheimer_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -293,7 +293,7 @@ frequency: 1
 @centrist
 view-if: n_advisors < 3
 
-- #center_advisor
+- #neoliberal_advisor
 
 @Seeheimer
 view-if: n_advisors < 3
@@ -325,36 +325,36 @@ title: Rudolf Hilferding
 subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
-tags: center_advisor
+tags: neoliberal_advisor
 view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: hilferding_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Rudolf Hilferding is now an advisor.
 
-@add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+@add_weil
+title: Stephan Weil
+subtitle: Stephan Weil is a famous party organizer and leads the government in . {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
-card-image: img/portraits/WelsRudolf.jpg
-tags: center_advisor
-view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: wels_advisor = 1; n_advisors += 1
+card-image: img/portraits/WeilStephan.jpg
+tags: neoliberal_advisor
+view-if: weil_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: weil_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Otto Wels is now an advisor.
+Stephan Weil is now an advisor.
 
 @add_scholz
 title: Olaf Scholz
 subtitle: Olaf Scholz is most popular candidate for Chancellorship. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
 card-image: img/portraits/ScholzHermann.jpg
-tags: center_advisor
+tags: neoliberal_advisor
 view-if: scholz_advisor = 0 and scholz_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: scholz_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Hermann Scholz is now an advisor.
+Olaf Scholz is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
@@ -364,7 +364,7 @@ card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
 on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: center_advisor
+tags: neoliberal_advisor
 
 Rudolf Breitscheid is now an advisor.
 
@@ -406,8 +406,6 @@ go-to: advisor_menu
 tags: seeheimer_advisor
 
 Antonie Pfülf is now an advisor.
-
-
 
 # left
 
