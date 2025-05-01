@@ -35,7 +35,7 @@ We have increased the strength of the left faction with the SPD. This raised con
 
 @organizing_women
 title: Organizing women
-subtitle: Juchacz's strategies are aimed at second wave feminists.
+subtitle: Esken's strategies are aimed at second wave feminists.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: womens_rights += 1; workers_spd += 4*(1-dissent); rural_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); advisor_action_timer = 6
