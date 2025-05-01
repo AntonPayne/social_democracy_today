@@ -1,13 +1,13 @@
-title: Otto Wels
+title: Stephan Weil
 is-pinned-card: true
-tags: advisor, centrist
-card-image: img/portraits/WelsOtto.jpg
-view-if: wels_advisor = 1
+tags: advisor, neoliberal
+card-image: portraits/WeilStephan.jpg
+view-if: weil_advisor = 1
 new-page: true
 
-= Otto Wels
+= Stephan Weil
 
-Wels is the long-time chairman of the SPD. He is a gifted organizer and a member of the centrist faction.
+Weil is the long-time leader of the SPD in Lower Saxony. He is a gifted organizer with an approval rating comparable to Olaf Scholz.
 
 - @clear_agenda
 - @party_discipline
@@ -53,8 +53,8 @@ We have gained +[+ dues +] resources.
 @snap_election
 title: Snap Election
 subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Wels" : Wels must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and (chancellor == "Wels")
+unavailable-subtitle: [? if chancellor != "Weil" and vice_chancellor != "Weil" : Weil must be Chancellor or Vice Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Weil" or vice_chancellor == "Weil")
 on-arrival: advisor_action_timer = 6; time_to_election = 3
 call: set_next_election_time
 
