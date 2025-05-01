@@ -92,8 +92,8 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 Q.spd_r = Q.spd_votes;
 Q.cdu_r = Q.cdu_votes;
 Q.linke_r = Q.linke_votes;
-Q.fdp_r = Q.ddp_votes;
-Q.greens_r = Q.dvp_votes;
+Q.fdp_r = Q.fdp_votes;
+Q.greens_r = Q.greens_votes;
 Q.bsw_r = Q.bsw_votes;
 Q.afd_r = Q.afd_votes;
 if (Q.electoral_threshold >= 5 && Q.other_votes < 15) {
