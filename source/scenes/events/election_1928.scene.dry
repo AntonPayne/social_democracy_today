@@ -88,14 +88,29 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the AfD, CDU, or the SPD.
-Q.largest_party = 'SPD';
-if (Q.afd_r >= Q.spd_r && Q.afd_r >= Q.cdu_r) {
-    Q.largest_party = 'AfD';
+// set congress proportion to votes
+Q.spd_r = Q.spd_votes;
+Q.cdu_r = Q.cdu_votes;
+Q.linke_r = Q.linke_votes;
+Q.fdp_r = Q.ddp_votes;
+Q.greens_r = Q.dvp_votes;
+Q.bsw_r = Q.bsw_votes;
+Q.afd_r = Q.afd_votes;
+if (Q.electoral_threshold >= 5 && Q.other_votes < 15) {
+    Q.other_r = 0;
+}
+if (Q.electoral_threshold = 3 && Q.other_votes >= 15) {
+    Q.other_r = 5;
 }
 
-if (Q.cdu_r >= Q.spd_r && Q.cdu_r >= Q.afd_r) {
-    Q.largest_party = 'CDU';
+
+// The largest party can only be the AfD or the SPD.
+Q.largest_party = 'SPD';
+if (Q.afd_r >= Q.spd_r && Q.nsdap_r >= Q.linke_r) {
+    Q.largest_party = 'AfD';
+}
+if (Q.linke_r >= Q.spd_r && Q.linke_r >= Q.nsdap_r) {
+    Q.largest_party = 'Linke';
 }
 
 // coalitions
