@@ -1,7 +1,7 @@
 title: Saskia Esken
 is-pinned-card: true
 tags: advisor, left
-card-image: img/EskenSaskia.jpg
+card-image: portraits/EskenSaskia.jpg
 view-if: esken_advisor = 1
 new-page: true 
 
