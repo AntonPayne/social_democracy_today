@@ -87,30 +87,13 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // get change arrows and signs
 
-
-// set congress proportion to votes
-Q.spd_r = Q.spd_votes;
-Q.cdu_r = Q.cdu_votes;
-Q.linke_r = Q.linke_votes;
-Q.fdp_r = Q.fdp_votes;
-Q.greens_r = Q.greens_votes;
-Q.bsw_r = Q.bsw_votes;
-Q.afd_r = Q.afd_votes;
-if (Q.electoral_threshold >= 5 && Q.other_votes < 15) {
-    Q.other_r = 0;
-}
-if (Q.electoral_threshold = 3 && Q.other_votes >= 15) {
-    Q.other_r = 5;
-}
-
-
-// The largest party can only be the AfD or the SPD.
+// The largest party can only be the AfD, CDU, or SPD.
 Q.largest_party = 'SPD';
-if (Q.afd_r >= Q.spd_r && Q.nsdap_r >= Q.linke_r) {
+if (Q.afd_r >= Q.spd_r && Q.afd_r >= Q.cdu_r) {
     Q.largest_party = 'AfD';
 }
-if (Q.linke_r >= Q.spd_r && Q.linke_r >= Q.nsdap_r) {
-    Q.largest_party = 'Linke';
+if (Q.cdu_r >= Q.spd_r && Q.cdu_r >= Q.afd_r) {
+    Q.largest_party = 'CDU';
 }
 
 // coalitions
@@ -122,15 +105,19 @@ Q.midnight_coalition = Q.cdu_r + Q.afd_r;
 Q.left_coalition = Q.spd_r + Q.linke_r + Q.bsw_r;
 // this is an absurd concept lol
 Q.popular_front = Q.spd_r + Q.linke_r + Q.greens_r;
-Q.anti_democratic_coalition = Q.linke_r + Q.afd_r + Q.dnvp_r;
+Q.anti_democratic_coalition = Q.linke_r + Q.afd_r + Q.bsw_r;
 // aka everyone except nazi, linke, bsw
 Q.zimbabwe_coalition = Q.spd_r + Q.fdp_r + Q.cdu_r + Q.greens_r;
 Q.bahamas_coalition = Q.cdu_r + Q.fdp_r + Q.afd_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.ddp_r + Q.bsw_r;
+Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.greens_r + Q.bsw_r;
 
 if (Q.linke_relation >= 30) {
     Q.germany_coalition += Q.bsw_r;
+}
+
+if (Q.cdu_party_leader = "Röttgen" && Q.cdu_relation >= 50) {
+    Q.progressive_coalition += Q.cdu_r * 0.3;
 }
 
 Q.leverage = Q.spd_r;
@@ -158,7 +145,7 @@ Q.economic_minister_party = Q.ddp_name;
 Q.finance_minister_party = 'DVP';
 Q.agriculture_minister_party = 'Z';
 
-// reset KPD goals
+// reset Die Linke goals
 Q.linke_goals_seen = 0;
 Q.linke_ultimatum_seen = 0;
 Q.welfare_goal = 0;
@@ -184,7 +171,7 @@ Q.strike_term_seen = 0;
 Q.cdu_minus_csu_r = Q.cdu_r - 7;
 
 // understanding the enemy
-if (Q.afd_r >= 15) {
+if (Q.afd_r >= 20) {
     Q.understanding_enemy_timer = 2;
 }
 
@@ -194,7 +181,7 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and afd_r >= 15)
+on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and afd_r >= 20)
 on-display: {!
 data = [
     {
@@ -311,7 +298,7 @@ Black-Yellow Coalition (CDU + CSU + FDP): [+ black_yellow_coalition +]%
 
 Jamaica Coalition (CDU + CSU + FDP + Greens): [+ jamaica_coalition +]%
 
-[? if nazi_urgency <= 1 and afd_r >= 15 : The rapid rise in AfD votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and afd_r >= 20 : The rapid rise in AfD votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
 [? if anti_democratic_coalition >= 50 : Together, the anti-establishmentarian Left Party, AfD, and BSW have a majority in the Bundestag. A stable governing majority will be almost impossible. ?]
 
