@@ -235,45 +235,45 @@ Q.bsw_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd    = 24;
-Q.workers_cdu    = 12;
+Q.workers_spd = 24;
+Q.workers_cdu = 12;
 Q.workers_greens = 15;
-Q.workers_fdp    = 11;
-Q.workers_afd    = 12;
-Q.workers_linke  =  8;
-Q.workers_other  =  8;
+Q.workers_fdp = 11;
+Q.workers_afd = 12;
+Q.workers_linke =  8;
+Q.workers_other =  8;
 
-Q.old_middle_spd    = 20;
-Q.old_middle_cdu    = 22;
+Q.old_middle_spd = 20;
+Q.old_middle_cdu = 22;
 Q.old_middle_greens = 14;
-Q.old_middle_fdp    = 11;
-Q.old_middle_afd    = 10;
-Q.old_middle_linke  =  4;
-Q.old_middle_other  =  9;
+Q.old_middle_fdp = 11;
+Q.old_middle_afd = 10;
+Q.old_middle_linke =  4;
+Q.old_middle_other =  9;
 
-Q.new_middle_spd    = 18;
-Q.new_middle_cdu    = 32;
+Q.new_middle_spd = 18;
+Q.new_middle_cdu = 32;
 Q.new_middle_greens = 14;
-Q.new_middle_fdp    = 10;
-Q.new_middle_afd    =  8;
-Q.new_middle_linke  =  3;
-Q.new_middle_other  =  7;
+Q.new_middle_fdp = 10;
+Q.new_middle_afd =  8;
+Q.new_middle_linke =  3;
+Q.new_middle_other =  7;
 
 Q.rural_spd = 20;
 Q.rural_cdu = 28;
 Q.rural_greens = 12;
 Q.rural_fdp = 11;
-Q.rural_afd    = 10;
-Q.rural_linke  =  5;
-Q.rural_other  =  6;
+Q.rural_afd = 10;
+Q.rural_linke =  5;
+Q.rural_other =  6;
 
-Q.unemployed_spd    = 30;
-Q.unemployed_cdu    = 12;
+Q.unemployed_spd = 30;
+Q.unemployed_cdu = 12;
 Q.unemployed_greens = 13;
-Q.unemployed_fdp    = 11;
-Q.unemployed_afd    = 12;
-Q.unemployed_linke  = 12;
-Q.unemployed_other  = 10;
+Q.unemployed_fdp = 11;
+Q.unemployed_afd = 12;
+Q.unemployed_linke = 12;
+Q.unemployed_other = 10;
 
 Q.catholics_spd = 16;
 Q.catholics_linke = 8;
@@ -290,7 +290,6 @@ Q.muslims_fdp = 5;
 Q.muslims_greens = 18;
 Q.muslims_afd = 2;
 Q.muslims_other = 5;
-
 
 // Current bundestag composition
 // % of bundestag in May 2021
@@ -369,7 +368,7 @@ Q.spd_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Merkel cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
+// starting with the 4th Merkel cabinet https://en.wikipedia.org/wiki/Fourth_Merkel_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Maas';
 Q.foreign_minister_party = 'SPD';
