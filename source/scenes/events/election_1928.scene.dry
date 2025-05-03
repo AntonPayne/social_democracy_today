@@ -529,9 +529,9 @@ title: Refuse to form a government, so that a Jamaica coalition may be formed.
 subtitle: CDU + CSU + Greens + FDP ([+ jamaica_coalition +]%)
 unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
-choose-if: year < 1929
+choose-if: year < 2022
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
+There are enough votes for center-right coalition of the CDU, Greens, and FDP. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
 - @jamaica_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a center-right coalition take power.
 - @grand_coalition: Actually, we wish to form a grand coalition after all.
@@ -540,7 +540,7 @@ There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DN
 @no_jamaica_coalition
 go-to: no_majority
 
-However, the DNVP and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Bundestag majority.
+However, the Greens are unwilling to participate in a government alongside the "out-of-touch" CDU. Thus, there is no clear path towards a Bundestag majority.
 
 @jamaica_coalition_sure
 subtitle: This will be extremely unpopular within our party.
@@ -549,9 +549,9 @@ go-to: jamaica_coalition_2
 
 
 @jamaica_coalition_2
-unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
+unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
-choose-if: year < 1929
+choose-if: year < 2022
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "DNVP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "CDU"; agriculture_minister_party = "DNVP"; in_jamaica_coalition = 1;
 
 Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
@@ -1214,7 +1214,7 @@ go-to: no_govt_2
 
 @no_govt_2
 on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_germany_coalition = 0; in_grand_coalition = 0; chancellor = "Brüning" if chancellor == "Marx"; spd_in_government = 0; grand_coalition_failed = 1
-go-to: jamaica_coalition_post_spd if jamaica_coalition >= 50 and president != "Braun" and year < 1929; new_elections_spd if (jamaica_coalition < 50 or year >= 1929) and president != "Braun"; brauns_dilemma if president == "Braun"
+go-to: jamaica_coalition_post_spd if jamaica_coalition >= 50 and president != "Braun" and year < 2022; new_elections_spd if (jamaica_coalition < 50 or year >= 2022) and president != "Braun"; brauns_dilemma if president == "Braun"
 
 
 @jamaica_coalition_post_spd
