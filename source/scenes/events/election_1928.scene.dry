@@ -552,10 +552,9 @@ go-to: jamaica_coalition_2
 unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
 choose-if: year < 2022
-on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "DNVP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "CDU"; agriculture_minister_party = "DNVP"; in_jamaica_coalition = 1;
+on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Laschet"; chancellor_party = "CDU"; chancellor = "Habeck"; chancellor_party = "Greens"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; interior_minister_party = "CSU"; justice_minister_party = "DNVP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "Greens"; finance_minister_party = "CDU"; agriculture_minister_party = "Greens"; in_jamaica_coalition = 1;
 
-Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
-
+Even though the Greens are very reluctant to participate in such a coalition, they still accede to Armin Laschet's wishes. Thus, a majority center-right coalition is formed, with Laschet as chancellor and Robert Habeck as Vice Chancellor.
 
 
 @no_majority
@@ -569,11 +568,11 @@ go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; n
 # either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Hitler.
 
 @no_majority_spd
-on-arrival: chancellor = "Brüning"; chancellor_party = "CDU"
+on-arrival: chancellor = "Günther"; chancellor_party = "CDU"; vice_chancellor = "[+ fdp_leader +]" if fdp_r > 0; vice_chancellor_party = "FDP" if fdp_r > 0; vice_chancellor = "Habeck" if fdp_r = 0; vice_chancellor_party = "Greens" if fdp_r = 0;
 
-There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker SPD government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
+There is no path to an obviously workable majority. President Steinmeier tries to negotiate a minority or caretaker SPD government, but his words fall on deaf years. As such, the preferred chancellor is Daniel Günther of the CDU, who could lead a minority [? if fdp_r = 0: Black-Green ?][? if fdp_r > 0: Black-Yellow ?] government.
 
-- @toleration_bruning: We will tolerate Brüning.
+- @toleration_bruning: We will tolerate Günther.
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 
@@ -586,7 +585,7 @@ go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_de
 @hindenburg_appoints_papen
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; sa_banned = 0; pro_republic -= 8; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; bundeswehr_minister = "I";
 
-There is no path to a majority government. President Hindenburg is tired of the chaos, and appoints Franz von Papen as chancellor instead of Brüning. Papen is a indenpendent formerly from the Center Party, and is significantly to the right of the majority of the Center Party.
+There is no path to a majority government. President Hindenburg is tired of the chaos, and appoints Franz von Papen as chancellor instead of Günther. Papen is a indenpendent formerly from the Center Party, and is significantly to the right of the majority of the Center Party.
 
 Papen is immediately faced with a vote of no confidence, given his unpopularity. However the SPD votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties.
 
@@ -601,7 +600,7 @@ Alternatively, we could try to form a "new grand coalition" of all constitutiona
 
 The third option is to have new elections.
 
-- @toleration_bruning: We will tolerate Brüning.
+- @toleration_bruning: We will tolerate Günther.
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 - @unity_government
@@ -635,7 +634,7 @@ Now, we have a new grand coalition, a "Constitutional Coalition" of all the non-
 
 Who should be chancellor?
 
-- @join_bruning: For better or for worse, it must be Heinrich Brüning of the Center.
+- @join_bruning: For better or for worse, it must be Daniel Günther of the Center.
 - @braun_chancellor_new: Otto Braun for Chancellor?
 
 @braun_chancellor_new
@@ -724,7 +723,7 @@ There is no path to a majority government for now. The scheming around President
 title: SPD majority alone
 subtitle: SPD: [+ spd_r +]%
 view-if: spd_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; bundeswehr_loyalty -= 0.05; 
+on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; vice_chancellor = "Empty"; vice_chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; bundeswehr_loyalty -= 0.05; 
 achievement: majority_party
 
 Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
@@ -975,7 +974,7 @@ Heinrich Brüning welcomes us into his new cabinet. Now, we have our pick of min
 @bruning_oppo
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "CSU"; justice_minister_party = "CDU"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "CDU"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; grand_coalition_failed = 1
 
-By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if jamaica_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the DNVP. However, the DNVP leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the NSDAP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if jamaica_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the DNVP, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the NSDAP is not interested in coalition government. This means that there is no route to a majority coalition. ?]
+By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if jamaica_coalition >= 50 : There are enough votes to form a center-right coalition that includes the Greens. However, the Greens are opposed to a coalition with the "November criminals" of the Center Party. And of course, the NSDAP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if jamaica_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the DNVP, and they are not interested in joining in a coalition with the "out-of-touch" CDU, anyhow. And of course, the AfD is not interested in coalition government. This means that there is no route to a majority coalition. ?]
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Chancellor may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
