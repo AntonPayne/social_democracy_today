@@ -45,10 +45,10 @@ var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_r'] = Q[party + '_r'];
     if (Q.constitutional_reform >= 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold >= 5 && party == 'Other') || Q[party + '_banned']) {
+        if (Q[party + '_'] < Q.electoral_threshold || (Q.electoral_threshold >= 5 && party == 'Other') || Q[party + '_banned']) {
             Q[party + '_r'] = 0;
         } else {
-            Q[party + '_r'] = Q[party + '_votes'];
+            Q[party + '_r'] = Q[party + '_'];
         }
         new_party_sum += Q[party + '_r'];
     } else {
@@ -270,23 +270,23 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Bundestag Seats</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} [+ spd_votes +]% {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-[? if bsw_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}BSW: {!</td><td>!} [+ votes_bsw +]% {!</td><td>!} [+ bsw_r +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
+[? if bsw_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ bsw_r +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}Linke: {!</td><td>!} [+ votes_linke +]% {!</td><td>!} [+ linke_r +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}Linke: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ linke_r +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} FDP: {!</td><td>!} [+ votes_fdp +]% {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} FDP: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ votes_cdu - 7 +]% {!</td><td>!} [+ cdu_minus_csu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_votes - 7 +]% {!</td><td>!} [+ cdu_minus_csu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#0570C9'> </div> !} CSU: {!</td><td>!} 7% {!</td><td>!} 7% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ votes_greens +]% {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ votes_other +] % {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes +] % {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0489DB'> </div> !} AfD: {!</td><td>!} [+ votes_afd +]% {!</td><td>!} [+ afd_r +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0489DB'> </div> !} AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ afd_r +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
