@@ -552,7 +552,7 @@ go-to: jamaica_coalition_2
 unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
 choose-if: year < 2022
-on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Laschet"; chancellor_party = "CDU"; chancellor = "Habeck"; chancellor_party = "Greens"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; interior_minister_party = "CSU"; justice_minister_party = "DNVP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "Greens"; finance_minister_party = "CDU"; agriculture_minister_party = "Greens"; in_jamaica_coalition = 1;
+on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Laschet"; chancellor_party = "CDU"; vice_chancellor = "Habeck"; vice_chancellor_party = "Greens"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; interior_minister_party = "CSU"; justice_minister_party = "DNVP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "Greens"; finance_minister_party = "CDU"; agriculture_minister_party = "Greens"; in_jamaica_coalition = 1;
 
 Even though the Greens are very reluctant to participate in such a coalition, they still accede to Armin Laschet's wishes. Thus, a majority center-right coalition is formed, with Laschet as chancellor and Robert Habeck as Vice Chancellor.
 
