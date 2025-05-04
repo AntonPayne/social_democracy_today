@@ -115,6 +115,7 @@ Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.greens_r + Q.bsw_r;
 
 if (Q.linke_relation >= 30) {
     Q.germany_coalition += Q.bsw_r;
+    Q.red_green_coalition += Q.bsw_r;
 }
 
 if (Q.cdu_party_leader = "Röttgen" && Q.cdu_relation >= 50) {
