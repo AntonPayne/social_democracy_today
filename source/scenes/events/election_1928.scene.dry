@@ -324,9 +324,9 @@ There are some potential coalition arrangements.
 @popular_front
 title: A new "Red-Red-Green" coalition?
 subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%)
-unavailable-subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Thälmann") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with Die Linke. ?][? if (greens_relation < 45 and z_party_leader == "Röttgen") or (greens_relation < 65 and z_party_leader != "Röttgen" and linke_party_leader != "Conciliators") or (greens_relation < 55 and z_party_leader != "Röttgen" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Greens. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+unavailable-subtitle: SPD + Linke + Greens  [? if bsw_formed: + BSW(?) ?]([+ popular_front +]%) - [? if ((linke_relation < 65 and linke_party_leader == "Wissler") or (linke_relation < 45 and linke_party_leader == "Conciliators")): We do not have good enough relations with Die Linke. ?][? if (greens_relation < 45 and z_party_leader == "Joos") or (greens_relation < 65 and z_party_leader != "Joos" and linke_party_leader != "Conciliators") or (greens_relation < 55 and z_party_leader != "Joos" and linke_party_leader == "Conciliators"): We do not have good enough relations with the Greens. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front >= 50
-choose-if: (((linke_relation >= 65 and linke_party_leader == "Thälmann") or (linke_relation >= 45 and linke_party_leader == "Conciliators")) and ((greens_relation >= 45 and z_party_leader == "Röttgen") or (cdu_relation >= 65 and z_party_leader != "Röttgen" and linke_party_leader != "Conciliators") or (cdu_relation >= 55 and z_party_leader != "Röttgen" and linke_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (greens_party_leader == "Röttgen" and linke_party_leader == "Conciliators" and greens_relation >= 30 and linke_relation >= 30)
+choose-if: (((linke_relation >= 65 and linke_party_leader == "Wissler") or (linke_relation >= 45 and linke_party_leader == "Conciliators")) and ((greens_relation >= 45 and z_party_leader == "Röttgen") or (cdu_relation >= 65 and z_party_leader != "Röttgen" and linke_party_leader != "Conciliators") or (cdu_relation >= 55 and z_party_leader != "Röttgen" and linke_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (greens_party_leader == "Röttgen" and linke_party_leader == "Conciliators" and greens_relation >= 30 and linke_relation >= 30)
 
 Could we really form a coalition that included both the Greens and the Communists? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
 
@@ -447,7 +447,7 @@ unavailable-subtitle: SPD + KPD [? if bsw_formed: + bsw ?] ([+ left_coalition +]
 view-if: left_coalition >= 50
 choose-if: (linke_relation >= 50 or (linke_party_leader == "Conciliators" and linke_relation >= 40)) and communist_coalition >= 3
 
-There are enough votes for a SPD + KPD coalition government, if such a thing were actually possible.
+There are enough votes for a Red-Left coalition government, if such a thing were actually possible.
 
 The far-right might attempt a coup, if such a coalition were formed.
 
@@ -462,17 +462,17 @@ A far left coalition is impossible.
 
 @left_coalition_possible
 
-The KPD is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Ernst Thälmann as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
+The Left is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Janine Wissler as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
 
-- @thalmann_chancellor: Appoint Thälmann as chancellor.
+- @thalmann_chancellor: Appoint Wissler as chancellor.
 - @left_coalition_resources
 - @left_coalition_relations
 - @coalition_menu: Try a different governing arrangement.
 
 @thalmann_chancellor
 choose-if: president == "Braun" and reformist_strength + neorevisionist_strength < left_strength
-unavailable-subtitle: [? if president != "Braun": President [+ president +] would never allow such a thing. ?] [? if reformist_strength >= left_strength : Most in the parliamentary party would not support Thälmann as chancellor. ?]
-on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"; linke_relation = 80; in_left_coalition = 1; spd_in_government = 1 
+unavailable-subtitle: [? if president != "Braun": President [+ president +] would never allow such a thing. ?] [? if reformist_strength >= left_strength : Most in the parliamentary party would not support Wissler as chancellor. ?]
+on-arrival: chancellor = "Wissler"; chancellor_party = "KPD"; vice_chancellor = "Mützenich"; vice_chancellor_party = "SPD"; linke_relation = 80; in_left_coalition = 1; spd_in_government = 1 
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 
@@ -503,23 +503,23 @@ on-arrival: spd_in_government = 1; in_left_coalition = 1; chancellor = "Breitsch
 go-to: left_coalition_civil_war if coup_progress >= 10; left_coalition_no_civil_war if coup_progress < 10
 achievement: einheitsfront
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing Thälmann as chancellor. The consensus choice for chancellor, accepted by the SPD, KPD, and President [+ president +], is Rudolf Breitscheid, who belongs to the centrist faction of the SPD, but was acceptable to the left due to his previous membership in the left-wing anti-war USPD.
+Somehow, surprisingly, the left coalition is successfully formed, without appointing Wissler as chancellor. The consensus choice for chancellor, accepted by the SPD, Linke, and President [+ president +], is Rolf Mützenich, who was acceptable to the left due to his membership in the Parliamentary Left.
 
 # just raise the coup limit, don't immediately go to civil war
 
 @left_coalition_no_civil_war
 on-arrival: linke_goals_seen = 0; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; bundeswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; bundeswehr_loyalty -= 0.05
 
-In response to the KPD's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
+In response to the Left's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
 
-The KPD has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
+The Left Party has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
 
 Whatever their reasoning is, the SPD has control over the ministries of government.
 
 @left_coalition_civil_war
 on-arrival: bundeswehr_loyalty += 0.1
 
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the Left's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
 - @civil_war: A civil war, then.
 
@@ -576,8 +576,6 @@ There is no path to an obviously workable majority. President Steinmeier tries t
 - @toleration_bruning: We will tolerate Günther.
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
-
-# - if NSDAP is the largest party and the 
 
 @no_majority_bruning
 go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); hindenburg_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
@@ -664,12 +662,6 @@ achievement: constitutional_coalition
 
 We have formed a new unity government of all the constitutional parties! Now, we just need to decide on the Vice Chancellor.
 
-# - @scholz_unity_government
-# - @klingbeil_unity_government
-# - @esken_unity_government
-# - @baerbock_unity_government
-# - @habeck_unity_government
-
 @reject_unity_government
 on-arrival: cdu_relation -= 8; fdp_relation -= 5; greens_relation -= 5
 
@@ -677,11 +669,11 @@ Our rejection of the unity government has hurt our relations with the bourgeois 
 
 - @brauns_dilemma
 - @toleration_bruning: We will tolerate a minority government led by Brüning.
-- @toleration_rottgen: We will tolerate a minority government led by Norbert Röttgen.
+- @toleration_wirth: We will tolerate a minority government led by Norbert Röttgen.
 - @new_elections: There will be new elections.
 
 
-@toleration_rottgen
+@toleration_wirth
 view-if: z_party_leader = "Röttgen"
 choose-if: president == "Braun"
 unavailable-subtitle: President Hindenburg will not support a minority government led by Norbert Röttgen.
@@ -929,7 +921,7 @@ Who should be the chancellor?
 - @breitscheid_coalition_chancellor
 - @wels
 - @z_chancellor
-- @cdu_chancellor_rottgen
+- @cdu_chancellor_wirth
 
 @breitscheid_coalition_chancellor
 title: Rudolf Breitscheid for Chancellor
@@ -1122,7 +1114,7 @@ Who should be the chancellor?
 - @braun
 - @wels
 - @z_chancellor
-- @cdu_chancellor_rottgen
+- @cdu_chancellor_wirth
 - @no_govt
 
 
@@ -1175,7 +1167,7 @@ This is highly unexpected, and many in the left and center of our party are crit
 [? if year == 1928 : Since Wilhelm Marx resigned, Heinrich Brüning has been appointed chancellor. ?]
 [? if year > 1928: Heinrich Brüning of the Center Party has been appointed chancellor. ?]
 
-@z_chancellor_rottgen
+@z_chancellor_wirth
 title: Let Norbert Röttgen of the Center Party be chancellor.
 view-if: z_party_leader == "Röttgen"
 subtitle: Röttgen is on the left wing of the Center Party. This may give us a better position in negotiating for other cabinet positions.
