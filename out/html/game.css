@@ -542,6 +542,9 @@ table {
 .seat.other {
     fill: #a0a0a0;
 }
+.seat.dnvp {
+    fill: #3F7BC1;
+}
 .seat.afd {
     fill: #0489DB;
 }
