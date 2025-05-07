@@ -112,7 +112,7 @@ Q.linke_leader = "Wagenknecht";
 Q.linke_party_leader = "Wissler";
 // party leader - can be Friedrich Merz or Norbert Röttgen after the 2021 December convention. Röttgen will be most friendly to the SPD.
 Q.cdu_party_leader = "Laschet";
-//FDP may change leaders if they fail to cross the threshold
+// FDP may change leaders if they fail to cross the threshold
 Q.fdp_leader = "Lidner";
 Q.afd_leader = "Weidel";
 
