@@ -7,7 +7,7 @@ new-page: true
 
 = Saskia Esken
 
-Esken has been the co-leader of the party since 2019[? if chancellor = "Esken":  as well as the current Chancellor ?][? if vice_chancellor = "Esken":  as well as the current Vice Chancellor ?]. She has been a member of the Bundestag since 2013 and was an IT specialist in the early 1990s. She rose to fame by championing labour law[? if chancellor != "Esken" and vice_chancellor != "Esken":   but has ruled out the prospect of chancellorship ?].
+Esken has been the co-leader of the party since 2019[? if chancellor = "Esken":  as well as the current Chancellor ?][? if vice_chancellor = "Esken":  as well as the current Vice Chancellor ?]. She has been a member of the Bundestag since 2013 and was an IT specialist in the early 1990s. [? if chancellor = "Esken" or vice_chancellor = "Esken": She rose to fame by championing labour law and is instrumental in the composition of the current government. ?][? if chancellor != "Esken" and vice_chancellor != "Esken": She rose to fame by championing labour law but has ruled out the prospect of chancellorship ?].
 
 - @emergency_fundraising
 - @building_the_left
