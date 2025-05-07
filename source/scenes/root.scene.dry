@@ -113,7 +113,7 @@ Q.linke_party_leader = "Wissler";
 // party leader - can be Friedrich Merz or Norbert Röttgen after the 2021 December convention. Röttgen will be most friendly to the SPD.
 Q.cdu_party_leader = "Laschet";
 //FDP may change leaders if they fail to cross the threshold
-Q.fdp_leader = "Lidner"
+Q.fdp_leader = "Lidner";
 Q.afd_leader = "Weidel";
 
 // hmm... maybe we can play nice with Steinmeier???
@@ -128,7 +128,7 @@ Q.saxon_government = "SPD";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // bundesbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 200;
+Q.rb_strength = 50;
 Q.rb_militancy = 0;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
@@ -443,8 +443,6 @@ Q.education_science = 0;
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
-
-Q.electoral_threshold = 5;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
