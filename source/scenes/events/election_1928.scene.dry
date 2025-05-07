@@ -271,7 +271,7 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Bundestag Seats</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} [+ spd_votes +]% {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_votes +]%** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
 [? if bsw_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ bsw_r +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 
