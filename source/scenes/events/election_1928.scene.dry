@@ -300,7 +300,7 @@ Black-Yellow Coalition (CDU + CSU + FDP): [+ black_yellow_coalition +]%
 
 Jamaica Coalition (CDU + CSU + FDP + Greens): [+ jamaica_coalition +]%
 
-[? if nazi_urgency <= 1 and afd_r >= 20 : The rapid rise in AfD votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and afd_r >= 20 : The rapid rise in AfD votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?][? if linke_r = 0 : The Left Party failed to meet the 5% threshold for the first time since 2002. This leaves them with only two MPs who won direct mandates in Berlin to represent them in the Bundestag. ?][? if bsw_formed and bsw_r = 0 : Contrary to many polls, the BSW failed to cross the 5% threshold, meaning that they will not hold any seats in the Bundestag. ?]
 
 [? if anti_democratic_coalition >= 50 : Together, the anti-establishmentarian Left Party, AfD, and BSW have a majority in the Bundestag. A stable governing majority will be almost impossible. ?]
 
