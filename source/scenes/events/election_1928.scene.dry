@@ -45,7 +45,7 @@ var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_r'] = Q[party + '_r'];
     if (Q.constitutional_reform >= 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold >= 5 && party == 'Other') || Q[party + '_banned']) {
+        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold >= 5 && party == 'other') || Q[party + '_banned']) {
             Q[party + '_r'] = 0;
         } else {
             Q[party + '_r'] = Q[party + '_votes'];
@@ -283,7 +283,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#0570C9'> </div> !} CSU: {!</td><td>!} 7% {!</td><td>!} 7% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes +] % {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
