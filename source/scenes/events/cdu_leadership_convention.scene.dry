@@ -1,11 +1,11 @@
 title: CDU Leadership Convention
 subtitle: The CDU chooses their new leader...
-view-if: year = 2021 and month = 12 and cdu_party_leader == "Laschet"
+view-if: cdu_relation > 0 and month = 12 and cdu_party_leader == "Laschet"
 max-visits: 1
 tags: event
 new-page: true
 
-= Center Party Conference
+= CDU Conference
 
 # reference: "Mitgliederbefragung für den CDU-Vorsitz". Cdu.de; "Merz und Röttgen für CDU-Parteivorsitz nominiert". 15 November 2021
 
