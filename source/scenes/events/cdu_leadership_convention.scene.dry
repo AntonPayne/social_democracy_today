@@ -1,6 +1,6 @@
 title: CDU Leadership Convention
 subtitle: The CDU chooses their new leader...
-view-if: year = 2021 and month = 12 and cdu_party_leader = "Laschet"
+view-if: year = 2021 and month = 12 and cdu_party_leader == "Laschet"
 max-visits: 1
 tags: event
 new-page: true
