@@ -367,18 +367,18 @@ go-to: popular_front_success
 
 @great_popular_front
 view-if: cdu_party_leader == "Röttgen" and linke_party_leader == "Conciliators"
-on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; linke_relation += 10; coup_progress += 2; in_left_coalition = 0; in_germany_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
+on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; linke_relation += 10; coup_progress += 2; in_left_coalition = 0; in_germany_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
 achievement: grosse_volksfront
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 
-Somehow, the coalition is successfully formed! The conciliatory leadership of the Center Party and KPD helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
+Somehow, the coalition is successfully formed! The conciliatory leadership of the Center Party and KPD helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Rolf Mützenich of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_success
-on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; linke_relation += 10; coup_progress += 2; in_left_coalition = 0; in_germany_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
+on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; linke_relation += 10; coup_progress += 2; in_left_coalition = 0; in_germany_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 achievement: volksfront
 
-Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
+Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rolf Mützenich of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_no_civil_war
 on-arrival: linke_goals_seen = 0; finance_minister_party = "CDU"; interior_minister_party = "CSU"; economic_minister_party = "CDU"; labor_minister_party = "CDU"; foreign_minister_party = "CDU"; agriculture_minister_party = "CDU"; bundeswehr_minister = "I"; leverage += linke_r
@@ -499,11 +499,11 @@ go-to: left_coalition_success
 
 
 @left_coalition_success
-on-arrival: spd_in_government = 1; in_left_coalition = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_germany_coalition = 0; linke_relation += 10
+on-arrival: spd_in_government = 1; in_left_coalition = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_germany_coalition = 0; linke_relation += 10
 go-to: left_coalition_civil_war if coup_progress >= 10; left_coalition_no_civil_war if coup_progress < 10
 achievement: einheitsfront
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing Wissler as chancellor. The consensus choice for chancellor, accepted by the SPD, Linke, and President [+ president +], is Rolf Mützenich, who was acceptable to the left due to his membership in the Parliamentary Left.
+Somehow, surprisingly, the left coalition is successfully formed, without appointing Wissler as chancellor. The consensus choice for chancellor, accepted by the SPD, Linke, and President [+ president +], is Rolf Mützenich, who was acceptable due to his membership in the Parliamentary Left.
 
 # just raise the coup limit, don't immediately go to civil war
 
@@ -728,7 +728,7 @@ Finally, the SPD can govern alone! Our long campaign of electioneering has paid 
 Who should be chancellor?
 
 - @braun_majority_chancellor: Otto Braun for Chancellor.
-- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
+- @breitscheid_majority_chancellor: Rolf Mützenich for Chancellor.
 - @muller_majority_chancellor: Hermann Müller for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
@@ -740,9 +740,9 @@ on-arrival: chancellor = "Braun"
 [? if president != "Braun": Otto Braun has become chancellor of the SPD majority. ?]
 
 @breitscheid_majority_chancellor
-on-arrival: chancellor = "Breitscheid"
+on-arrival: chancellor = "Mützenich"
 
-Rudolf Breitscheid has become chancellor of the SPD majority.
+Rolf Mützenich has become chancellor of the SPD majority.
 
 @muller_majority_chancellor
 view-if: muller_dead = 0
@@ -783,7 +783,7 @@ on-arrival: sa_strength += 100; sh_strength += 100; in_emergency_government = 1
 Yes, an emergency minority government, with the support of the SPD. Who should lead this emergency minority government?
 
 - @braun_emergency_chancellor: Otto Braun for Chancellor-President!
-- @breitscheid_emergency_chancellor: Rudolf Breitscheid for emergency Chancellor.
+- @breitscheid_emergency_chancellor: Rolf Mützenich for emergency Chancellor.
 - @bruning_emergency_chancellor: Brüning of the Center Party, as a goodwill gesture toward the bourgeoisie.
 - @rottgen_emergency_chancellor: Norbert Röttgen of the Center Party, as a gesture of republican unity.
 
@@ -801,9 +801,9 @@ Thus, we have Chancellor-President Otto Braun. He claims that he will resign as 
 
 @breitscheid_emergency_chancellor
 subtitle: The Communists are warming to him...
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; spd_in_government = 1; linke_relation += 5; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; bundeswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; bundeswehr_loyalty -= 0.1;
+on-arrival: chancellor = "Mützenich"; chancellor_party = "SPD"; spd_in_government = 1; linke_relation += 5; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; bundeswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; bundeswehr_loyalty -= 0.1;
 
-We have appointed Rudolf Breitscheid as emergency chancellor. The Communists consider him less objectionable than the alternatives, although it is unclear whether they will tolerate this government.
+We have appointed Rolf Mützenich as emergency chancellor. The Communists consider him less objectionable than the alternatives, although it is unclear whether they will tolerate this government.
 
 - @far_right_coup
 - @emergency_no_confidence
@@ -821,7 +821,7 @@ The Center Party is pleased, and somewhat surprised, that we have appointed [+ c
 view-if: z_party_leader == "Röttgen"
 on-arrival: chancellor = "Röttgen"; chancellor_party = "CDU"; spd_in_government = 1; cdu_relation += 10; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; bundeswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD" 
 
-The Center Party is pleased that we have appointed [+ chancellor +] as chancellor.
+The CDU is pleased that we have appointed [+ chancellor +] as chancellor.
 
 - @far_right_coup
 - @emergency_no_confidence
@@ -923,13 +923,13 @@ Who should be the chancellor?
 - @z_chancellor
 
 @breitscheid_coalition_chancellor
-title: Rudolf Breitscheid for Chancellor
+title: Rolf Mützenich for Chancellor
 subtitle: Breitscheid is viewed as friendlier towards the left of the SPD.
 view-if: year >= 1930
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD";
+on-arrival: chancellor = "Mützenich"; chancellor_party = "SPD";
 go-to: ministries
 
-Rudolf Breitscheid has been appointed chancellor.
+Rolf Mützenich has been appointed chancellor.
 
 
 @grand_coalition
@@ -945,7 +945,7 @@ go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD")
 @grand_coalition_cdu_lead
 go-to: grand_coalition_cdu_lead_2 if greens_relation >= 30; grand_coalition_fail if greens_relation < 30
 
-There are enough votes to form a majority coalition consisting of the SPD, Center (Z), Bavarian People's (BVP), Democratic ([+ ddp_name +]), and People's (DVP) parties. Given our rather weak electoral performance, [? if spd_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_spd = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
+There are enough votes to form a majority coalition consisting of the SPD, CDU, and CSU. Given our rather weak electoral performance, [? if spd_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_spd = 1 : and the vote of no confidence against us, ?] the CDU will take the lead role in forming a government.
 
 # TODO: if the SPD participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -961,7 +961,7 @@ Brüning is not opposed to a coalition with us. Alternatively, we could enter a 
 - @unity_government
 
 @join_bruning
-view-if: grand_coalition >= 50 or zimbabwe_coalition >= 50
+view-if: germany_coalition >= 50 or zimbabwe_coalition >= 50
 on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "CSU"; justice_minister_party = "CDU"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "CDU"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; leverage = 25 if leverage >= 25;
 go-to: ministries
 
@@ -1101,13 +1101,21 @@ As expected, the DVP is too set in their anti-democratic ways.
 
 
 @grand_coalition_spd_lead
-on-arrival: leverage -= 15 if greens_relation < 20
+go-to: grand_coalition_confirmation if year = 2021; grand_coalition_chancellor if year > 2021
 
-As expected, the SPD is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic ([+ ddp_name +]), and People's (DVP) parties.
+The SPD is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor.
 
-[? if greens_relation < 20 : As our relation with the DVP is poor, they are demanding more minister posts in order to remain part of the coalition. ?]
+@grand_coalition_confirmation
 
-Who should be the chancellor?
+Our party rose to fame due to its promise to never form another coalition with the CDU/CSU. Must we betray our promise to the proletariat?
+
+- @grand_coalition_chancellor: Our political reality demands another grand coalition.
+- @coalition_menu: No, we can try for another coalition.
+
+@grand_coalition_chancellor
+on-arrival: workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; workers_linke += 1 if year = 2021; new_middle_spd -= 2 if year = 2021; new_middle_cdu -= 3 if year = 2021; new_middle_afd += 4 if year = 2021
+
+[? if year = 2021 : Fine. Despite protests from within our party's left wing, we form a coalition with the CDU/CSU. ?] Who should be our chancellor?
 
 - @muller
 - @braun
@@ -1299,7 +1307,7 @@ view-if: foreign_minister_party != "SPD"
 on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"
 go-to: ministries
 
-Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
+Rolf Mützenich of the SPD has been appointed Foreign Minister.
 
 
 @agriculture
