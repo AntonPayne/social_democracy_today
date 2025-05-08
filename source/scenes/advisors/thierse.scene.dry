@@ -1,0 +1,57 @@
+title: Wolfgang Thierse
+is-pinned-card: true
+tags: advisor, seeheimer
+card-image: portraits/ThierseWolfgang.jpg
+view-if: thierse_advisor = 1
+new-page: true 
+
+= Wolfgang Thierse
+
+Thierse is a former research assistant from East Germany who came from a conservative Catholic family. He is an activist for liberal democracy and for broadening the support of the SPD. 
+
+- @support_peoples_party
+- @build_peoples_party
+- @campaigning_peoples_party
+- @democratic
+- @root: Return to main
+
+@support_peoples_party
+title: Build support for a People's Party
+subtitle: Can we expand our party beyond the industrial working class?
+view-if: peoples_party = 0
+choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; seeheimer_strength += 5;
+
+We are building up support for the idea of a People's Party.
+
+@build_peoples_party
+title: Building a People's Party
+subtitle: Can we expand our party beyond the industrial working class?
+view-if: peoples_party = 0
+choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: peoples_party
+
+@campaigning_peoples_party
+title: Campaigning as a People's Party
+subtitle: Campaigning with some of our previously nontraditional demographics.
+view-if: peoples_party = 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: peoples_party_campaigning
+
+
+@democratic
+title: Rally for democracy
+subtitle: Expanding our nascent democracy and defending it against dictatorship and fascism.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; democratization += 1; pro_republic += 4*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3; cdu_relation += 4; greens_relation += 4; fdp_relation += 5;
+
+Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it. This also comes off as critical support for the moderate membership within the CDU/CSU, Greens, and FDP.
+
+[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
+[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
