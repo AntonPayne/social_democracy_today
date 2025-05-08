@@ -1,0 +1,41 @@
+title: Lars Klingbeil
+is-pinned-card: true
+tags: advisor, seeheimer
+card-image: img/portraits/KlingbeilLars.jpg
+view-if: klingbeil_advisor = 1
+new-page: true 
+
+= Lars Klingbeil
+
+Klingbeil [? if year > 2021 : was ?][? if year = 2021 : is ?] the Secretary General of the SPD. He is a Seeheimer leader who seeks to work with the bourgeois parties.
+
+- @coalition
+- @finance_ministry_
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Klingbeil can improve our relationships with our centrist and center-right coalition partners in the Bundestag.
+choose-if: advisor_action_timer <= 0 and (in_germany_coalition or in_grand_coalition or in_kenya_coalition)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; cdu_relation += 6; fdp_relation += 6 if in_germany_coalition
+
+We have improved our relations with the [? if in_germany_coalition : CDU/CSU and FDP, ?][? if not in_germany_coalition: CDU/CSU, ?] and reduced tensions within the coalition.
+
+@finance_ministry_
+title: Fiscal Policy
+subtitle: As Finance Minister, Klingbeil can enact tax policies.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if finance_minister != "Klingbeil" : Klingbeil does not control the finance ministry. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister == "Klingbeil"
+on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
+go-to: fiscal_policy
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Klingbeil" and vice_chancellor != "Klingbeil" : Klingbeil must be Chancellor or Vice Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Klingbeil" or vice_chancellor == "Klingbeil")
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
