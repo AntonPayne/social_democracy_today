@@ -1,7 +1,7 @@
 title: Lars Klingbeil
 is-pinned-card: true
 tags: advisor, seeheimer
-card-image: img/portraits/KlingbeilLars.jpg
+card-image: portraits/KlingbeilLars.jpg
 view-if: klingbeil_advisor = 1
 new-page: true 
 
