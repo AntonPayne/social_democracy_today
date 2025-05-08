@@ -543,14 +543,14 @@ Q.sender_advisor = 0;
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+Q.mutzenich_advisor = 0; // Rolf Mutzenich
 
 // neoliberal alternate advisors
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+
 
 // Seeheimer advisors
 Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
+Q.klingbeil_advisor = 0; // Lars Klingbeil
 Q.baade_advisor = 0; // Fritz Baade
 Q.pfulf_advisor = 0; // Antonie Pfülf
 
