@@ -82,14 +82,14 @@ go-to: rm_main
 
 Severing has been removed as an advisor. The Seeheimer faction disapproves.
 
-@remove_braun
-title: Remove Braun
-view-if: braun_advisor = 1
+@remove_klingbeil
+title: Remove Klingbeil
+view-if: klingbeil_advisor = 1
 tags: remove_advisor
-on-arrival: braun_advisor = 0; seeheimer_dissent += 5; n_advisors -= 1
+on-arrival: klingbeil_advisor = 0; seeheimer_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Braun has been removed as an advisor. The Seeheimer faction disapproves.
+Klingbeil has been removed as an advisor. The Seeheimer faction disapproves.
 
 @remove_pfulf
 title: Remove Pfülf
@@ -371,17 +371,17 @@ go-to: advisor_menu
 
 Carl Severing is now an advisor.
 
-@add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+@add_klingbeil
+title: Lars Klingbeil
+subtitle: Lars Klingbeil [? if year > 2021 : was ?][? if year = 2021 : is ?] the Secretary General of the SPD., and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Fiscal Policy, Negotiating with the Coalition ?]
 is-card: true
-card-image: img/portraits/BraunOtto.jpg
+card-image: portraits/KlingbeilLars.jpg
 tags: seeheimer_advisor
-view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; seeheimer_strength += 5
+view-if: klingbeil_advisor = 0 and n_advisors < 3
+on-arrival: klingbeil_advisor = 1; n_advisors += 1; seeheimer_strength += 5
 go-to: advisor_menu
 
-Otto Braun is now an advisor.
+Lars Klingbeil is now an advisor.
 
 @add_pfulf
 title: Antonie Pfülf
