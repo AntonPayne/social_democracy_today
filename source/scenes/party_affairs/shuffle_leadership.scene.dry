@@ -61,14 +61,14 @@ go-to: rm_main
 Scholz has been removed as an advisor. The neo-liberal faction disapproves.
 
 
-@remove_breitscheid
-title: Remove Breitscheid
-view-if: breitscheid_advisor = 1
+@remove_mutzenich
+title: Remove Mützenich
+view-if: mutzenich_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; neoliberal_dissent += 5; n_advisors -= 1
+on-arrival: mutzenich_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The neo-liberal faction disapproves.
+Mützenich has been removed as an advisor. The leftist faction disapproves.
 
 # Seeheimers
 
@@ -356,18 +356,6 @@ go-to: advisor_menu
 
 Olaf Scholz is now an advisor.
 
-@add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
-is-card: true
-card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: breitscheid_advisor = 0 and n_advisors < 3
-on-arrival: breitscheid_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: neoliberal_advisor
-
-Rudolf Breitscheid is now an advisor.
-
 # Seeheimer
 
 
@@ -457,21 +445,21 @@ tags: left_advisor
 
 Kurt Rosenfeld is now an advisor.
 
-@add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+@add_mutzenich
+title: Rolf Mützenich
+subtitle: Rolf Mützenich comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
-card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: portraits/MutzenichRolf.jpg
+view-if: mutzenich_advisor = 0 and n_advisors < 3
+on-arrival: mutzenich_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: left_advisor
 
-Max Seydewitz is now an advisor.
+Rolf Mützenich is now an advisor.
 
 @add_siemsen
 title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+subtitle: Anna Siemsen is an educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
