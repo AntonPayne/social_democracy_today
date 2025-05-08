@@ -10,11 +10,13 @@ go-to: election_algorithm
 set-jump: pres_election
 face-image: img/steinmeier_election.jpg
 
-= STEINMEIER SEEKS RE-ELECTION
+= Steinmeier Seeks Re-election
 
 @pres_election
 
-The presidential election is coming up soon. While the position of President is nowhere near as powerful as it was during the Weimar Republic, [? if spd_in_government = 0 : it would still help us compensate for our exclusion from the current government ?][? if spd_in_government = 1 : it would still compliment our participation in the current government ?]. Meanwhile, the far-right AfD has endorsed Max Otte of the CDU. Die Linke is campaigning behind the independent Gerhard Trabert.
+The presidential election is coming up soon. While the position of President is nowhere near as powerful as it was during the Weimar Republic, [? if spd_in_government = 0 : it would still help us compensate for our exclusion from the current government ?][? if spd_in_government = 1 : it would still compliment our participation in the current government ?].
+
+Meanwhile, the far-right AfD has endorsed Max Otte of the CDU while Die Linke is campaigning behind the independent Gerhard Trabert. Both parties are aware that their candidates have no realistic chance at acquiring the presidency. Instead, these candidates are more likely to be publicity stunts.
 
 # this is supposed to be a Steinmeier landslide victory
 
@@ -70,16 +72,18 @@ Trabert - [+ trabert_votes_disp +]%
 
 
 @steinmeier_wins
-on-arrival: president = "Steinmeier"; workers_spd += 3; rural_spd += 3
+on-arrival: president = "Steinmeier"; workers_spd += 3; rural_spd += 1; workers_afd += 2; unemployed_afd += 1
 
 As expected, the incumbent Steinmeier wins the presidency. Let's hope he continues to keep the neo-Nazis out of power.
 
 @otte_wins
-on-arrival: president = "Steinmeier"; pro_republic -= 10; afd_workers += 8; cdu_catholics -= 5; afd_rural += 8; afd_new_middle += 5
+on-arrival: president = "Otte"; pro_republic -= 10; afd_workers += 8; cdu_catholics -= 5; afd_rural += 8; afd_new_middle += 5
 
-Somehow, Max Otte manages to emerge victorious in the presidential elections. The CDU revokes his membership owing to his collusion with the AfD, triggering a constitutional crisis. However, a convenient assasination forces Steinmeier to maintain his position. The people's trust in the democratic system has been shaken by this whole ordeal.
+Somehow, Max Otte manages to emerge victorious in the presidential elections. The CDU revokes his membership owing to his collusion with the AfD, triggering a constitutional crisis. In the end, the people's trust in the democratic system has been completely shattered by this ordeal. No one trusts us with anything anymore.
 
 What have you done, [REDACTED]?
+
+- @game_over
 
 @trabert_wins
 on-arrival: president = "Trabert"; linke_workers += 15; linke_rural += 5; linke_new_middle += 5; pro_republic -= 5
