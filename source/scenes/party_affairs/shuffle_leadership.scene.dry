@@ -91,14 +91,14 @@ go-to: rm_main
 
 Klingbeil has been removed as an advisor. The Seeheimer faction disapproves.
 
-@remove_pfulf
-title: Remove Pfülf
-view-if: pfulf_advisor = 1
+@remove_thierse
+title: Remove Thierse
+view-if: thierse_advisor = 1
 tags: remove_advisor
-on-arrival: pfulf_advisor = 0; seeheimer_dissent += 5; n_advisors -= 1
+on-arrival: thierse_advisor = 0; seeheimer_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Pfülf has been removed as an advisor. The Seeheimer faction disapproves.
+Thierse has been removed as an advisor. The Seeheimer faction disapproves.
 
 
 # labor
@@ -169,15 +169,6 @@ go-to: rm_main
 
 Rosenfeld has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_seydewitz
-title: Remove Seydewitz
-view-if: seydewitz_advisor = 1
-tags: remove_advisor
-on-arrival: seydewitz_advisor = 0; left_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Seydewitz has been removed as an advisor. The Leftist faction disapproves.
-
 @remove_siemsen
 title: Remove Siemsen
 view-if: siemsen_advisor = 1
@@ -186,9 +177,6 @@ on-arrival: siemsen_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Siemsen has been removed as an advisor. The Leftist faction disapproves.
-
-
-
 
 # neorevisionists
 
@@ -383,17 +371,17 @@ go-to: advisor_menu
 
 Lars Klingbeil is now an advisor.
 
-@add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+@add_thierse
+title: Wolfgang Thierse
+subtitle: Wolfgang Thierse is a leader in social policy and pro-democracy advocacy. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Rally for Democracy ?]
 is-card: true
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 0 and n_advisors < 3
-on-arrival: pfulf_advisor = 1; n_advisors += 1
+card-image: portraits/ThierseWolfgang.jpg
+view-if: thierse_advisor = 0 and n_advisors < 3
+on-arrival: thierse_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: seeheimer_advisor
 
-Antonie Pfülf is now an advisor.
+Wolfgang Thierse is now an advisor.
 
 # left
 
