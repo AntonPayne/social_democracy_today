@@ -76,6 +76,8 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
+- @merkelism: Pivoting towards accountability and stately behavior.
+- @fiery: A fiery critique of our political opponents.
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -101,7 +103,7 @@ Our speakers defend the republican system and rail against the monarchists and a
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the need for Germany to stay in NATO.
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
@@ -113,6 +115,26 @@ unavailable-subtitle: The economic crisis is largely over now, and the public is
 on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
 
 The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
+
+
+@merkelism
+on-arrival: merkelism += 4*(1-dissent); workers_spd += workers_cdu += 2 if merkelism >= 65 and cdu_party_leader != "Merz"; workers_spd += 5*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent) if merkelism >= 65; workers_spd -= 1 if merkelism < 40; new_middle_spd -= 1 if merkelism < 40; unemployed_spd += 2 if merkelism >= 65
+
+Our speakers paint an orderly, multilateral, lawful, and moral world with a focus on composure. Our party members declare that our new agenda revolves around not bowing down to baseless slander.
+
+[? if merkelism < 40 : With Angela Merkel's talk of solving a crisis with patience and prudence in decline, this nuanced take does not go well with voters. ?]
+[? if merkelism >= 40 and merkelism < 65 : Even though the appeal of Merkelism has declined recently, this calm appeal is not completely unattractive to voters. ?]
+[? if merkelism >= 65 : With talk of Merkelism in vogue, evoking themes of respect and solidarity goes well with potential voters. ?]
+
+
+@fiery
+on-arrival: merkelism -= 3; workers_spd += 4*(1-dissent); unemployed_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent) if merkelism < 40; workers_spd -= 1 if merkelism >= 40 and merkelism < 65; new_middle_spd -= 1 if merkelism >= 65; unemployed_spd -= 2 if merkelism >= 65; workers_cdu -= 2*(1-dissent) if merkelism >= 65
+
+Our speakers give an impassioned take by talking about the strings with which the non-leftists pave the way for lobbyists into government.
+
+[? if merkelism < 40 : With Angela Merkel's talk of solving a crisis with patience and prudence in decline, this fiery critique serves well with potential voters. ?]
+[? if merkelism >= 40 and merkelism < 65 : Even though the appeal of Merkelism has declined recently, this fiery critique does not seem appealing to many. ?]
+[? if merkelism >= 65 : In an era of German politics dominated by composure and patience, this fiery critique drives away many potential voters. ?]
 
 
 @local
