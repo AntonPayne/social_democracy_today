@@ -118,7 +118,7 @@ The WTB plan has become a popular rallying cry for our party. The workers are ea
 
 
 @merkelism
-on-arrival: merkelism += 4*(1-dissent); workers_spd += workers_cdu += 2 if merkelism >= 65 and cdu_party_leader != "Merz"; workers_spd += 5*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent) if merkelism >= 65; workers_spd -= 1 if merkelism < 40; new_middle_spd -= 1 if merkelism < 40; unemployed_spd += 2 if merkelism >= 65
+on-arrival: merkelism += 4*(1-dissent); workers_cdu += 2 if merkelism >= 65 and cdu_party_leader != "Merz"; workers_spd += 5*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent) if merkelism >= 65; workers_spd -= 1 if merkelism < 40; new_middle_spd -= 1 if merkelism < 40; unemployed_spd += 2 if merkelism >= 65
 
 Our speakers paint an orderly, multilateral, lawful, and moral world with a focus on composure. Our party members declare that our new agenda revolves around not bowing down to baseless slander.
 
