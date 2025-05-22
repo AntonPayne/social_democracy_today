@@ -27,7 +27,7 @@ go-to: international_relations
 title: Foreign Policy
 subtitle: As foreign expert, Mützenich can set our foreign policy.
 unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "SPD" : We do not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government and and foreign_minister_party == "SPD"
+choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
 
@@ -37,7 +37,7 @@ title: Party Discipline
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_dissent -= 10; labor_dissent -= 10; center_dissent -= 5; reformist_dissent -= 10; neorevisionist_dissent -= 5
+on-arrival: advisor_action_timer = 6; left_dissent -= 10; labor_dissent -= 10; neoliberal_dissent -= 5; seeheimer_dissent -= 5; modernist_dissent -= 5
 
 We have enforced party discipline to reduce dissent across all factions.
 
