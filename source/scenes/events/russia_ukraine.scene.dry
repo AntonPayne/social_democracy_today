@@ -55,7 +55,7 @@ We criticize [+ foreign_minister +]'s sabre-rattling and call for a more peacefu
 subtitle: Such rhetoric is too naive and severely underestimates the threat posed by Putin.
 view-if: foreign_minister_party == "Greens" and foreign_minister == "Trittin"
 on-arrival: budget -= 1; economic_growth -= 0.3; greens_relations -= 4; cdu_relations += 3; workers_greens -= 3; workers_spd -= 3; workers_afd += 5; unemployed_afd += 4; new_middle_afd += 3; coalition_dissent += 1
-on-departure: foreign_minister == "Habeck"
+on-departure: foreign_minister = "Habeck"
 
 We criticize [+ foreign_minister +]'s naivety and call for a more aggressive foreign policy when dealing with Russia. The old doves in the Greens are shocked by our intransigence but this pleases everyone in our party except for our left wing. Jürgen Trittin resigns amidst our criticism, letting the more interventionist Robert Habeck take his place. Due to our protests, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on this affair, claiming to represent a new Germany without coalition politics.
 
