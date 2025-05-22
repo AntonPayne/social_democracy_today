@@ -1,0 +1,29 @@
+title: Russia Invades Ukraine
+new-page: true
+subtitle: A "special military operation" has surprised Europe
+tags: event
+view-if: year = 2022 and month >= 2 and russia_ukraine = 0
+on-arrival: russia_ukraine += 1
+max-visits: 1
+go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
+
+= Russo-Ukranian War
+
+The conflict in Ukraine that had been static since 2014 erupted once again after Russian divisions began an incursion into Ukrainian-administered territory. Ukrainian forces are in retreat, with heavy fighting being reported in major Ukrainian cities.
+
+Vladimir Putin claims that the Russian invasion was in response to rising Ukrainian neo-Nazism and NATO expansion. Meanwhile, Volodymyr Zelenskyy claims that he is willing to do anything to defend his country, despite initial electoral promises of ending the Donbass War.
+
+@gov_menu
+
+As we are part of the current government, we are expected to provide a response to this sudden invasion.
+
+[? if foreign_minister_party != "SPD" and foreign_minister != "Trittin" : Foreign Minister [+ foreign_minister +] spoke about Germany’s solidarity with Ukraine and European security in their latest speech It is up to us on how to react to it. ?]
+[? if foreign_minister_party = "Greens" and foreign_minister = "Trittin" : Foreign Minister [+ foreign_minister +] has opposed arms deliveries to Ukraine and emphasized the importance of diplomacy in resolving conflicts. ?]
+[? if foreign_minister_party = "SPD" : As we control the foreign ministry, we are expected to voice our opinions on this conflict. ?]
+
+- @bundeswehr: We must significantly increase military spending in light of this invasion.
+- @sanctions: We must launch punitive sanctions on Russia in protest of this invasion.
+- @criticize: Criticize [+ foreign_minister +] hawkish speech.
+- @ostenpolitik: Emphasize the need for a New Eastern Policy.
+
+@oppo_menu
