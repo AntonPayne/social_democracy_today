@@ -2,7 +2,7 @@ title: Russia Invades Ukraine
 new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
-view-if: year = 2022 and month >= 2 and russia_ukraine = 0
+view-if: year == 2022 and month >= 2 and russia_ukraine == 0
 on-arrival: russia_ukraine += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
@@ -11,19 +11,68 @@ go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_
 
 The conflict in Ukraine that had been static since 2014 erupted once again after Russian divisions began an incursion into Ukrainian-administered territory. Ukrainian forces are in retreat, with heavy fighting being reported in major Ukrainian cities.
 
-Vladimir Putin claims that the Russian invasion was in response to rising Ukrainian neo-Nazism and NATO expansion. Meanwhile, Volodymyr Zelenskyy claims that he is willing to do anything to defend his country, despite initial electoral promises of ending the Donbass War.
+Vladimir Putin claims that the Russian invasion was in response to rising Ukrainian neo-Nazism and NATO expansion. Meanwhile, Volodymyr Zelenskyy claims that he is willing to do anything to defend his country, despite initial electoral promises of peacefully ending the Donbass War.
 
 @gov_menu
 
 As we are part of the current government, we are expected to provide a response to this sudden invasion.
 
-[? if foreign_minister_party != "SPD" and foreign_minister != "Trittin" : Foreign Minister [+ foreign_minister +] spoke about Germany’s solidarity with Ukraine and European security in their latest speech It is up to us on how to react to it. ?]
-[? if foreign_minister_party = "Greens" and foreign_minister = "Trittin" : Foreign Minister [+ foreign_minister +] has opposed arms deliveries to Ukraine and emphasized the importance of diplomacy in resolving conflicts. ?]
-[? if foreign_minister_party = "SPD" : As we control the foreign ministry, we are expected to voice our opinions on this conflict. ?]
+[? if foreign_minister_party != "SPD" and foreign_minister != "Trittin" : Foreign Minister [+ foreign_minister +] spoke about Germany’s solidarity with Ukraine and European security in their latest speech. It is up to us on how to react to it. ?]
+[? if foreign_minister_party == "Greens" and foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] has opposed arms deliveries to Ukraine and emphasized the importance of diplomacy in resolving conflicts. It is up to us on how to react to it. ?]
+[? if foreign_minister_party == "SPD" : As we control the foreign ministry, we are expected to voice our opinions on this conflict. ?]
+
+Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
 - @bundeswehr: We must significantly increase military spending in light of this invasion.
 - @sanctions: We must launch punitive sanctions on Russia in protest of this invasion.
-- @criticize: Criticize [+ foreign_minister +] hawkish speech.
+- @criticize_hawkish: Criticize [+ foreign_minister +]'s hawkish speech.
+- @criticize_dovish: Criticize [+ foreign_minister +]'s dovish speech.
 - @ostenpolitik: Emphasize the need for a New Eastern Policy.
 
+@bundeswehr
+subtitle: We are living through a watershed era. To keep warmongers like Putin in check, we must improve our defenses.
+view-if: bundeswehr_minister_party == "SPD"
+on-arrival: budget -= 2; greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
+
+Chancellor [+ chancellor +] proclaims that the Russo-Ukranian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
+
+[? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?][? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
+
+@sanctions
+subtitle: We must be quick to provide aid to Zelenskyy’s struggle. At the same time, we must cut economic ties with Russia.
+on-arrival: budget -= 1; bundeswehr_loyalty += 0.02 if bundeswehr_loyalty < 1; nationalism += 4; left_dissent += 2; economic_growth -= 0.4; workers_afd += 3; unemployed_afd += 3; new_middle_afd += 2
+
+Even if Germany does not militarily intervene in the Russo-Ukranian conflict, we can join a coalition of European countries and impose strict sanctions against Russia. A quick scuffle follows to make Germany independent of Russian gas and oil. Both our anti-war membership and the center-right parties are dissatisfied with our vague stance. The AfD exploits our half-measures to draw away voters.
+
+@criticize_hawkish
+subtitle: Such rhetoric is highly dangerous and runs the risk of avoidable escalation.
+view-if: foreign_minister_party != "SPD" and foreign_minister != "Trittin"
+on-arrival: budget -= 1; economic_growth -= 0.4; workers_greens -= 2; workers_spd -= 2; workers_afd += 4; unemployed_afd += 3; new_middle_afd += 2; coalition_dissent += 1
+
+We criticize [+ foreign_minister +]'s sabre-rattling and call for a more peaceful foreign policy when dealing with Russia. The newfound hawks in the Greens are shocked by our intransigence but this pleases our left wing. Despite our hesitancy, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on the coalition infighting.
+
+@criticize_dovish
+subtitle: Such rhetoric is too naive and severely underestimates the threat posed by Putin.
+view-if: foreign_minister_party == "Greens" and foreign_minister == "Trittin"
+on-arrival: budget -= 1; economic_growth -= 0.3; greens_relations -= 4; cdu_relations += 3; workers_greens -= 3; workers_spd -= 3; workers_afd += 5; unemployed_afd += 4; new_middle_afd += 3; coalition_dissent += 1
+on-departure: foreign_minister == "Habeck"
+
+We criticize [+ foreign_minister +]'s naivety and call for a more aggressive foreign policy when dealing with Russia. The old doves in the Greens are shocked by our intransigence but this pleases everyone in our party except for our left wing. Jürgen Trittin resigns amidst our criticism, letting the more interventionist Robert Habeck take his place. Due to our protests, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on this affair, claiming to represent a new Germany without coalition politics.
+
+@ostenpolitik
+view-if: foreign_minister_party == "SPD"
+on-arrival: economic_growth -= 0.2; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1
+
+We advocate for easing tensions with the East, promoting a peaceful end to the Russo-Ukranian conflict. The newfound hawks in the Greens are shocked by our intransigence. Amidst rising criticism of Putin, we are forced to impose slight restrictions on Russian goods into Germany. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on locking up the hawkish vote.
+
 @oppo_menu
+
+As we are the leader of the opposition, we are expected to provide a response to this sudden invasion.
+
+[? if foreign_minister_party != "SPD" and foreign_minister != "Trittin" : Foreign Minister [+ foreign_minister +] spoke about Germany’s solidarity with Ukraine and European security in their latest speech, earning applause from the CDU. It is up to us on how to react to it. ?]
+
+Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
+
+# - @support
+# - @no_comment
+# - @join
