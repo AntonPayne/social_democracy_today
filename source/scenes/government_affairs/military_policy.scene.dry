@@ -22,7 +22,7 @@ The Bundeswehr has been reformed since the days of the Weimar Republic. Still, [
 subtitle: -1 budget
 choose-if: budget >= 1
 unavailable-subtitle: We do not have the budget.
-on-arrival: budget -= 1; cdu_relations += coalition_dissent -= 1 if coalition_dissent > 0; bundeswehr_loyalty += 0.07 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; linke_coalition_dissent += 1; west_relation += 1; east_relation += 1; eu_progress -= 1; economic_growth += 0.1
+on-arrival: budget -= 1; cdu_relations += 3; coalition_dissent -= 1 if coalition_dissent > 0; bundeswehr_loyalty += 0.07 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; linke_coalition_dissent += 1; west_relation += 1; east_relation += 1; eu_progress -= 1; economic_growth += 0.1
 
 The military and the center-right parties are pleasantly surprised that we would increase military funding. Our membership tends to be anti-military, and is less enthused. Germany's neighbors are supportive of our military buildup.
 
