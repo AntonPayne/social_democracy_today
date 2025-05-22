@@ -1416,7 +1416,7 @@ go-to: ministries
 @drop_bundeswehr
 title: Drop the Bundeswehr Ministry.
 view-if: bundeswehr_minister_party = "SPD"
-on-arrival: bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lidner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
-tags: drop_mins_1928 leverage += 15;
+on-arrival: leverage += 15; bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lidner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
+tags: drop_mins_1928
 tags: drop_mins_1928
 go-to: ministries
