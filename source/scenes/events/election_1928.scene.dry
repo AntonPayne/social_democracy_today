@@ -1313,12 +1313,12 @@ go-to: ministries
 
 [? if left_strength <= neoliberal_strength + seeheimer_strength : Heiko Maas ?][? if left_strength <= neoliberal_strength + seeheimer_strength : Rolf Mützenich ?] of the SPD has been appointed Foreign Minister.
 
-
 @environment
 title: Environment Ministry
 subtitle: This is the favourite ministry for the Greens.
 view-if: environment_minister_party != "SPD"
 on-arrival: leverage -= 5; environment_minister_party = "SPD"; environment_minister = "Schulze"
+tags: mins_1928
 go-to: ministries
 
 Svenja Schulze of the SPD has been appointed Environment Minister.
@@ -1409,14 +1409,14 @@ go-to: ministries
 @drop_agriculture
 title: Drop the Agriculture Ministry.
 view-if: agriculture_minister_party = "SPD"
-on-arrival: agriculture_minister_party = "FDP"; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "CDU" if in_germany_coalition; agriculture_minister = "Hermes" if in_germany_coalition
+on-arrival: agriculture_minister_party = "FDP"; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "CDU" if in_germany_coalition or in_grand_coalition; agriculture_minister = "Hermes" if in_germany_coalition
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_bundeswehr
 title: Drop the Bundeswehr Ministry.
 view-if: bundeswehr_minister_party = "SPD"
-on-arrival: bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lidner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
+on-arrival: bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lidner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
 tags: drop_mins_1928 leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
