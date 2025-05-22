@@ -1311,7 +1311,7 @@ view-if: foreign_minister_party != "SPD"
 on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Maas" if left_strength <= neoliberal_strength + seeheimer_strength; foreign_minister = "Mützenich" if left_strength > neoliberal_strength + seeheimer_strength
 go-to: ministries
 
-[? if left_strength <= neoliberal_strength + seeheimer_strength : Heiko Maas ?][? if left_strength <= neoliberal_strength + seeheimer_strength : Rolf Mützenich ?] of the SPD has been appointed Foreign Minister.
+[? if left_strength <= neoliberal_strength + seeheimer_strength : Heiko Maas ?][? if left_strength > neoliberal_strength + seeheimer_strength : Rolf Mützenich ?] of the SPD has been appointed Foreign Minister.
 
 @environment
 title: Environment Ministry
@@ -1417,6 +1417,5 @@ go-to: ministries
 title: Drop the Bundeswehr Ministry.
 view-if: bundeswehr_minister_party = "SPD"
 on-arrival: leverage += 15; bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lidner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
-tags: drop_mins_1928
 tags: drop_mins_1928
 go-to: ministries
