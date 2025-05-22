@@ -9,7 +9,7 @@ card-image: img/portraits/LeberJulius.jpg
 
 = Military Policy
 
-The Bundeswehr has been reformed since the days of the Weimar Republic. Still, [? if bundeswehr_loyalty > 0.70 : the institution suffers from a terrible image outside our boundaries ?][? if bundeswehr_loyalty <= 0.70 : the institution is considered a right-wing haven by many ?.]  However, we now control the military as part of the government. What should we do to continue these reforms?
+The Bundeswehr has been reformed since the days of the Weimar Republic. Still, [? if bundeswehr_loyalty > 0.70 : the institution suffers from a terrible image outside our boundaries ?][? if bundeswehr_loyalty <= 0.70 : the institution is considered a right-wing haven by many ?].  However, we now control the military as part of the government. What should we do to continue these reforms?
 
 - @increase_funding: Increase funding for the military to purchase its loyalty.
 - @decrease_funding: Reduce funding for the military so we have more for social spending.
