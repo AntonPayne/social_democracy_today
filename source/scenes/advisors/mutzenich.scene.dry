@@ -25,9 +25,9 @@ go-to: international_relations
 
 @mutzenich_foreign
 title: Foreign Policy
-subtitle: As Foreign Minister, Mützenich can set our foreign policy.
-unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "Mützenich" : Mützenich does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister == "Mützenich" and foreign_minister_party == "SPD"
+subtitle: As foreign expert, Mützenich can set our foreign policy.
+unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "SPD" : We do not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government and and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
 
