@@ -49,7 +49,7 @@ subtitle: Such rhetoric is highly dangerous and runs the risk of avoidable escal
 view-if: foreign_minister_party != "SPD" and foreign_minister != "Trittin"
 on-arrival: budget -= 1; economic_growth -= 0.4; workers_greens -= 2; workers_spd -= 2; workers_afd += 4; unemployed_afd += 3; new_middle_afd += 2; coalition_dissent += 1
 
-We criticize [+ foreign_minister +]'s sabre-rattling and call for a more peaceful foreign policy when dealing with Russia. The newfound hawks in the Greens are shocked by our intransigence but this pleases our left wing. Despite our hesitancy, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on the coalition infighting.
+We criticize [+ foreign_minister +]'s sabre-rattling and call for a more peaceful foreign policy when dealing with Russia. The newfound hawks in the [+ foreign_minister_party +] are shocked by our intransigence but this pleases our left wing. Despite our hesitancy, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on the coalition infighting.
 
 @criticize_dovish
 subtitle: Such rhetoric is too naive and severely underestimates the threat posed by Putin.
