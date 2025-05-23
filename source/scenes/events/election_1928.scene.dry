@@ -411,6 +411,11 @@ view-if: traffic_light_coalition >= 50 and red_green_coalition < 50 and social_l
 
 A coalition between the leftist and liberal parties was once considered conceptually and mathematically impossible. As it turns out, we had enough grit to form one anyways!
 
+The only question is over who the chancellor should be.
+
+- @muller
+- @breitscheid
+
 @midnight_coalition
 title: Midnight Coalition
 subtitle: AfD + CDU + CSU ([+ midnight_coalition +]%)
@@ -531,13 +536,6 @@ on-arrival: bundeswehr_loyalty += 0.1
 In response to the Left's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
 - @civil_war: A civil war, then.
-
-@traffic_light_coalition
-title: A Traffic Light coalition with the Greens and FDP?
-view-if: traffic_light_coalition >= 50 and red_green_coalition < 50 and social_liberal_coalition < 50
-on-arrival:
-
-A coalition between the SPD, Greens, and FDP was once considered conceptually and mathematically impossible.  
 
 @jamaica_coalition
 title: Refuse to form a government, so that a Jamaica coalition may be formed.
