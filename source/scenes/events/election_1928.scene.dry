@@ -413,8 +413,48 @@ A coalition between the leftist and liberal parties was once considered conceptu
 
 The only question is over who the chancellor should be.
 
-- @muller
-- @breitscheid
+- @scholz_greens
+- @mutzenich_greens
+
+@scholz_greens
+title: Olaf Scholz for Chancellor
+subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
+on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"
+go-to: vc_greens
+
+Scholz's appointment as chancellor is approved by all our potential allies.
+
+@mutzenich_greens
+title: Olaf Scholz for Chancellor
+subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
+on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"
+go-to: vc_greens
+
+Mützenich's appointment as chancellor ruffles some feathers amongst our potential allies, but he manages to form a stable coalition.
+
+@vc_greens
+on-arrival: vice_chancellor = "Vacant"; vice_chancellor_party = "Greens"
+
+As the second largest party in our coalition, the Greens are vying for the Vice Chancellorship.
+
+- @habeck_vc
+- @baerbock_vc
+
+@habeck_vc
+title: Robert Habeck for Vice Chancellor.
+subtitle: Robert Habeck is an uncontroversial choice for the position and is supported by all wings in our coalition.
+on-arrival: vice_chancellor = "Habeck"
+go-to: ministries
+
+As expected, Robert Habeck is elevated to the vice chancellorship.
+
+@baerbock_vc
+title: Annabela Baerbock for Vice Chancellor.
+subtitle: Annabela Baerbock's appointment might cause some annoyance in the Green party membership.
+on-arrival: vice_chancellor = "Baerbock"; workers_greens += 3 if year == 2021; new_middle_greens += 3 if year == 2021
+go-to: ministries
+
+Annabela Baerbock is pleasantly surprised to be elevated to the vice chancellorship. As a sign of gratitude, she even agrees to abandon her claim on the foreign ministry. [? if year == 2021 : Riding high from sixteen years of Angela Merkel, a female vice chancellor earns the goodwill of feminist groups throughout Germany. ?]
 
 @midnight_coalition
 title: Midnight Coalition
@@ -1137,12 +1177,11 @@ on-arrival: workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; wo
 
 @muller
 title: Olaf Scholz for Chancellor
-view-if: muller_dead = 0
 subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
 on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; vice_chancellor = "Laschet" if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
 go-to: ministries
 
-Müller's appointment as chancellor is approved by all our potential allies. [? if in_grand_coalition == 1 : Meanwhile, Armin Laschet of the CDU is appointed Vice Chancellor. ?]
+Scholz's appointment as chancellor is approved by all our potential allies. [? if in_grand_coalition == 1 : Meanwhile, Armin Laschet of the CDU is appointed Vice Chancellor. ?]
 
 @wels
 title: Otto Wels for Chancellor
