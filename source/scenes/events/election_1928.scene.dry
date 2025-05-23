@@ -312,8 +312,9 @@ There are some potential coalition arrangements.
 @coalition_menu
 
 - @spd_majority
-- @germany_coalition
 - @grand_coalition
+- @traffic_light_coalition
+- @germany_coalition
 - @new_grand_coalition
 - @unity_government
 - @midnight_coalition
@@ -403,7 +404,12 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 
 - @civil_war: A civil war, then.
 
+@traffic_light_coalition
+title: Form a Traffic Light coalition with the Greens and FDP!
+subtitle: SPD + Greens + FDP ([+ traffic_light_coalition +]%)
+view-if: traffic_light_coalition >= 50 and red_green_coalition < 50 and social_liberal_coalition < 50
 
+A coalition between the leftist and liberal parties was once considered conceptually and mathematically impossible. As it turns out, we had enough grit to form one anyways!
 
 @midnight_coalition
 title: Midnight Coalition
