@@ -130,6 +130,7 @@ Q.coalition_dissent = 0;
 Q.linke_coalition_dissent = 0;
 Q.spd_in_government = 0;
 Q.in_germany_coalition = 0;
+Q.in_social_liberal_coalition = 0;
 Q.in_grand_coalition = 0;
 Q.in_left_coalition = 0;
 Q.in_popular_front = 0;
@@ -138,14 +139,15 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.spd_toleration = 0;
 Q.spd_caretaker = 0;
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
-Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
-Q.bundeswehr_minister_party = 'I';
-Q.economic_minister_party = Q.ddp_name;
-Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
+Q.foreign_minister_party = 'CDU';
+Q.interior_minister_party = 'CSU';
+Q.justice_minister_party = 'FDP';
+Q.labor_minister_party = 'CSU';
+Q.bundeswehr_minister_party = 'CDU';
+Q.economic_minister_party = 'FDP';
+Q.finance_minister_party = 'FDP';
+Q.environment_minister_party = 'FDP';
+Q.agriculture_minister_party = 'CDU';
 
 // reset Die Linke goals
 Q.linke_goals_seen = 0;
@@ -409,7 +411,7 @@ view-if: midnight_coalition >= 50
 go-to: far_right_win if (year >= 1932 or afd_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and afd_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
 priority: 2
 
-There are enough votes for the Nazis and the DNVP to form a coalition. [+ afd_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
+There are enough votes for the CDU/CSU and AfD to form a coalition. [+ afd_leader +] has made their participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
 on-arrival: chancellor = afd_leader; chancellor_party = "AfD"
@@ -1129,19 +1131,19 @@ on-arrival: workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; wo
 
 
 @muller
-title: Hermann Müller for Chancellor
+title: Olaf Scholz for Chancellor
 view-if: muller_dead = 0
-subtitle: Müller is popular within the party, and is the preferred candidate of the Center and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_germany_coalition == 0
+subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
+on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; vice_chancellor = "Laschet" if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
 go-to: ministries
 
-Müller's appointment as chancellor is approved by all our potential allies.
+Müller's appointment as chancellor is approved by all our potential allies. [? if in_grand_coalition == 1 : Meanwhile, Armin Laschet of the CDU is appointed Vice Chancellor. ?]
 
 @wels
 title: Otto Wels for Chancellor
 view-if: muller_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_germany_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD";  vice_chancellor = "Laschet" if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
 go-to: ministries
 
 Otto Wels's appointment as chancellor is approved by our potential allies.
@@ -1394,7 +1396,7 @@ go-to: ministries
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "SPD"
-on-arrival: foreign_minister_party = "Greens"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "CDU" if in_germany_coalition or in_popular_front; foreign_minister = "Röttgen" if in_germany_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "Greens"; foreign_minister = "Baerbock" if vice_chancellor != "Baerbock"; foreign_minister = "Trittin" if vice_chancellor == "Baerbock"; leverage += 10; foreign_minister_party = "CDU" if in_germany_coalition or in_grand_coalition; foreign_minister = "Wadephul" if in_germany_coalition or in_grand_coalition;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1402,7 +1404,7 @@ go-to: ministries
 title: Drop the Environment Ministry
 subtitle: This is the favourite ministry for the Greens.
 view-if: environment_minister_party = "SPD"
-on-arrival: leverage += 5; environment_minister_party = "Greens" if not in_grand_coalition and not in_social_liberal_coalition; environment_minister = "Lemke" if not in_grand_coalition and not in_social_liberal_coalition and not in_germany_coalition; environment_minister_party = "CSU" if in_grand_coalition or in_germany_coalition; environment_minister_party = "FDP" if in_social_liberal_coalition; environment_minister = "Köhler" if in_social_liberal_coalition
+on-arrival: leverage += 5; environment_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "CSU" if in_grand_coalition or in_germany_coalition; environment_minister_party = "FDP" if in_social_liberal_coalition; environment_minister = "Köhler" if in_social_liberal_coalition
 tags: drop_mins_1928
 go-to: ministries
 
