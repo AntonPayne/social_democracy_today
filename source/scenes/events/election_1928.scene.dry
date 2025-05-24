@@ -417,17 +417,18 @@ The only question is over who the chancellor should be.
 - @mutzenich_greens
 
 @scholz_greens
-title: Olaf Scholz for Chancellor
-subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
+title: Olaf Scholz is the obvious choice!
+subtitle: Scholz is popular within the party, and is the preferred candidate of the Greens and other parties.
 on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"
 go-to: vc_greens
 
 Scholz's appointment as chancellor is approved by all our potential allies.
 
 @mutzenich_greens
-title: Olaf Scholz for Chancellor
-subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"
+title: Rolf Mützenich for Chancellor.
+subtitle: Mützenich is friendlier to the left than most in our party.
+view-if: year >= 2023 and left_strength >= 30
+on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; leverage -= 5
 go-to: vc_greens
 
 Mützenich's appointment as chancellor ruffles some feathers amongst our potential allies, but he manages to form a stable coalition.
@@ -1388,10 +1389,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
 view-if: bundeswehr_minister_party != "SPD"
-on-arrival: leverage -= 15; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Pistorius"
+on-arrival: leverage -= 15; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Lambrecht" if lambrecht_gaffe == 0; bundeswehr_minister = "Pistorius" if lambrecht_gaffe == 1
 go-to: ministries
 
-Boris Pistorius of the SPD has been appointed Bundeswehr Minister.
+[? if lambrecht_gaffe == 0 : Christine Lambrecht ?][? if lambrecht_gaffe == 1 : Boris Pistorius ?] of the SPD has been appointed Bundeswehr Minister.
 
 
 
