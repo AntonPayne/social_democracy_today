@@ -16,6 +16,7 @@ Q.workers_other -= 5;
 
 if (Q.left_split) {
     Q.workers_bsw += 5;
+}
 if (Q.unions_independent) {
     Q.workers_bsw += 8;
 }
