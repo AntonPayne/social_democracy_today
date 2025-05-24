@@ -1,0 +1,11 @@
+title: Neo-liberal leaders resign
+new-page: true 
+subtitle: Neo-liberal disagreements with our policies have grown too severe.
+tags: event
+view-if: neoliberal_dissent >= 60
+on-arrival: neoliberal_strength *= 0.4; workers_spd -= 5; workers_cdu += 3; workers_greens += 2; n_advisors -= 1 if weil_advisor == 1; n_advisors -= 1 if hilferding_advisor == 1; n_advisors -= 1 if muller_advisor == 1; weil_advisor = 0; hilferding_advisor = 0; muller_advisor = 0; rb_strength -= 5; neoliberals_resign = 1
+max-visits: 1
+
+= Neo-liberal leaders resign
+
+Our policy choices have greatly offended the Neoliberal faction. Many of our most experienced leaders have resigned, moving to the Greens and CDU/CSU instead.
