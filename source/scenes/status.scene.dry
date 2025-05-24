@@ -80,7 +80,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Free Democratic Party">!}FDP{!</span>!}: [+ fdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">Greens</span>!}: [+ greens_relation : relationships +]
+{!<span class="tooltip-text" title="Green Party">Greens</span>!}: [+ greens_relation : relationships +]
 
 {!<span class="tooltip-text" title="The Left">Linke</span>!}: [+ linke_relation : relationships +]
 
@@ -112,8 +112,8 @@ if (Q.lj_strength) {
 if (Q.ja_strength) {
     Q.ja_strength_2 = Q.ja_strength.toFixed(1);
 }
-if (Q.da_strength) {
-    Q.da_strength_2 = Q.da_strength.toFixed(1);
+if (Q.pj_strength) {
+    Q.pj_strength_2 = Q.pj_strength.toFixed(1);
 }
 !}
 
@@ -131,9 +131,9 @@ Left Youth Militarization: [+ lj_militancy : militancy +]
 
 Junge Alternative Militarization: [+ ja_militancy : militancy +]
 
-[? if ja_banned: {!<span class="tooltip-text" title="The DA (Deutsche Alternative) is the neo-Nazi paramilitary.">DA</span>!} Strength: [+ da_strength_2 +] thousand ?]
+[? if pj_formed : {!<span class="tooltip-text" title="The PJ (Patriotische Jugend) is the neo-Nazi paramilitary.">DA</span>!} Strength: [+ pj_strength_2 +] thousand ?]
 
-[? if ja_banned: DA Militarization: [+ da_militancy : militancy +] ?]
+[? if ja_banned : PJ Militarization: [+ pj_militancy : militancy +] ?]
 
 = Official Militaries
 
@@ -141,9 +141,9 @@ Bundeswehr: [+ bundeswehr_strength +] thousand troops.
 
 Bundeswehr Loyalty: [+ bundeswehr_loyalty : loyalty +]
 
-Lower Saxon Police: [+ lower_saxon_police_strength +] thousand members.
+Saxon Police: [+ saxon_police_strength +] thousand members.
 
-Lower Saxon Police Loyalty: [+ lower_saxon_police_loyalty : loyalty +]
+Saxon Police Loyalty: [+ saxon_police_loyalty : loyalty +]
 
 [? if spd_in_government : Interior Police Loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
