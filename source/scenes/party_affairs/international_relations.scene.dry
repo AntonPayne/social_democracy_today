@@ -58,10 +58,10 @@ The Stalinists of the KPD insists on calling us "social fascists", suggesting th
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 1; labor_strength += 10; labor_dissent -= 10; left_dissent += 5
 
-Fred Redmond appreciates our aid but the Trade Union Confederation of the Americas is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+Fred Redmond greatly appreciates our aid. The Trade Union Confederation of the Americas helps us organize strikes. However, the Confederations uncritically pro-American bias angers some of our membership.
 
-@reduce
+@return
 
 We do not need the international contacts at the moment.
