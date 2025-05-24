@@ -1,0 +1,51 @@
+title: Left Party Split!
+subtitle: The Left Party is breaking apart - will the social democrats stand to gain?
+view-if: year = 2023 and month >= 10
+max-visits: 1
+on-arrival: linke_split_seen = 1; linke_leader = "Pellmann"
+go-to: bsw_formed if bsw_formed == 0
+
+= Left Party Split
+
+Following irreconcilable differences on the question of the Russo-Ukrainian conflict as well as multiple electoral defeats, several leaders of The Left have rallied around Sahra Wagenknecht and announced their decision to form a new party, from Bundestag members right up to faction co-leaders like Amira Mohamed Ali. This new party will allegedly be called the "Sahra Wagenknecht Alliance" (BSW).
+
+[? if left_split = 1 : Many former social democrats have joined with the BSW. They have brought their support base and organization skills to the party, leading to its growth as a nascent rival to the SPD and Die Linke for the support of the working class. ?]
+
+Sahra Wagenknecht has long hindered political cooperation with Die Linke. Her exit could be a start for better relations.
+
+After the resignation of their leader, a new leadership election is held. The moderate Sören Pellmann contests against Ates Gürpinar, who is highly critical of cooperation with the SPD. Dietmar Bartsch, a long-time supporter of coalitions with our party, has decline to run.
+
+- @attack: Relentlessly attack both The Left and the BSW.
+- @soften: Soften our rhetoric with The Left.
+- @nvm: The Left and their internal affairs are none of our concerns.
+
+@attack
+on-arrival: workers_linke -= 3; unemployed_linke -= 3; workers_bsw -= 2; unemployed_bsw -= 1; linke_relations -= 10; linke_leader = "Gürpinar"
+
+In our media, we show off the misgivings of both The Left and the BSW to drive away voters from the two parties and ensure that neither of them can cross the electoral threshold.
+
+Meanwhile, Pellmann is very narrowly defeated by the hardline Gürpinar.
+
+@soften
+on-arrival: left_coalition += 1; linke_relations += 10
+go-to: soften_success if linke_relations >= 50; soften_mediocre if linke_relations < 50
+
+We tone down our criticism of The Left with the hope of reconcilliation with the SPD.
+
+@soften_success
+on-arrival: linke_leader = "Bartsch"
+
+Our silence is noticed by Dietmar Bartsch, who takes it as a green signal to contest the party leadership elections once again. Sören Pellmann withdraws from the race and the conciliatory Bartsch overwhelmingly defeats the hardline Gürpinar.
+
+@soften_mediocre
+on-arrival: seeheimer_dissent += 3; neoliberal_dissent += 3; workers_spd -= 1; workers_linke -= 1;
+
+It does not achieve much and many core voters in both parties are left scratching their heads.
+
+Meanwhile, Pellman narrowly defeats the hardline Gürpinar.
+
+@nvm
+
+There is not much to gain from involving ourselves in the internal affairs of minor leftist organizations.
+
+Meanwhile, Pellman narrowly defeats the hardline Gürpinar.
