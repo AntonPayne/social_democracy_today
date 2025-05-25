@@ -1,6 +1,6 @@
 title: Left Party Split!
 subtitle: The Left Party is breaking apart - will the social democrats stand to gain?
-view-if: year = 2023 and month >= 10
+view-if: year = 2023 and month == 10
 max-visits: 1
 on-arrival: linke_split_seen = 1; linke_leader = "Pellmann"
 go-to: bsw_formed if bsw_formed == 0
@@ -13,7 +13,7 @@ Following irreconcilable differences on the question of the Russo-Ukrainian conf
 
 Sahra Wagenknecht has long hindered political cooperation with Die Linke. Her exit could be a start for better relations.
 
-After the resignation of their leader, a new leadership election is held. The moderate Sören Pellmann contests against Ates Gürpinar, who is highly critical of cooperation with the SPD. Dietmar Bartsch, a long-time supporter of coalitions with our party, has decline to run.
+After the resignation of their leader, a new leadership election is held. The moderate Sören Pellmann contests against Ates Gürpinar, who is highly critical of cooperation with the SPD. Dietmar Bartsch, a long-time supporter of coalitions with our party, has declined to run.
 
 - @attack: Relentlessly attack both The Left and the BSW.
 - @soften: Soften our rhetoric with The Left.
