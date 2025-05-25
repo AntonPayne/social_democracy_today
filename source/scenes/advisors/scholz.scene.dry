@@ -1,7 +1,7 @@
 title: Olaf Scholz
 is-pinned-card: true 
 tags: advisor, neoliberal
-card-image: portraits/ScholzOlaf.jpg if chancellor == "Merkel"; img/ScholzCabinet.jpg if chancellor != "Merkel"
+card-image: portraits/ScholzOlaf.jpg
 new-page: true
 view-if: scholz_advisor = 1
 
