@@ -419,7 +419,7 @@ The only question is over who the chancellor should be.
 @scholz_greens
 title: Olaf Scholz is the obvious choice!
 subtitle: Scholz is popular within the party, and is the preferred candidate of the Greens and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"
+on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economics_minister = "Habeck"; economics_minister_party = "Greens"; interior_minister = "Buschmann"; interior_minister_party = "FDP"
 go-to: vc_greens
 
 Scholz's appointment as chancellor is approved by all our potential allies.
@@ -428,7 +428,7 @@ Scholz's appointment as chancellor is approved by all our potential allies.
 title: Rolf Mützenich for Chancellor.
 subtitle: Mützenich is friendlier to the left than most in our party.
 view-if: year >= 2023 and left_strength >= 30
-on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; leverage -= 5
+on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; leverage -= 5; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economics_minister = "Habeck"; economics_minister_party = "Greens"; interior_minister = "Buschmann"; interior_minister_party = "FDP"
 go-to: vc_greens
 
 Mützenich's appointment as chancellor ruffles some feathers amongst our potential allies, but he manages to form a stable coalition.
@@ -452,10 +452,10 @@ As expected, Robert Habeck is elevated to the vice chancellorship.
 @baerbock_vc
 title: Annabela Baerbock for Vice Chancellor.
 subtitle: Annabela Baerbock's appointment might cause some annoyance in the Green party membership.
-on-arrival: vice_chancellor = "Baerbock"; workers_greens += 3 if year == 2021; new_middle_greens += 3 if year == 2021
+on-arrival: vice_chancellor = "Baerbock"; workers_greens += 3 if year == 2021; new_middle_greens += 3 if year == 2021; foreign_minister = "Fischer" if russia_ukraine >= 1; foreign_minister = "Trittin" if russia_ukraine == 0
 go-to: ministries
 
-Annabela Baerbock is pleasantly surprised to be elevated to the vice chancellorship. As a sign of gratitude, she even agrees to abandon her claim on the foreign ministry. [? if year == 2021 : Riding high from sixteen years of Angela Merkel, a female vice chancellor earns the goodwill of feminist groups throughout Germany. ?]
+Annabela Baerbock is pleasantly surprised to be elevated to the vice chancellorship. As a sign of gratitude, she even agrees to abandon her claim on the foreign ministry. It is rumored that [? if russia_ukraine == 0 : Jürgen Trittin ?][? if russia_ukraine >= 1 :Joschka Fischer ?] is petitioning for the position. [? if year == 2021 : Riding high from sixteen years of Angela Merkel, a female vice chancellor earns the goodwill of feminist groups throughout Germany. ?]
 
 @midnight_coalition
 title: Midnight Coalition
@@ -1179,16 +1179,16 @@ on-arrival: workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; wo
 @muller
 title: Olaf Scholz for Chancellor
 subtitle: Scholz is popular within the party, and is the preferred candidate of the CDU and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; vice_chancellor = "Laschet" if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
+on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; vice_chancellor = cdu_party_leader if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
 go-to: ministries
 
-Scholz's appointment as chancellor is approved by all our potential allies. [? if in_grand_coalition == 1 : Meanwhile, Armin Laschet of the CDU is appointed Vice Chancellor. ?]
+Scholz's appointment as chancellor is approved by all our potential allies. [? if in_grand_coalition == 1 : Meanwhile, [? if cdu_party_leader == "Laschet" : Armin Laschet ?][? if cdu_party_leader == "Merz" : Friedrich Merz ?][? if cdu_party_leader == "Röttgen" : Norbet Röttgen ?] of the CDU is appointed Vice Chancellor. ?]
 
 @wels
 title: Otto Wels for Chancellor
 view-if: muller_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD";  vice_chancellor = "Laschet" if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD";  vice_chancellor = cdu_party_leader if in_grand_coalition == 1; chancellor_party = "CDU" if in_grand_coalition == 1
 go-to: ministries
 
 Otto Wels's appointment as chancellor is approved by our potential allies.
@@ -1362,7 +1362,7 @@ go-to: ministries
 
 @environment
 title: Environment Ministry
-subtitle: This is the favourite ministry for the Greens.
+subtitle: This is the favourite ministry of the Greens.
 view-if: environment_minister_party != "SPD"
 on-arrival: leverage -= 5; environment_minister_party = "SPD"; environment_minister = "Schulze"
 tags: mins_1928
@@ -1447,7 +1447,6 @@ go-to: ministries
 
 @drop_environment
 title: Drop the Environment Ministry
-subtitle: This is the favourite ministry for the Greens.
 view-if: environment_minister_party = "SPD"
 on-arrival: leverage += 5; environment_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "CSU" if in_grand_coalition or in_germany_coalition; environment_minister_party = "FDP" if in_social_liberal_coalition; environment_minister = "Köhler" if in_social_liberal_coalition
 tags: drop_mins_1928
