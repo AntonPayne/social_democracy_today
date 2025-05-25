@@ -1,14 +1,14 @@
 title: Cabinet
 is-pinned-card: true
 tags: advisor
-card-image: img/muller_cabinet.jpg
-view-if: difficulty < 0 and spd_in_government and chancellor_party = "SPD"
+card-image: img/ScholzCabinet.jpg
+view-if: difficulty < 0 and spd_in_government and (chancellor_party = "SPD" or vice_chancellor_party = "SPD") and chancellor != "Merkel"
 on-arrival: last_advisor_action = 1
 new-page: true 
 
 = Cabinet
 
-With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
+Under the [+ chancellor +] administration, we can direct the affairs of the national government.
 
 - #cabinet
 - @back: Return to main
