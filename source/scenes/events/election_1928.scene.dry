@@ -419,7 +419,7 @@ The only question is over who the chancellor should be.
 @scholz_greens
 title: Olaf Scholz is the obvious choice!
 subtitle: Scholz is popular within the party, and is the preferred candidate of the Greens and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Scholz"; chancellor_party = "SPD"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economics_minister = "Habeck"; economics_minister_party = "Greens"; interior_minister = "Buschmann"; interior_minister_party = "FDP"
+on-arrival: spd_in_government = 1; in_traffic_light_coalition; chancellor = "Scholz"; chancellor_party = "SPD"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economic_minister = "Habeck"; economic_minister_party = "Greens"; interior_minister = "Kuhle"; interior_minister_party = "FDP"; labor_minister = "Dröge"; labor_minister_party = "Greens"
 go-to: vc_greens
 
 Scholz's appointment as chancellor is approved by all our potential allies.
@@ -428,7 +428,7 @@ Scholz's appointment as chancellor is approved by all our potential allies.
 title: Rolf Mützenich for Chancellor.
 subtitle: Mützenich is friendlier to the left than most in our party.
 view-if: year >= 2023 and left_strength >= 30
-on-arrival: spd_in_government = 1; chancellor = "Mützenich"; chancellor_party = "SPD"; leverage -= 5; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economics_minister = "Habeck"; economics_minister_party = "Greens"; interior_minister = "Buschmann"; interior_minister_party = "FDP"
+on-arrival: spd_in_government = 1; in_traffic_light_coalition; chancellor = "Mützenich"; chancellor_party = "SPD"; leverage -= 5; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; agriculture_minister = "Özdemir"; agriculture_minister_party = "Greens"; environment_minister = "Lemke"; environment_minister_party = "Greens"; bundeswehr_minister = "Strack-Zimmermann"; bundeswehr_minister_party = "FDP"; justice_minister = "Buschmann"; justice_minister_party = "FDP"; finance_minister = "Lidner"; finance_minister_party = "FDP"; economic_minister = "Habeck"; economic_minister_party = "Greens"; interior_minister = "Kuhle"; interior_minister_party = "FDP"; labor_minister = "Dröge"; labor_minister_party = "Greens"
 go-to: vc_greens
 
 Mützenich's appointment as chancellor ruffles some feathers amongst our potential allies, but he manages to form a stable coalition.
@@ -451,7 +451,7 @@ As expected, Robert Habeck is elevated to the vice chancellorship.
 
 @baerbock_vc
 title: Annabela Baerbock for Vice Chancellor.
-subtitle: Annabela Baerbock's appointment might cause some annoyance in the Green party membership.
+subtitle: Annabela Baerbock's appointment might cause some turbulence in the Green party leadership structure.
 on-arrival: vice_chancellor = "Baerbock"; workers_greens += 3 if year == 2021; new_middle_greens += 3 if year == 2021; foreign_minister = "Fischer" if russia_ukraine >= 1; foreign_minister = "Trittin" if russia_ukraine == 0
 go-to: ministries
 
