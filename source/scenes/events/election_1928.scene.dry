@@ -450,12 +450,12 @@ go-to: ministries
 As expected, Robert Habeck is elevated to the vice chancellorship.
 
 @baerbock_vc
-title: Annabela Baerbock for Vice Chancellor.
-subtitle: Annabela Baerbock's appointment might cause some turbulence in the Green party leadership structure.
+title: Annalena Baerbock for Vice Chancellor.
+subtitle: Annalena Baerbock's appointment might cause some turbulence in the Green party leadership structure.
 on-arrival: vice_chancellor = "Baerbock"; workers_greens += 3 if year == 2021; new_middle_greens += 3 if year == 2021; foreign_minister = "Fischer" if russia_ukraine >= 1; foreign_minister = "Trittin" if russia_ukraine == 0
 go-to: ministries
 
-Annabela Baerbock is pleasantly surprised to be elevated to the vice chancellorship. As a sign of gratitude, she even agrees to abandon her claim on the foreign ministry. It is rumored that [? if russia_ukraine == 0 : Jürgen Trittin ?][? if russia_ukraine >= 1 :Joschka Fischer ?] is petitioning for the position. [? if year == 2021 : Riding high from sixteen years of Angela Merkel, a female vice chancellor earns the goodwill of feminist groups throughout Germany. ?]
+Annalena Baerbock is pleasantly surprised to be elevated to the vice chancellorship. As a sign of gratitude, she even agrees to abandon her claim on the foreign ministry. It is rumored that [? if russia_ukraine == 0 : Jürgen Trittin ?][? if russia_ukraine >= 1 :Joschka Fischer ?] is petitioning for the position. [? if year == 2021 : Riding high from sixteen years of Angela Merkel, a female vice chancellor earns the goodwill of feminist groups throughout Germany. ?]
 
 @midnight_coalition
 title: Midnight Coalition
@@ -583,7 +583,7 @@ title: Refuse to form a government, so that a Jamaica coalition may be formed.
 subtitle: CDU + CSU + Greens + FDP ([+ jamaica_coalition +]%)
 unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
-choose-if: year < 2022
+choose-if: russia_ukraine < 1
 
 There are enough votes for center-right coalition of the CDU, Greens, and FDP. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
@@ -605,11 +605,10 @@ go-to: jamaica_coalition_2
 @jamaica_coalition_2
 unavailable-subtitle: The Greens are not interested in a coalition with the CDU.
 view-if: jamaica_coalition >= 50
-choose-if: year < 2022
+choose-if: russia_ukraine < 1
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Laschet"; chancellor_party = "CDU"; vice_chancellor = "Habeck"; vice_chancellor_party = "Greens"; foreign_minister = "Baerbock"; foreign_minister_party = "Greens"; interior_minister_party = "CSU"; justice_minister_party = "FDP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "CDU"; economic_minister_party = "Greens"; environment_minister_party = "Greens"; finance_minister_party = "FDP"; agriculture_minister_party = "Greens"; in_jamaica_coalition = 1;
 
 Even though the Greens are very reluctant to participate in such a coalition, they still accede to Angela Merkel's wishes to form a stable government. Thus, a majority center-right coalition is formed, with Armin Laschet as chancellor and Robert Habeck as Vice Chancellor. A fluke ballot fails to attain a majority at first, but intense negotiations allow for a government with the slimmest margin.
-
 
 @no_majority
 title: There is no clear governing majority.
@@ -1295,10 +1294,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: labor_minister_party != "SPD"
-on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Heil"
+on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Heil" if chancellor_party != "CDU"; labor_minister = "Bas" if chancellor_party == "CDU"
 go-to: ministries
 
-Hubertus Heil of the SPD has been appointed labor minister.
+[? if chancellor_party != "CDU" : Hubertus Heil ?][? if chancellor_party == "CDU" : Bärbel Bas ?] of the SPD has been appointed labor minister.
 
 @interior
 title: Interior Ministry
@@ -1319,7 +1318,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: finance_minister_party != "SPD"
-on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"
+on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Klingbeil"
 go-to: ministries
 
 Lars Klingbeil of the SPD has been appointed Finance Minister.
@@ -1355,10 +1354,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "SPD"
-on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Maas" if left_strength <= neoliberal_strength + seeheimer_strength; foreign_minister = "Mützenich" if left_strength > neoliberal_strength + seeheimer_strength
+on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Maas" if left_strength <= neoliberal_strength + seeheimer_strength or chancellor == "Mützenich"; foreign_minister = "Mützenich" if left_strength > neoliberal_strength + seeheimer_strength and chancellor != "Mützenich"
 go-to: ministries
 
-[? if left_strength <= neoliberal_strength + seeheimer_strength : Heiko Maas ?][? if left_strength > neoliberal_strength + seeheimer_strength : Rolf Mützenich ?] of the SPD has been appointed Foreign Minister.
+[? if left_strength <= neoliberal_strength + seeheimer_strength or chancellor == "Mützenich" : Heiko Maas ?][? if left_strength > neoliberal_strength + seeheimer_strength and chancellor != "Mützenich" : Rolf Mützenich ?] of the SPD has been appointed Foreign Minister.
 
 @environment
 title: Environment Ministry
@@ -1389,12 +1388,10 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
 view-if: bundeswehr_minister_party != "SPD"
-on-arrival: leverage -= 15; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Lambrecht" if lambrecht_gaffe == 0; bundeswehr_minister = "Pistorius" if lambrecht_gaffe == 1
+on-arrival: leverage -= 10; bundeswehr_minister_party = "SPD"; bundeswehr_minister = "Lambrecht" if lambrecht_gaffe == 0; bundeswehr_minister = "Pistorius" if lambrecht_gaffe == 1
 go-to: ministries
 
 [? if lambrecht_gaffe == 0 : Christine Lambrecht ?][? if lambrecht_gaffe == 1 : Boris Pistorius ?] of the SPD has been appointed Bundeswehr Minister.
-
-
 
 @no_more
 title: No more ministries.
@@ -1462,6 +1459,6 @@ go-to: ministries
 @drop_bundeswehr
 title: Drop the Bundeswehr Ministry.
 view-if: bundeswehr_minister_party = "SPD"
-on-arrival: leverage += 15; bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lindner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
+on-arrival: leverage += 10; bundeswehr_minister_party = "Greens" if not in_grand_coalition and not in_germany_coalition and not in_social_liberal_coalition; bundeswehr_minister = "Lindner"; bundeswehr_minister_party = "CDU" if in_grand_coalition or in_germany_coalition; bundeswehr_minister = "Wadephul" if in_grand_coalition or in_germany_coalition; bundeswehr_minister_party = "FDP" if in_social_liberal_coalition; bundeswehr_minister = "Strack-Zimmermann" if in_social_liberal_coalition
 tags: drop_mins_1928
 go-to: ministries
