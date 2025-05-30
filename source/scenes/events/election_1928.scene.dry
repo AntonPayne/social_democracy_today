@@ -193,7 +193,7 @@ data = [
         "id": "linke",
         "legend": "Linke",
         "name": "Linke",
-        "seats": Math.round(Q.linke_r*5),
+        "seats": Math.max(2, Math.round(Q.linke_r*5)),
     }
 ];
 if (Q.bsw_formed && Q.bsw_r) {
