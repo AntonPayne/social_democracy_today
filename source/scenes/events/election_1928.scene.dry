@@ -987,7 +987,7 @@ Rolf Mützenich has been appointed chancellor.
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
 subtitle: SPD + CDU + CSU ([+ grand_coalition +]%)
-on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_coalition = 0
+on-arrival: in_popular_front = 0; in_left_coalition = 0
 go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 20) or president = "Braun"; grand_coalition_cdu_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
 
 # TODO: if there are enough votes to form a grand coalition, who leads? Does the SPD lead or does Brüning (Z) lead? In reality this depended on Hindenburg's will, basically, which in turn depended on what his camarilla supported.
@@ -1164,7 +1164,7 @@ Our party rose to fame due to its promise to never form another coalition with t
 - @coalition_menu: No, we can try for another coalition.
 
 @grand_coalition_chancellor
-on-arrival: workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; workers_linke += 1 if year = 2021; new_middle_spd -= 2 if year = 2021; new_middle_cdu -= 3 if year = 2021; new_middle_afd += 4 if year = 2021
+on-arrival: in_grand_coalition = 1; workers_spd -= 3 if year = 2021; workers_afd += 2 if year = 2021; workers_linke += 1 if year = 2021; new_middle_spd -= 2 if year = 2021; new_middle_cdu -= 3 if year = 2021; new_middle_afd += 4 if year = 2021
 
 [? if year = 2021 : Fine. Despite protests from within our party's left wing, we form a coalition with the CDU/CSU. ?] Who should be our chancellor?
 
