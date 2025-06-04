@@ -3,7 +3,7 @@ new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
 view-if: year == 2022 and month >= 2 and russia_ukraine == 0
-on-arrival: russia_ukraine += 1
+on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
 
@@ -25,6 +25,7 @@ Meanwhile, several communist and workers' parties are drafting up a joint statem
 
 - @bundeswehr: We must significantly increase military spending in light of this invasion.
 - @sanctions: We must launch punitive sanctions on Russia in protest of this invasion.
+- @affirm: Affirm our commitment to peace and diplomacy in Europe.
 - @criticize_hawkish: Criticize [+ foreign_minister +]'s hawkish speech.
 - @criticize_dovish: Criticize [+ foreign_minister +]'s dovish speech.
 - @ostenpolitik: Emphasize the need for a New Eastern Policy.
@@ -32,7 +33,8 @@ Meanwhile, several communist and workers' parties are drafting up a joint statem
 @bundeswehr
 subtitle: We are living through a watershed era. To keep warmongers like Putin in check, we must improve our defenses.
 view-if: bundeswehr_minister_party == "SPD"
-on-arrival: budget -= 2; greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
+on-arrival: greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
+on-departure: budget -= 2
 
 Chancellor [+ chancellor +] proclaims that the Russo-Ukranian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
 
@@ -44,10 +46,17 @@ on-arrival: budget -= 1; bundeswehr_loyalty += 0.02 if bundeswehr_loyalty < 1; n
 
 Even if Germany does not militarily intervene in the Russo-Ukranian conflict, we can join a coalition of European countries and impose strict sanctions against Russia. A quick scuffle follows to make Germany independent of Russian gas and oil. Both our anti-war membership and the center-right parties are dissatisfied with our vague stance. The AfD exploits our half-measures to draw away voters.
 
+@affirm
+subtitle: This invasion gives us a chance to atone for our militaristic past. As such, avoiding unnecessary escalation should be our priority.
+view-if: foreign_minister == "Trittin" and foreign_minister_party == "Greens"
+on-arrival: pacifism += 1; workers_greens += 1; workers_linke -= 1; workers_afd += 4; left_strength += 2; left_dissent -= 3; unemployed_afd += 3; new_middle_afd += 3; economic_growth -= 0.2; seeheimer_dissent += 3; neoliberal_dissent += 3
+
+We mirror [+ foreign_minister +]'s stance on this conflict and promote diplomacy instead of military intervention. As such, we avoid placing sanctions on Russia. Still, it is clear that the invasion has sent shockwaves throughout the global economy, and Germany has suffered too. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on the anti-Russian crowd.
+
 @criticize_hawkish
 subtitle: Such rhetoric is highly dangerous and runs the risk of avoidable escalation.
 view-if: foreign_minister_party != "SPD" and foreign_minister != "Trittin"
-on-arrival: budget -= 1; economic_growth -= 0.4; workers_greens -= 2; workers_spd -= 2; workers_afd += 4; unemployed_afd += 3; new_middle_afd += 2; coalition_dissent += 1
+on-arrival: budget -= 1; economic_growth -= 0.4; workers_greens -= 2 if not in_grand_coalition; workers_cdu -= 2 if in_grand_coalition; workers_spd -= 2; workers_afd += 4; unemployed_afd += 3; new_middle_afd += 2; coalition_dissent += 1
 
 We criticize [+ foreign_minister +]'s sabre-rattling and call for a more peaceful foreign policy when dealing with Russia. The newfound hawks in the [+ foreign_minister_party +] are shocked by our intransigence but this pleases our left wing. Despite our hesitancy, a quick scuffle follows to make Germany independent of Russian gas and oil. The AfD immediately capitalizes on the coalition infighting.
 
@@ -62,7 +71,7 @@ We criticize [+ foreign_minister +]'s naivety and call for a more aggressive for
 @ostenpolitik
 subtitle: Just like Willy Brandt spearheaded a new era of East-West relations, we too must seek peace.
 view-if: foreign_minister_party == "SPD"
-on-arrival: economic_growth -= 0.2; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1
+on-arrival: economic_growth -= 0.3; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1; left_strength += 3; left_dissent -= 5; seeheimer_dissent += 3; neoliberal_dissent += 3
 
 We advocate for easing tensions with the East, promoting a peaceful end to the Russo-Ukranian conflict. The newfound hawks in the [? if not in_grand_coalition : Greens ?][? if in_grand_coalition : CDU ?] are shocked by our intransigence. Amidst rising criticism of Putin, we are forced to impose slight restrictions on Russian goods into Germany. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on locking up the hawkish vote.
 
