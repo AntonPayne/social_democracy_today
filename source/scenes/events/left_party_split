@@ -2,8 +2,40 @@ title: Left Party Split!
 subtitle: The Left Party is breaking apart - will the social democrats stand to gain?
 view-if: year = 2023 and month == 10
 max-visits: 1
-on-arrival: linke_split_seen = 1; linke_leader = "Pellmann"
-go-to: bsw_formed if bsw_formed == 0
+on-arrival: {!
+// set up the infrastructure
+Q.bsw_formed = 1;
+Q.parties.push('bsw');
+
+Q.workers_bsw = 10;
+Q.workers_spd -= 3;
+Q.new_middle_bsw = 1;
+Q.old_middle_bsw = 0;
+Q.rural_bsw = 0;
+Q.unemployed_bsw = 3;
+Q.catholics_bsw = 4;
+Q.muslims_bsw = 15;
+
+Q.workers_other -= 5;
+
+if (Q.left_split) {
+    Q.workers_bsw += 5;
+}
+if (Q.unions_independent) {
+    Q.workers_bsw += 8;
+}
+
+// update all records
+Q.bsw_r = 0;
+Q.old_bsw_r = 0;
+for (var record of Q.election_records) {
+    record['bsw'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['bsw'] = 0;
+}
+!}
+
 
 = Left Party Split
 
@@ -38,13 +70,14 @@ on-arrival: linke_leader = "Bartsch"
 Our silence is noticed by Dietmar Bartsch, who takes it as a green signal to contest the party leadership elections once again. Sören Pellmann withdraws from the race and the conciliatory Bartsch overwhelmingly defeats the hardline Gürpinar.
 
 @soften_mediocre
-on-arrival: seeheimer_dissent += 3; neoliberal_dissent += 3; workers_spd -= 1; workers_linke -= 1;
+on-arrival: seeheimer_dissent += 3; neoliberal_dissent += 3; workers_spd -= 1; workers_linke -= 1; linke_leader = "Pellmann"
 
 It does not achieve much and many core voters in both parties are left scratching their heads.
 
 Meanwhile, Pellman narrowly defeats the hardline Gürpinar.
 
 @nvm
+on-arrival: linke_leader = "Pellmann"
 
 There is not much to gain from involving ourselves in the internal affairs of minor leftist organizations.
 
