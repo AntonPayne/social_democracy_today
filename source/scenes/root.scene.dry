@@ -119,10 +119,10 @@ Q.afd_leader = "Weidel";
 Q.steinmeier_sanity = 25;
 
 
-// Does the SPD lead in Saxony?
-Q.spd_saxony = 1;
+// Does the SPD lead in Lower Saxony?
+Q.spd_lower_saxony = 1;
 // Options: SPD, CDU, AfD
-Q.saxon_government = "SPD";
+Q.lower_saxon_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -134,25 +134,25 @@ Q.rb_banned = 0;
 Q.ja_strength = 2;
 Q.ja_militancy = 0.2;
 Q.ja_banned = 0;
-Q.ja_banned_saxony = 0;
+Q.ja_banned_lower_saxony = 0;
 Q.pj_strength = 0;
 Q.pj_militancy = 0;
 Q.pj_banned = 0;
-Q.pj_banned_saxony = 0;
+Q.pj_banned_lower_saxony = 0;
 Q.lj_strength = 20;
 Q.lj_militancy = 0;
 Q.lj_banned = 0;
-Q.lj_banned_saxony = 0;
+Q.lj_banned_lower_saxony = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 2;
 Q.interior_police_loyalty = 0.45;
 
-Q.saxon_police_strength = 13;
-Q.saxon_police_militancy = 2;
-Q.saxon_police_loyalty = 0.5;
+Q.lower_saxon_police_strength = 13;
+Q.lower_saxon_police_militancy = 2;
+Q.lower_saxon_police_loyalty = 0.5;
 
-// strength includes actual military and de facto reserves?
+// strength includes actual military and de facto reserves
 Q.bundeswehr_strength = 180;
 Q.bundeswehr_militancy = 5;
 Q.bundeswehr_loyalty = 0.3;
@@ -213,7 +213,6 @@ Q.income = 1600;
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 3.1;
 
-// economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 2.7;
 
 // economic expansion timer
@@ -235,86 +234,95 @@ Q.bsw_formed = 0;
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
-Q.workers_spd = 25;
-Q.workers_cdu = 11;
-Q.workers_greens = 15;
-Q.workers_fdp = 12;
-Q.workers_afd = 12;
+// Workers
+Q.workers_spd = 31;
+Q.workers_cdu = 12;
+Q.workers_greens = 17;
+Q.workers_fdp = 14;
+Q.workers_afd = 13;
 Q.workers_linke = 6;
-Q.workers_other = 8;
+Q.workers_other = 7;
 
-Q.old_middle_spd = 22;
-Q.old_middle_cdu = 21;
-Q.old_middle_greens = 14;
-Q.old_middle_fdp = 12;
-Q.old_middle_afd = 10;
+// Old middle class
+Q.old_middle_spd = 27;
+Q.old_middle_cdu = 22;
+Q.old_middle_greens = 16;
+Q.old_middle_fdp = 14;
+Q.old_middle_afd = 11;
 Q.old_middle_linke = 3;
-Q.old_middle_other = 9;
+Q.old_middle_other = 8;
 
-Q.new_middle_spd = 20;
-Q.new_middle_cdu = 31;
-Q.new_middle_greens = 14;
-Q.new_middle_fdp = 11;
+// New middle class
+Q.new_middle_spd = 24;
+Q.new_middle_cdu = 32;
+Q.new_middle_greens = 15;
+Q.new_middle_fdp = 12;
 Q.new_middle_afd = 8;
 Q.new_middle_linke = 2;
-Q.new_middle_other = 7;
+Q.new_middle_other = 6;
 
-Q.rural_spd = 22;
-Q.rural_cdu = 27;
-Q.rural_greens = 12;
-Q.rural_fdp = 12;
-Q.rural_afd = 10;
+// Rural
+Q.rural_spd = 26;
+Q.rural_cdu = 28;
+Q.rural_greens = 13;
+Q.rural_fdp = 13;
+Q.rural_afd = 11;
 Q.rural_linke = 4;
-Q.rural_other = 6;
+Q.rural_other = 5;
 
-Q.unemployed_spd = 32;
+// Unemployed
+Q.unemployed_spd = 36;
 Q.unemployed_cdu = 11;
 Q.unemployed_greens = 13;
 Q.unemployed_fdp = 12;
 Q.unemployed_afd = 12;
 Q.unemployed_linke = 8;
-Q.unemployed_other = 10;
+Q.unemployed_other = 8;
 
+// Catholics
 Q.catholics_spd = 16;
-Q.catholics_linke = 8;
 Q.catholics_cdu = 39;
-Q.catholics_fdp = 7;
 Q.catholics_greens = 10;
+Q.catholics_fdp = 7;
 Q.catholics_afd = 8;
+Q.catholics_linke = 8;
 Q.catholics_other = 12;
 
+// Muslims
 Q.muslims_spd = 25;
-Q.muslims_linke = 15;
 Q.muslims_cdu = 30;
-Q.muslims_fdp = 5;
 Q.muslims_greens = 18;
+Q.muslims_fdp = 5;
 Q.muslims_afd = 2;
+Q.muslims_linke = 15;
 Q.muslims_other = 5;
 
 // Current bundestag composition
 // % of bundestag in May 2021
 // source: wikipedia
 // note: the CDU figures also include the CSU (Christian Social Union)
-Q.spd_r = 22;
-Q.linke_r = 10;
-Q.cdu_r = 35;
-Q.fdp_r = 11;
-Q.greens_r = 9;
-Q.afd_r = 13;
+Q.spd_r = 21.6;
+Q.linke_r = 9.7;
+Q.cdu_r = 34.7;
+Q.fdp_r = 11.3;
+Q.greens_r = 9.5;
+Q.afd_r = 13.3;
 Q.other_r = 0;
 
 // diff from prev
-Q.old_spd_r = 22;
-Q.old_linke_r = 10;
-Q.old_cdu_r = 35;
-Q.old_fdp_r = 11;
-Q.old_greens_r = 9;
-Q.old_afd_r = 13;
+Q.old_spd_r = 21.6;
+Q.old_linke_r = 9.7;
+Q.old_cdu_r = 34.7;
+Q.old_fdp_r = 11.3;
+Q.old_greens_r = 9.5;
+Q.old_afd_r = 13.3;
 Q.old_other_r = 0;
 
 // bsw isn't formed yet, but it may be formed
 Q.bsw_r = 0;
 Q.old_bsw_r = 0;
+
+//alternatively, some other cursed things may happen
 
 // array of objects of the form {date: Date(), spd: 10, linke: 12, ...} for each election
 Q.election_records = [];
@@ -344,7 +352,7 @@ Q.in_germany_coalition = 0;
 // Grand coalition = SPD + CDU + CSU
 // also includes the "Kenya Coalition" of SPD + CDU + CSU + Greens
 Q.in_grand_coalition = 1;
-// Popular front = SPD + linke + Z + fdp
+// Popular front = SPD + Linke + Greens
 Q.in_popular_front = 0;
 // left coalition = SPD + linke + left-splinters
 Q.in_left_front = 0;
