@@ -112,6 +112,10 @@ Q.zimbabwe_coalition = Q.spd_r + Q.fdp_r + Q.cdu_r + Q.greens_r;
 Q.bahamas_coalition = Q.cdu_r + Q.fdp_r + Q.afd_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.spd_r + Q.linke_r + Q.greens_r + Q.bsw_r;
+// new coalitions by franco
+Q.red_yellow_coalition = Q.spd_r + Q.fdp_r;
+Q.red_green_coalition = Q.spd_r + Q.greens_r;
+Q.kenya_coalition = Q.spd_r + Q.greens_r + Q.cdu_r;
 
 if (Q.linke_relation >= 30) {
     Q.germany_coalition += Q.bsw_r;
@@ -323,6 +327,9 @@ There are some potential coalition arrangements.
 - @left_coalition
 - @popular_front
 - @jamaica_coalition
+- @red_yellow_coalition
+- @red_green_coalition
+- @kenya_coalition
 
 
 @popular_front
@@ -1279,6 +1286,59 @@ Since the remaining bourgeois and right-wing parties cannot form a tolerable gov
 
 We are seen as responsible for the failure to form a government, and many of our middle-class and even some working-class supporters have deserted the party.
 
+// new coalitions by franco
+// ministers are TO DO
+
+@red_yellow_coalition
+title: We can form a "Red-Yellow" Coalition.
+subtitle: SPD + FDP ([+ red_yellow_coalition +]%)
+view-if: red_yellow_coalition >= 50
+on-arrival: leverage += 5; leverage += 5 if cdu_party_leader == "Röttgen"; in_germany_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_coalition = 0; foreign_minister_party = "CDU"; interior_minister_party = "CSU"; justice_minister_party = "FDP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "FDP"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; foreign_minister = "Röttgen"; interior_minister = "Röttgen"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; bundeswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
+
+We have enough votes to form a "Red Yellow" government consisting of the SPD and FDP
+
+Who should be the chancellor?
+
+- @muller
+- @braun
+- @breitscheid_coalition_chancellor
+- @wels
+- @z_chancellor
+
+
+@red_green_coalition
+title: We can form a "Red-Green" Coalition.
+subtitle: SPD + Greens ([+ red_green_coalition +]%)
+view-if: red_green_coalition >= 50
+on-arrival: leverage += 5; leverage += 5 if cdu_party_leader == "Röttgen"; in_germany_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_coalition = 0; foreign_minister_party = "CDU"; interior_minister_party = "CSU"; justice_minister_party = "FDP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "FDP"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; foreign_minister = "Röttgen"; interior_minister = "Röttgen"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; bundeswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
+
+We have enough votes to form a "Red Green" government consisting of the SPD and the Greens
+
+Who should be the chancellor?
+
+- @muller
+- @braun
+- @breitscheid_coalition_chancellor
+- @wels
+- @z_chancellor
+
+@kenya_coalition
+title: We can form a "Kenya" Coalition.
+subtitle: SPD + Greens + CDU ([+ kenya_coalition +]%)
+view-if: red_yellow_coalition >= 50
+on-arrival: leverage += 5; leverage += 5 if cdu_party_leader == "Röttgen"; in_germany_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_coalition = 0; foreign_minister_party = "CDU"; interior_minister_party = "CSU"; justice_minister_party = "FDP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "FDP"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; foreign_minister = "Röttgen"; interior_minister = "Röttgen"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; bundeswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
+
+We have enough votes to form a "Kenya" government consisting of the SPD, CDU and FDP
+
+Who should be the chancellor?
+
+- @muller
+- @braun
+- @breitscheid_coalition_chancellor
+- @wels
+- @z_chancellor
+
+// new coalitions end
 
 @ministries
 
