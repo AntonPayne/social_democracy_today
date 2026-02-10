@@ -557,11 +557,9 @@ table {
     text-decoration-style: dotted;
 }
 
-
 .mytooltip {
   position: relative;
   cursor: pointer;
-  background-color: rgb(100, 140, 220, 0.5);
   padding: 2px 5px;
 }
 
