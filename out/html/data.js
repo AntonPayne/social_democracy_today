@@ -37,32 +37,32 @@ const tooltipList = [{
 const colourList = [{
         word: "SPD",
         style: "color: #E3000F; font-weight: bold;",
-        img: "img/Spd.png",
+        img: "img/Spd_a.png",
     },
                     {
         word: "Linke",
         style: "color: #8B0000; font-weight: bold;",
-        img: "img/DieLinke.png",
+        img: "img/DieLinke_a.png",
     },
                     {
         word: "FDP",
         style: "color: #DCCA4A; font-weight: bold;",
-        img: "img/Fdp.png",
+        img: "img/Fdp_a.png",
     },
                     {
         word: "CDU",
         style: "color: #000; font-weight: bold;",
-        img: "img/CDU.png",
+        img: "img/CDU_a.png",
     },
                     {
         word: "CSU",
         style: "color: #0570C9; font-weight: bold;",
-        img: "img/CSU.png"
+        img: "img/CSU_a.png"
     },
                     {
         word: "Greens",
         style: "color: #1AA037; font-weight: bold;",
-        img: "img/Greens.png"
+        img: "img/Greens_a.png"
     },
                     {
         word: "Others",
@@ -71,5 +71,5 @@ const colourList = [{
                     {
         word: "AfD",
         style: "color: #0489DB; font-weight: bold;",
-        img: "img/AFD.png",
+        img: "img/AFD_a.png",
     }];
