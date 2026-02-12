@@ -1026,11 +1026,11 @@ Who should be the chancellor?
 
 @kenya_coalition
 title: We can form a "Kenya" Coalition.
-subtitle: SPD + Greens + CDU ([+ kenya_coalition +]%)
+subtitle: SPD + CDU + Greens ([+ kenya_coalition +]%)
 view-if: red_yellow_coalition >= 50
 on-arrival: leverage += 5; leverage += 5 if cdu_party_leader == "Röttgen"; in_germany_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_coalition = 0; foreign_minister_party = "CDU"; interior_minister_party = "CSU"; justice_minister_party = "FDP"; labor_minister_party = "CDU"; bundeswehr_minister_party = "I"; economic_minister_party = "FDP"; finance_minister_party = "CDU"; agriculture_minister_party = "CDU"; foreign_minister = "Röttgen"; interior_minister = "Röttgen"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; bundeswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
 
-We have enough votes to form a "Kenya" government consisting of the SPD, CDU and FDP
+We have enough votes to form a "Kenya" government consisting of the SPD, CDU and the Greens
 
 Who should be the chancellor?
 
