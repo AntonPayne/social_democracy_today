@@ -1,4 +1,4 @@
-title: Russia Invades Ukraine
+title: Russia Invades Ukraine!
 new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
@@ -7,7 +7,7 @@ on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
 
-= Russo-Ukranian War
+= Russo-Ukrainian War
 
 The conflict in Ukraine that had been static since 2014 erupted once again after Russian divisions began an incursion into Ukrainian-administered territory. Ukrainian forces are in retreat, with heavy fighting being reported in major Ukrainian cities.
 
@@ -24,7 +24,7 @@ As we are part of the current government, we are expected to provide a response 
 Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
 - @bundeswehr: We must significantly increase military spending in light of this invasion.
-- @sanctions: We must launch punitive sanctions on Russia in protest of this invasion.
+- @sanctions: We must slap punitive sanctions on Russia in protest of this invasion.
 - @affirm: Affirm our commitment to peace and diplomacy in Europe.
 - @criticize_hawkish: Criticize [+ foreign_minister +]'s hawkish speech.
 - @criticize_dovish: Criticize [+ foreign_minister +]'s dovish speech.
@@ -36,7 +36,7 @@ view-if: bundeswehr_minister_party == "SPD"
 on-arrival: greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
 on-departure: budget -= 2
 
-Chancellor [+ chancellor +] proclaims that the Russo-Ukranian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
+Chancellor [+ chancellor +] proclaims that the Russo-Ukrainian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
 
 [? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?][? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
 
@@ -44,7 +44,7 @@ Chancellor [+ chancellor +] proclaims that the Russo-Ukranian conflict is a hist
 subtitle: We must be quick to provide aid to Zelenskyy’s struggle. At the same time, we must cut economic ties with Russia.
 on-arrival: budget -= 1; bundeswehr_loyalty += 0.02 if bundeswehr_loyalty < 1; nationalism += 4; left_dissent += 2; economic_growth -= 0.4; workers_afd += 3; unemployed_afd += 3; new_middle_afd += 2
 
-Even if Germany does not militarily intervene in the Russo-Ukranian conflict, we can join a coalition of European countries and impose strict sanctions against Russia. A quick scuffle follows to make Germany independent of Russian gas and oil. Both our anti-war membership and the center-right parties are dissatisfied with our vague stance. The AfD exploits our half-measures to draw away voters.
+Even if Germany does not militarily intervene in the Russo-Ukrainian conflict, we can join a coalition of European countries and impose strict sanctions against Russia. A quick scuffle follows to make Germany independent of Russian gas and oil. Both our anti-war membership and the center-right parties are dissatisfied with our vague stance. The AfD exploits our half-measures to draw away voters.
 
 @affirm
 subtitle: This invasion gives us a chance to atone for our militaristic past. As such, avoiding unnecessary escalation should be our priority.
