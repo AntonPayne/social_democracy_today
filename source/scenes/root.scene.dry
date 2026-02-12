@@ -235,11 +235,11 @@ Q.bsw_formed = 0;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
 // Workers
-Q.workers_spd = 31;
-Q.workers_cdu = 12;
-Q.workers_greens = 17;
-Q.workers_fdp = 14;
-Q.workers_afd = 13;
+Q.workers_spd = 26;
+Q.workers_cdu = 20;
+Q.workers_greens = 15;
+Q.workers_fdp = 5;
+Q.workers_afd = 21;
 Q.workers_linke = 6;
 Q.workers_other = 7;
 
