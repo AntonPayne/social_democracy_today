@@ -7,12 +7,20 @@ const tooltipList = [{
     explanationText: "<img src=img/DieLinke.png> The Left/The Left Party. <br> (Die Linke/Linkspartei)"
                       },
                      {
+    searchString: "Die Linke",
+    explanationText: "<img src=img/DieLinke.png> The Left/The Left Party. <br> (Die Linke/Linkspartei)"
+                      },
+                     {
     searchString: "FDP",
     explanationText: "<img src=img/Fdp.png> The Free Democratic Party. <br> (Freie Demokratische Partei)"
 },
                      {
     searchString: "CDU",
     explanationText: "<img src=img/CDU.png> The Christian Democratic Union. <br> (Christlich Demokratische Union Deutschlands)"
+},
+                                          {
+    searchString: "boyishly laughing",
+    explanationText: "<img src=img/laschet_laugh.jpeg> I hope that joke was at least funny"
 },
                      {
     searchString: "CSU",
