@@ -14,7 +14,7 @@ max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 2021 and month = 7 : CDU candidate Armin Laschet was pictured boyishly laughing while attending a speech in flood-stricken Ergtstadt. This lapse has caused his polls to tank. ?]
+[? if year = 2021 and month = 7 : CDU candidate Armin Laschet was pictured boyishly laughing while attending a speech in the flood-stricken town of Ergtstadt. This lapse has caused his polls to tank. ?]
 
 - @party
 - @govt
