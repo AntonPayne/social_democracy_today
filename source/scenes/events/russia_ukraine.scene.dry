@@ -1,4 +1,4 @@
-title: Russia Invades Ukraine
+title: Russia Invades Ukraine!
 new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
@@ -7,7 +7,7 @@ on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
 
-= Russo-Ukranian War
+= Russo-Ukrainian War
 
 The conflict in Ukraine that had been static since 2014 erupted once again after Russian divisions began an incursion into Ukrainian-administered territory. Ukrainian forces are in retreat, with heavy fighting being reported in major Ukrainian cities.
 
@@ -36,7 +36,7 @@ view-if: bundeswehr_minister_party == "SPD"
 on-arrival: greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
 on-departure: budget -= 2
 
-Chancellor [+ chancellor +] proclaims that the Russo-Ukranian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
+Chancellor [+ chancellor +] proclaims that the Russo-Ukrainian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
 
 [? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?][? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
 
@@ -73,7 +73,7 @@ subtitle: Just like Willy Brandt spearheaded a new era of East-West relations, w
 view-if: foreign_minister_party == "SPD"
 on-arrival: economic_growth -= 0.3; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1; left_strength += 3; left_dissent -= 5; seeheimer_dissent += 3; neoliberal_dissent += 3
 
-We advocate for easing tensions with the East, promoting a peaceful end to the Russo-Ukranian conflict. The newfound hawks in the [? if not in_grand_coalition : Greens ?][? if in_grand_coalition : CDU ?] are shocked by our intransigence. Amidst rising criticism of Putin, we are forced to impose slight restrictions on Russian goods into Germany. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on locking up the hawkish vote.
+We advocate for easing tensions with the East, promoting a peaceful end to the Russo-Ukrainian conflict. The newfound hawks in the [? if not in_grand_coalition : Greens ?][? if in_grand_coalition : CDU ?] are shocked by our intransigence. Amidst rising criticism of Putin, we are forced to impose slight restrictions on Russian goods into Germany. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on locking up the hawkish vote.
 
 @oppo_menu
 
