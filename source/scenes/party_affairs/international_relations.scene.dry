@@ -55,7 +55,7 @@ on-arrival: resources -= 1; linke_relation += 5*(1-dissent); communist_coalition
 We host a conference with the Communist Party of China (CPC) on the history of socialism in China and Germany. This can also help us outflank Die Linke from the left in the future.
 
 [? if year <= 2025 : The United States and many European countries criticize us for meeting with the CPC. ?]
-[? if year <= 2025 : With Donald Trump leading the United States, many who previously mocked the idea that the 21st century is the "Chinese Century" are now welcoming closer ties with China. ?]
+[? if year >= 2025 : With Donald Trump leading the United States, many who previously mocked the idea that the 21st century is the "Chinese Century" are now welcoming closer ties with China. ?]
 
 @america
 subtitle: -1 resources
