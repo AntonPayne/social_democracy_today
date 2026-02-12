@@ -563,7 +563,12 @@ table {
   padding: 2px 5px;
 }
 
-.mytooltip:hover { background-color: rgb(100, 140, 220); }
+.mytooltip:hover {
+  background-color: #F0F1F5; 
+  box-shadow: 8px 8px 10px;
+  border: 4px solid 383F54;
+  border-radius: 10px;
+}
 
 .mytooltip .mytooltiptext {
   position: fixed;
@@ -576,7 +581,7 @@ table {
   padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-  border: 1px solid #b22222;
+  border: 1px solid #383F54;
   pointer-events: none;
   font-size: 14px !important;
   line-height: 1.5em !important;
