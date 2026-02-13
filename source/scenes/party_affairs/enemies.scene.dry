@@ -1,7 +1,7 @@
 title: Choosing Our Enemies
 new-page: true
-view-if: year <= 2025 and enemies_timer <= 0
-on-arrival: month_actions += 1; enemies_timer = 15
+view-if: year <= 2026 and enemies_timer <= 0
+on-arrival: month_actions += 1; enemies_timer = 12
 max-visits: 5
 is-card: true
 card-image: img/poster_1.png
@@ -10,6 +10,8 @@ tags: party_affairs
 = Choosing our enemies
 
 In our media and campaign materials, who should we consider as our main opponents?
+
+It should be noted that running a negative campaign would go against the stately behavior that Angela Merkel is most famous for.
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
@@ -21,28 +23,28 @@ In our media and campaign materials, who should we consider as our main opponent
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; neoliberal_strength += 5; seeheimer_strength += 5; left_dissent += 5; workers_linke -= 2; workers_afd -= 2; workers_bsw -= 2; linke_relation -= 10; bsw_relation -= 10 if bsw_formed
+on-arrival: enemies = "anti-democratic parties"; neoliberal_strength += 5; seeheimer_strength += 5; left_dissent += 5; workers_linke -= 2; workers_afd -= 2; workers_bsw -= 2; linke_relation -= 10; bsw_relation -= 10 if bsw_formed; ; merkelism -= 3
 
 Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the Left Party in the future.
 
 @esoteric
 view-if: bsw_formed
-on-arrival: enemies = "esotericists"; workers_afd -= 3; workers_bsw -= 3;
+on-arrival: enemies = "esotericists"; workers_afd -= 3; workers_bsw -= 3; merkelism -= 2
 
-Attacking the esotericists is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the our bourgeois coalition partners are apathetic to our actions.
+Attacking the esotericists is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while our bourgeois coalition partners are apathetic to our actions.
 
 @afd
-on-arrival: enemies = "AfD"; modernist_strength += 5; workers_afd -= 4; unemployed_afd -= 3 if nazi_urgency > 1
+on-arrival: enemies = "AfD"; modernist_strength += 5; workers_afd -= 4; unemployed_afd -= 3 if nazi_urgency > 1; merkelism -= 2
 on-departure: nazi_urgency += 1
 
 [? if nazi_urgency == 0 or afd_r < 15 : The general consensus is that the AfD is a fringe party similar to the NPD which will lose popular support with time. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and afd_r >= 15 : The neo-Nazis are the most urgent problem for us to deal with. ?]
 
 @linke
-on-arrival: enemies = "Left"; seeheimer_strength += 5; left_dissent += 8; seeheimer_dissent -= 5; linke_relation -= 15; fdp_relation += 5; cdu_relation += 5; workers_linke -= 4;
+on-arrival: enemies = "Left"; seeheimer_strength += 5; left_dissent += 8; seeheimer_dissent -= 5; linke_relation -= 15; fdp_relation += 5; cdu_relation += 5; workers_linke -= 4; merkelism -= 1
 
 Attacking the Left Party is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, if we are to reconcile with the Left Party, this may not be the best choice.
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; fdp_relation -= 8; cdu_relation -= 8; linke_relation += 5; seeheimer_dissent += 8; workers_cdu -= 3; coalition_dissent += 1
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; fdp_relation -= 8; cdu_relation -= 8; linke_relation += 5; seeheimer_dissent += 8; workers_cdu -= 3; coalition_dissent += 1; merkelism -= 5
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.

@@ -123,7 +123,7 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or KPD. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or Die Linke. They make up 40-50% of the population.
 
 **Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. Less than 10% of the population.
 
@@ -205,11 +205,11 @@ Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, FDP: 
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Brandt and Schröder. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the West and East German branches of the SPD in 1990. Save for a period between 2009 to 2013, we have always been part of a governing coalition.
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**CDU** - *Christlich Demokratische Union* (Christian Democratic Union) - a centrist to center-right Christian conservative party that supports the Republic, and has been historically responsible for watering down many of our labor, welfare, and environmentalist schemes. They have often been in coalitions with us. They are in a political alliance with the **CSU** (Christian Social Union), which represents Christian democrats in Bavaria. They have governed for sixteen long years under Angela Merkel.
 
-Current relations: [+ z_relation : relationships +]
+Current relations: [+ cdu_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
 **DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
@@ -232,9 +232,9 @@ Current relations: [+ kpd_relation : relationships +]
 
 **NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
-Current relations: [+ nsdap_relation : relationships +]
+Current relations: [+ afd_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
+**Other parties** - there is a multitude of small parties, located all throughout the political spectrum. These range from the right-wing Volt Party to various environmentalist and animal rights groups that refuse to caucus with the Greens. [? if chancellor != "Merkel": The most significant of these is the socially liberal South Schleswig Voters' Association (SSW), which is a party for the national Danish minority in Southern Schleswig. ?]
 
 @paramilitaries
 on-arrival: {!
