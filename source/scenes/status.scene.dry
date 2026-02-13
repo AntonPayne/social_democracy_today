@@ -40,18 +40,18 @@ Vice Chancellor: [+ vice_chancellor +] ([+ vice_chancellor_party +])
 Reichstag composition:
 
 # 2017: 20, 2021: 25, 2025: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
+SPD: [+ spd_r +]%
 [? if bsw_formed and bsw_r > 0: BSW: [+ bsw_r +]% ?]
 # 2017: 33, 2021: 15, 2025: 
-{!<span class="tooltip-text" title="Christian Democratic Union + Christian Social Union">CDU + CSU</span>!}: [+ cdu_r +]%
+CDU + CSU: [+ cdu_r +]%
 # 2017: 9, 2021: 13
-{!<span class="tooltip-text" title="The Left">Linke</span>!}: [+ linke_r +]%
+Linke: [+ linke_r +]%
 # 2017: 11, 2021: 4, 2025: 0
-{!<span class="tooltip-text" title="Free Democratic Party">!}FDP{!</span>!}: [+ fdp_r +]%
+FDP: [+ fdp_r +]%
 # 2017: 9, 2021: 5
-{!<span class="tooltip-text" title="Greens">Greens</span>!}: [+ greens_r +]%
+Greens: [+ greens_r +]%
 # 2017: 13, 2021: 7
-{!<span class="tooltip-text" title="Alternative for Germany">AfD</span>!}: [+ afd_r +]%
+AfD: [+ afd_r +]%
 # 2017: 0, 2021: 1, 2025: 1
 Others: [+ other_r +]%
 

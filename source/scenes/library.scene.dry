@@ -125,15 +125,15 @@ go-to: menu
 
 **Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or KPD. They make up 40-50% of the population.
 
-**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
+**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. Less than 10% of the population.
 
-**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
+**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. Around 20% of the population.
 
-**Rural**: Small and large farmers and independent rural workers. Protestant farmers often support the DNVP. 20-30% of the population.
+**Rural**: Small and large farmers and independent rural workers. Mostly concerned with the survival of the coal industry and rural digitization. 10-15% of the population.
 
-**Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the Center Party (or the Bavarian People's Party in Bavaria).
+**Catholics** are the largest religious minority, at about 25% of the population. They disproportionately support the Christian Democratic Union (or the Christian Social Union in Bavaria).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the DDP, although substantial numbers support the SPD or KPD.
+**Muslims** account for between 6.4% to 6.7% of the population, and ironically tend to support the conservative CDU, although substantial numbers support the SPD or Greens.
 
 
 @public_opinion
@@ -148,12 +148,11 @@ set-jump: election_projections
 
 **Public Opinion**
 
-#Support for Socialism: [+ socialism +]%
-
-#Support for Nationalism: [+ nationalism +]%
-
 Support for the Republic: [+ pro_republic_disp +]%
 
+Socialist Activity: [+ socialism_disp +]%
+
+Relevancy of Merkelism: [+ merkelism_disp +]%
 
 @election_projections
 view-if: (not historical_mode) or game_over
@@ -189,17 +188,19 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, FDP: [+ workers_fdp_display +]%, Linke: [+ workers_linke_display +]%, Greens: [+ workers_greens_display +]%, AfD: [+ workers_afd_display +]%, Others: [+ workers_other_display +]% [? if bsw_formed: BSW: [+ workers_bsw_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, FDP: [+ new_middle_fdp_display +]%, Linke: [+ new_middle_linke_display +]%, Greens: [+ new_middle_greens_display +]%, AfD: [+ new_middle_afd_display +]%, Others: [+ new_middle_other_display +]% [? if bsw_formed: BSW: [+ new_middle_bsw_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, FDP: [+ old_middle_fdp_display +]%, Linke: [+ old_middle_linke_display +]%, Greens: [+ old_middle_greens_display +]%, AfD: [+ old_middle_afd_display +]%, Others: [+ old_middle_other_display +]% [? if bsw_formed: BSW: [+ old_middle_bsw_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, FDP: [+ rural_fdp_display +]%, Linke: [+ rural_linke_display +]%, Greens: [+ rural_greens_display +]%, AfD: [+ rural_afd_display +]%, Others: [+ rural_other_display +]% [? if bsw_formed: BSW: [+ rural_bsw_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, FDP: [+ unemployed_fdp_display +]%, Linke: [+ unemployed_linke_display +]%, Greens: [+ unemployed_greens_display +]%, AfD: [+ unemployed_afd_display +]%, Others: [+ unemployed_other_display +]% [? if bsw_formed: BSW: [+ unemployed_bsw_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, FDP: [+ catholics_fdp_display +]%, Linke: [+ catholics_linke_display +]%, Greens: [+ catholics_greens_display +]%, AfD: [+ catholics_afd_display +]%, Others: [+ catholics_other_display +]% [? if bsw_formed: BSW: [+ catholics_bsw_display +]% ?]
+
+Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, FDP: [+ muslims_fdp_display +]%, Linke: [+ muslims_linke_display +]%, Greens: [+ muslims_greens_display +]%, AfD: [+ muslims_afd_display +]%, Others: [+ muslims_other_display +]%[? if bsw_formed:, BSW: [+ muslims_bsw_display +]% ?]
 
 @parties
 go-to: menu

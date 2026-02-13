@@ -109,10 +109,10 @@ Q.afd_relation = 1;
 
 Q.linke_leader = "Wagenknecht";
 Q.linke_party_leader = "Wissler";
-// party leader - can be Friedrich Merz or Norbert Röttgen after the 2021 December convention. Röttgen will be most friendly to the SPD.
+// party leader - can be Friedrich Merz, Norbert Röttgen, or Markus Söder after the convention. Röttgen will be most friendly to the SPD.
 Q.cdu_party_leader = "Laschet";
 // FDP may change leaders if they fail to cross the threshold
-Q.fdp_leader = "Lidner";
+Q.fdp_leader = "Lindner";
 Q.afd_leader = "Weidel";
 
 // hmm... maybe we can play nice with Steinmeier???
@@ -194,14 +194,14 @@ Q.budget = 4;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 50; // industry and trade
-Q.old_middle = 6; // "old mittelstand"
+Q.workers = 40; // industry and trade
+Q.old_middle = 9; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 22; // "new mittelstand"
-Q.rural = 13; // agriculture and forestry employment... but many of those are proletarians so...
+Q.new_middle = 18; // "new mittelstand"
+Q.rural = 22; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 3.6;
-Q.catholics = 26;
+Q.catholics = 25;
 Q.muslims = 7;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
@@ -235,11 +235,11 @@ Q.bsw_formed = 0;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
 // Workers
-Q.workers_spd = 31;
-Q.workers_cdu = 12;
-Q.workers_greens = 17;
-Q.workers_fdp = 14;
-Q.workers_afd = 13;
+Q.workers_spd = 26;
+Q.workers_cdu = 20;
+Q.workers_greens = 15;
+Q.workers_fdp = 5;
+Q.workers_afd = 21;
 Q.workers_linke = 6;
 Q.workers_other = 7;
 
