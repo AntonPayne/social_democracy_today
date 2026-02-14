@@ -54,8 +54,8 @@ on-arrival: resources -= 1; left_strength += 5; linke_relation += 5*(1-dissent);
 
 We host a conference with the Communist Party of China (CPC) on the history of socialism in China and Germany. This can also help us outflank Die Linke from the left in the future.
 
-[? if year <= 2025 President Joseph Biden is joined by many Western European countries in expressing their  us for meeting with the CPC. ?]
-[? if year >= 2025 With Donald Trump leading the United States, many who previously mocked the idea that the 21st century is the "Chinese Century" are now welcoming closer ties with China. ?]
+[? if year <= 2025: President Joseph Biden is joined by many Western European countries in expressing their  us for meeting with the CPC. ?]
+[? if year >= 2025: With Donald Trump leading the United States, many who previously mocked the idea that the 21st century is the "Chinese Century" are now welcoming closer ties with China. ?]
 
 @america
 subtitle: -1 resources
