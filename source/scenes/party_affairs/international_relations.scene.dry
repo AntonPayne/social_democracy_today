@@ -5,7 +5,7 @@ tags: party_affairs
 view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 6;
 card-image: img/international.jpg
-max-visits: 4
+max-visits: 7
 #subtitle: Building ties with our fraternal socialist parties.
 
 At the Progressive Alliance, we can forge contacts with our fraternal socialist parties in Europe and across the world.
@@ -13,8 +13,8 @@ At the Progressive Alliance, we can forge contacts with our fraternal socialist 
 - @fr_sp: Build relationships with the French PS and Spanish PSOE to move their governments in Germany's favor.
 - @myanmar: Learn organization and street fighting from the Myanma DPNS.
 - @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
 - @america: Contact the Trade Union Confederation of the Americas.
+- @china: Forget the Progressive Alliance - host a conference with the Chinese communists.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -32,7 +32,7 @@ subtitle: -1 resources [? if myanmar_offensive_seen and not myanmar_civil_war_se
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
-on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.02; resources -= 1; pdf_strength += 1 if myanmar_offensive_seen = 1
+on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.02; resources -= 1; pdf_strength += 1 if myanmar_offensive_seen = 1; dpns_seen += 1
 
 Our Reichsbanner can learn much in paramilitary organization and training from the Myanma People's Defence Force, the paramilitary representing the center-left within Myanmar.
 
@@ -46,13 +46,16 @@ on-arrival: seeheimer_strength += 8; wtb_support += 1; resources -= 1; moderate_
 
 The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
 
-@comintern
+@china
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; linke_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
+on-arrival: resources -= 1; left_strength += 5; linke_relation += 5*(1-dissent); communist_coalition += 1 if china_seen == 0; china_seen += 1; west_relation -= 1 if year >= 2025
 
-The Stalinists of the KPD insists on calling us "social fascists", suggesting that we social democrats are as bad or worse than actual fascists. Needless to say, this is not good for our relationship with the Communists. By observing the Comintern, we can better understand the KPD, enabling us to potentially improve relations, or counter the KPD if it may come to that.
+We host a conference with the Communist Party of China (CPC) on the history of socialism in China and Germany. This can also help us outflank Die Linke from the left in the future.
+
+[? if year <= 2025 President Joseph Biden is joined by many Western European countries in expressing their  us for meeting with the CPC. ?]
+[? if year >= 2025 With Donald Trump leading the United States, many who previously mocked the idea that the 21st century is the "Chinese Century" are now welcoming closer ties with China. ?]
 
 @america
 subtitle: -1 resources
@@ -60,7 +63,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; labor_strength += 10; labor_dissent -= 10; left_dissent += 5
 
-Fred Redmond greatly appreciates our aid and the Trade Union Confederation of the Americas helps us organize strikes. However, the Confederation's uncritically pro-American bias angers some of our membership.
+Fred Redmond greatly appreciates our aid and the Trade Union Confederation of the Americas helps us organize strikes. However, the Confederation's past support for various pro-American dictatorships in Latin America angers some of our membership.
 
 @return
 
