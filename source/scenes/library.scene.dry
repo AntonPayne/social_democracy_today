@@ -54,15 +54,15 @@ go-to: menu
 
 **1998**: The SPD, led by Gerhard Schröder, wins federal elections and forms a coalition with the Greens. Schröder becomes Chancellor.
 
-**2003**: The Schröder government launches Agenda 2010 and the Hartz labor market reforms, restructuring welfare and unemployment benefits. The reforms are controversial within the SPD and among trade unions. Schröder joins French President Chirac in preventing a consensu that would allow Operation Iraqi Freedom to become a NATO operation, arguing instead for continued diplomacy and weapons inspections.
+**2003**: The Schröder government launches Agenda 2010 and the Hartz labor market reforms, restructuring welfare and unemployment benefits. The reforms are controversial within the SPD and among trade unions. Schröder joins French President Chirac in preventing a consensus that would allow Operation Iraqi Freedom to become a NATO operation, arguing instead for continued diplomacy and weapons inspections.
 
 **2005**: After early elections, the SPD enters a Grand Coalition with the CDU under Angela Merkel. Schröder leaves federal politics.
 
 **2009**: The SPD suffers significant electoral losses and returns to opposition. The CDU and FDP form a coalition government, allowing Merkel to remain chancellor.
 
-**2013**: Following federal elections, the SPD again enters a Grand Coalition under Chancellor Angela Merkel after a membership referendum approves the coalition agreement. The AfD is founded as a Eurosceptic party opposing Eurozone bailouts.
+**2013**: Following federal elections, the SPD once again enters a Grand Coalition under Chancellor Angela Merkel after a membership referendum approves the coalition agreement. The AfD is founded as a Eurosceptic party opposing Eurozone bailouts.
 
-**2017**: The SPD records its worst postwar federal election result. After initial refusal, it reenters a Grand Coalition under Merkel in 2018.
+**2017**: The SPD records its worst postwar federal election result. After initial refusal, it reenters a Grand Coalition under Merkel.
 
 **2019**: Internal dissatisfaction grows within the party over coalition compromises and electoral decline. A new leadership duo, Saskia Esken and Norbert Walter-Borjans, is elected, signaling a shift toward the party’s left wing.
 
@@ -220,7 +220,7 @@ go-to: menu
 Current relations: [+ cdu_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-**FDP** - *Frei Demokratische Partei* (Free Democratic Party) - a liberal party, popular among the intelligensia and educated middle class. They have often been seen as "kingmakers", entering in coalitions with either the SPD or the CDU. [? if fdp_leader != "Lindner" : They have recently slumped in the polls, with recovery being highly unlikely. ?]
+**FDP** - *Freie Demokratische Partei* (Free Democratic Party) - a liberal party, popular among the intelligensia and educated middle class. They have often been seen as "kingmakers", entering coalitions with either the SPD or the CDU. [? if fdp_leader != "Lindner" : They have recently slumped in the polls, with recovery being highly unlikely. ?]
 
 Current relations: [+ fdp_relation : relationships +]
 
@@ -236,9 +236,9 @@ Current relations: [+ dnvp_relation : relationships +]
 
 Current relations: [+ linke_relation : relationships +]
 
-[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
+[? if bsw_formed: **BSW** - *Bündnis Sahra Wagenknecht* (Sahra Wagenknecht Alliance) - a party recently formed in a split from Die Linke, the BSW is essentially an agglomeration of various left-wing political beliefs with populist and nationalist tendencies. ?]
 
-**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
+**AfD** - *Alternative für Deutschland* (Alternative for Germany, or Neo-Nazis) - a far-right nationalist and Eurosceptic party. Founded by Alexander Gauland in 2013, they have since been employing historical revisionism as well as xenophobic rhetoric.
 
 Current relations: [+ afd_relation : relationships +]
 
