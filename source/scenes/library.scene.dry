@@ -212,9 +212,9 @@ go-to: menu
 Current relations: [+ cdu_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-**DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+**FDP** - *Free Demokratische Partei* (Free Democratic Party) - a liberal party, popular among the intelligensia and educated middle class. They have often been seen as "kingmakers", entering in coalitions with either the SPD or the CDU. [? if fdp_leader != "Lindner" : They have recently slumped in the polls, with recovery unlikely. ?]
 
-Current relations: [+ ddp_relation : relationships +]
+Current relations: [+ fdp_relation : relationships +]
 
 **DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
