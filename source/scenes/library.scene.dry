@@ -34,31 +34,39 @@ Germany is divided into a number of states, each of which have their own governm
 @weimar_timeline
 go-to: menu
 
-= Timeline of the SPD and the Republic (until 1928)
+= Timeline of the SPD and the Republic (until 2021)
 
-**1875**: The SPD is formed as a merger of the General German Workers' Association, founded by Ferdinand Lassalle, and the Social Democratic Workers' Party of Germany, led by Wilhelm Liebknecht and August Bebel. Eventually, the SPD grows to become the largest party in the German Empire.
+**1949**: The Federal Republic of Germany is founded. The Social Democratic Party of Germany, reconstituted after the Nazi period, becomes the main opposition to Chancellor Konrad Adenauer of the CDU. In the Soviet occupation zone, the SPD had been forcibly merged with the KPD into the SED.
 
-**1914**: The Great War begins. The SPD votes in favor of war credits, with substantial internal dissent. This begins a policy of *Burgfriedenspolitik*, a general peace between all political parties and trade unions.
+**1959**: The SPD adopts the Godesberg Program, abandoning its Marxist orientation and redefining itself as a broad-based “people’s party” committed to the social market economy, NATO membership, and parliamentary democracy.
 
-**1917**: The USPD, a left-wing anti-war split from the SPD, is formed.
+**1966**: A Grand Coalition is formed between the CDU/CSU and SPD. SPD leader Willy Brandt becomes Vice Chancellor and Foreign Minister.
 
-**1918**: Following defeats in the war and uprisings by soldiers, sailors, and workers, SPD leader Philip Scheidemann proclaims the German Republic, and Kaiser Wilhelm II abdicates from his throne. An armistice is declared, ending the Great War. Conflict between center-left social democrats and far-left radicals erupts in the streets of Berlin and elsewhere.
+**1969**: The SPD forms a coalition with the FDP. Willy Brandt becomes Chancellor, leading a reform-oriented government. Brandt launches Ostpolitik, normalizing relations with Eastern Europe and the German Democratic Republic.
 
-**1919**: The Spartacist Uprising, in which communist workers attempt to seize control of government, is launched. The uprising is defeated by the Social Democratic government, now led by President Friedrich Ebert and Chancellor Philipp Scheidemann, with the support of the far-right Freikorps militas. The two key leaders of the uprising, Rosa Luxemburg and Karl Liebknecht, are murdered by the Freikorps. The Treaty of Versailles is signed under great protest from all political factions in Germany, officially ending the Great War. The Weimar Constitution is signed. The first "Weimar Coalition" government is formed, led by the SPD, DDP, and Center (Z) parties.
+**1972**: Brandt wins reelection after a failed vote of no confidence. The Basic Treaty with East Germany is signed, easing tensions between the two German states.
 
-**1920**: The Kapp Putsch, an attempt by reactionary actors within the military to take power, is launched, and is defeated by the workers with a general strike. This is followed by left-wing uprisings in the Ruhr, which are defeated by the Reichswehr and Freikorps. The Weimar Coalition is defeated in the elections, with the right and far left increasing in vote share. Elected governments in this period are very unstable, often only lasting a matter of months. There is a split in the USPD, with the majority faction joining with the KPD and the Soviet Union's Communist International (Comintern) alliance.
+**1974**: Brandt resigns following the Guillaume spy affair. Helmut Schmidt becomes Chancellor. The SPD governs during economic turbulence and domestic terrorism by the Red Army Faction.
 
-**1921**: Communist uprisings in Saxony and Hamburg are defeated. Matthias Erzberger, the Center Party leader who signed the Versailles Treaty, is assassinated.
+**1982**: The FDP switches coalition partners. Helmut Schmidt is removed via constructive vote of no confidence, and Helmut Kohl becomes Chancellor. The SPD returns to opposition.
 
-**1922**: The Treaty of Rapallo is signed, which normalized relations with the Soviet Union. Walther Rathenau, the DDP Foreign Minister, is assassinated. The SPD reunites with most of the remaining USPD.
+**1989–1990**: The Berlin Wall falls and German reunification follows. The Federal Republic annexes the former German Democratic Republic. The East German SPD merges with the West German SPD.
 
-**1923**: Hyperinflation begins, largely due to the economic policy of "passive resistance" against the French occupation of the Ruhr and the Versailles reparations. The currency is rapidly devalued as prices for necessities rise to billions of Reichsmarks. The government launches a *Reichsexekution* against Saxony, which was led by a joint SPD-KPD government. The Nazi "Beer Hall Putsch" is launched in Munich, and fails, with the arrest of Hitler. Eventually, new policies manage to stabilize the currency, and the French occupation ends.
+**1998**: The SPD, led by Gerhard Schröder, wins federal elections and forms a coalition with the Greens. Schröder becomes Chancellor.
 
-**1924**: Parliamentary elections are held in May and December, the latter leading to the bourgeois-right governments that last until 1928. Hitler is released from prison. The Dawes Plan for the replayment of the Versailles reparations is negotiated, which reduces payments and increases economic growth. Germany begins to enter a period of relative stability, with the end of the hyperinflation crisis. 
+**2003**: The Schröder government launches Agenda 2010 and the Hartz labor market reforms, restructuring welfare and unemployment benefits. The reforms are controversial within the SPD and among trade unions. Schröder joins French President Chirac in preventing a consensu that would allow Operation Iraqi Freedom to become a NATO operation, arguing instead for continued diplomacy and weapons inspections.
 
-**1925**:  President Friedrich Ebert dies, and new presidential elections are held, leading to the narrow election of Paul von Hindenburg in the second round. Hindenburg is a war hero and a right-wing reactionary. The SPD adopts the Heidelberg Program as its party platform. The Locarno Treaties are signed, which confirmed Germany's post-war western borders.
+**2005**: After early elections, the SPD enters a Grand Coalition with the CDU under Angela Merkel. Schröder leaves federal politics.
 
-**1926**: A referendum on the expropriation of the princes, supported by the SPD and KPD, fails.
+**2009**: The SPD suffers significant electoral losses and returns to opposition. The CDU and FDP form a coalition government, allowing Merkel to remain chancellor.
+
+**2013**: Following federal elections, the SPD again enters a Grand Coalition under Chancellor Angela Merkel after a membership referendum approves the coalition agreement. The AfD is founded as a Eurosceptic party opposing Eurozone bailouts.
+
+**2017**: The SPD records its worst postwar federal election result. After initial refusal, it reenters a Grand Coalition under Merkel in 2018.
+
+**2019**: Internal dissatisfaction grows within the party over coalition compromises and electoral decline. A new leadership duo, Saskia Esken and Norbert Walter-Borjans, is elected, signaling a shift toward the party’s left wing.
+
+**2020**: The COVID-19 pandemic reshapes political priorities. The SPD supports expansive fiscal measures within Merkel’s coalition government, earning goodwill for Vice Chancellor and Finance Minister Olaf Scholz.
 
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
@@ -90,11 +98,12 @@ NSDAP: [+ nsdap_r +]%
 Others: [+ other_r +]%
 
 SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+[? if in_germany_coalition and spd_in_government: Germany Coalition ?][? if in_social_liberal_coalition and spd_in_government: Social-Liberal Coalition ?][? if in_traffic_light_coalition and spd_in_government: Traffic Light Coalition ?][? if in_red_green and spd_in_government: Red-Green Coalition ?][? if in_kenya_coalition and spd_in_government: Kenya Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Red-Red-Green Coalition ?][? if in_zimbabwe_coalition and spd_in_government: Zimbabwe Coalition ?][? if in_left_coalition and spd_in_government: Left Coalition ?][? if in_spd_majority and spd_in_government: SPD Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if in_emergency_government and spd_in_government: Emergency Government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and not in_spd_majority and not in_left_coalition : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and (in_left_coalition or in_popular_front): Linke coalition dissent: [+ linke_coalition_dissent : coalition_dissent +] ?]
+
 
 @cabinet
 go-to: menu
@@ -113,7 +122,9 @@ Justice: [+ justice_minister_party +]
 
 Foreign: [+ foreign_minister_party +]
 
-Reichswehr: [+ reichswehr_minister_party +]
+Bundeswehr: [+ bundeswehr_minister_party +]
+
+Environment: [+ environment_minister_party +]
 
 Agriculture: [+ agriculture_minister_party +]
 
@@ -123,17 +134,17 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or KPD. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or Die Linke. They make up 40-50% of the population.
 
-**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
+**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. Less than 10% of the population.
 
-**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
+**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. Around 20% of the population.
 
-**Rural**: Small and large farmers and independent rural workers. Protestant farmers often support the DNVP. 20-30% of the population.
+**Rural**: Small and large farmers and independent rural workers. Mostly concerned with the survival of the coal industry and rural digitization. 10-15% of the population.
 
-**Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the Center Party (or the Bavarian People's Party in Bavaria).
+**Catholics** are the largest religious minority, at about 25% of the population. They disproportionately support the Christian Democratic Union (or the Christian Social Union in Bavaria).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the DDP, although substantial numbers support the SPD or KPD.
+**Muslims** account for between 6.4% to 6.7% of the population, and ironically tend to support the conservative CDU, although substantial numbers support the SPD or Greens.
 
 
 @public_opinion
@@ -148,12 +159,11 @@ set-jump: election_projections
 
 **Public Opinion**
 
-#Support for Socialism: [+ socialism +]%
-
-#Support for Nationalism: [+ nationalism +]%
-
 Support for the Republic: [+ pro_republic_disp +]%
 
+Socialist Activity: [+ socialism_disp +]%
+
+Relevancy of Merkelism: [+ merkelism_disp +]%
 
 @election_projections
 view-if: (not historical_mode) or game_over
@@ -161,59 +171,58 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_votes +]%
+# 2017: 20, 2021: 25, 2025: 22
+SPD: [+ spd_r +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+[? if bsw_formed and bsw_r > 0: BSW: [+ bsw_r +]% ?]
 
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_votes +]%
+# 2017: 33, 2021: 15, 2025: 
+CDU + CSU: [+ cdu_r +]%
 
-# 1928: 10, 1930: 13
-KPD: [+ kpd_votes +]%
+# 2017: 9, 2021: 13
+Linke: [+ linke_r +]%
 
-# 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_votes +]%
+# 2017: 11, 2021: 4, 2025: 0
+FDP: [+ fdp_r +]%
 
-# 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+# 2017: 9, 2021: 5
+Greens: [+ greens_r +]%
 
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_votes +]%
+# 2017: 13, 2021: 7
+AfD: [+ afd_r +]%
 
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_votes +]%
-
-# 1928: 9, 1930: 10
-Others: [+ other_votes +]%
+# 2017: 0, 2021: 1, 2025: 1
+Others: [+ other_r +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, FDP: [+ workers_fdp_display +]%, Linke: [+ workers_linke_display +]%, Greens: [+ workers_greens_display +]%, AfD: [+ workers_afd_display +]%, Others: [+ workers_other_display +]% [? if bsw_formed: BSW: [+ workers_bsw_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, FDP: [+ new_middle_fdp_display +]%, Linke: [+ new_middle_linke_display +]%, Greens: [+ new_middle_greens_display +]%, AfD: [+ new_middle_afd_display +]%, Others: [+ new_middle_other_display +]% [? if bsw_formed: BSW: [+ new_middle_bsw_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, FDP: [+ old_middle_fdp_display +]%, Linke: [+ old_middle_linke_display +]%, Greens: [+ old_middle_greens_display +]%, AfD: [+ old_middle_afd_display +]%, Others: [+ old_middle_other_display +]% [? if bsw_formed: BSW: [+ old_middle_bsw_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, FDP: [+ rural_fdp_display +]%, Linke: [+ rural_linke_display +]%, Greens: [+ rural_greens_display +]%, AfD: [+ rural_afd_display +]%, Others: [+ rural_other_display +]% [? if bsw_formed: BSW: [+ rural_bsw_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, FDP: [+ unemployed_fdp_display +]%, Linke: [+ unemployed_linke_display +]%, Greens: [+ unemployed_greens_display +]%, AfD: [+ unemployed_afd_display +]%, Others: [+ unemployed_other_display +]% [? if bsw_formed: BSW: [+ unemployed_bsw_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, FDP: [+ catholics_fdp_display +]%, Linke: [+ catholics_linke_display +]%, Greens: [+ catholics_greens_display +]%, AfD: [+ catholics_afd_display +]%, Others: [+ catholics_other_display +]% [? if bsw_formed: BSW: [+ catholics_bsw_display +]% ?]
+
+Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, FDP: [+ muslims_fdp_display +]%, Linke: [+ muslims_linke_display +]%, Greens: [+ muslims_greens_display +]%, AfD: [+ muslims_afd_display +]%, Others: [+ muslims_other_display +]%[? if bsw_formed:, BSW: [+ muslims_bsw_display +]% ?]
 
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Brandt and Schröder. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the West and East German branches of the SPD in 1990. Save for a period between 2009 to 2013, we have always been part of a governing coalition.
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**CDU** - *Christlich Demokratische Union* (Christian Democratic Union) - a centrist to center-right Christian conservative party that supports the Republic, and has been historically responsible for watering down many of our labor, welfare, and environmentalist schemes. They have often been in coalitions with us. They are in a political alliance with the **CSU** (Christian Social Union), which represents Christian democrats in Bavaria. They have governed for sixteen long years under Angela Merkel.
 
-Current relations: [+ z_relation : relationships +]
+Current relations: [+ cdu_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-**DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+**FDP** - *Frei Demokratische Partei* (Free Democratic Party) - a liberal party, popular among the intelligensia and educated middle class. They have often been seen as "kingmakers", entering in coalitions with either the SPD or the CDU. [? if fdp_leader != "Lindner" : They have recently slumped in the polls, with recovery being highly unlikely. ?]
 
-Current relations: [+ ddp_relation : relationships +]
+Current relations: [+ fdp_relation : relationships +]
 
 **DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
@@ -223,17 +232,17 @@ Current relations: [+ dvp_relation : relationships +]
 
 Current relations: [+ dnvp_relation : relationships +]
 
-**KPD** - *Kommunistische Partei Deutschlands* (German Communist Party) - a radical left-wing offshoot of the SPD that emerged in the aftermath of the German Revolution of 1918, they follow the path of Moscow, opposing parliamentary democracy in favor of a Soviet-style revolution.
+**Linke** - *Die Linke* (The Left) - a democratic socialist offshoot of the SED that emerged in the aftermath of the 2007 PDS-WASG merger. [? if year < 2025: They have led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow since 2014. ?][? if year >= 2025: They led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow from 2014 to 2024. ?]
 
-Current relations: [+ kpd_relation : relationships +]
+Current relations: [+ linke_relation : relationships +]
 
 [? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
 
 **NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
-Current relations: [+ nsdap_relation : relationships +]
+Current relations: [+ afd_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
+**Other parties** - there is a multitude of small parties, located all throughout the political spectrum. These range from the right-wing Volt Party to various environmentalist and animal rights groups that refuse to caucus with the Greens. [? if chancellor != "Merkel": The most significant of these is the socially liberal South Schleswig Voters' Association (SSW), which is a party for the national Danish minority in Southern Schleswig. ?]
 
 @paramilitaries
 on-arrival: {!
