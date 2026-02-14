@@ -1,0 +1,19 @@
+title: Polish Parliamentary Elections
+subtitle: The reign of the right-wing Law and Justice is to be challenged...
+view-if: year = 2023 and (month = 10) and pole_election_seen = 0
+max-visits: 1
+new-page: true
+on-arrival: pole_election_seen += 1
+set-jump: @pole_election
+
+= 2023 Polish Parliamentary Elections
+
+@pole_election
+
+Parliamentary elections are to be held in Poland on 15 October 2023 to elect members of the Sejm and Senate. A referendum containing four questions concerning economic and immigration policy of the government is held simultaneously.
+
+The incumbent Law and Justice (PiS) is a national-conservative party led by Prime Minister Mateusz Morawiecki. It has been accused of authoritarianism and contributing to democratic backsliding, and attracted widespread international criticism and domestic protest movements.
+
+The opposition parties have been the target of intense media demonization and political witch hunts in the leadup to the election. One of these parties is the social democratic New Left.
+  
+- @poland_1: Let me guess...another victory for the right?
