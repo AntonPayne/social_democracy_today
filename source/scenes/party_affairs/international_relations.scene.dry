@@ -30,7 +30,7 @@ on-arrival: resources -= 1; west_relation += 1; seeheimer_strength += 5; pacifis
 The social democrats of France and Spain could influence their governments to be friendlier with Germany in the future, paving the way for European unity.
 
 @poles_1
-subtitle: [? if not pole_election_seen -1 ?][? if pole_election_seen -2 ?] resources
+subtitle: [? if not pole_election_seen: -1 ?][? if pole_election_seen: -2 ?] resources
 max-visits: 1
 choose-if: (resources >= 1 and not pole_election_seen) or (resources >= 2 and pole_election_seen)
 on-arrival: nl_in_pa += 1; resources -= 1; resources -= 1 if pole_election_seen
