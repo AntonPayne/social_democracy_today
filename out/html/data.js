@@ -51,8 +51,8 @@ const colourList = [{
         style: "color: #8B0000; font-weight: bold;",
     },
                     {
-        word: "boyishly laughing"
-                            style: " color #0000FF; font-weight: normal;",
+        word: "boyishly laughing",
+                            style: "color #0000FF; font-weight: normal;",
     },
                     {
         word: "Die Linke",
