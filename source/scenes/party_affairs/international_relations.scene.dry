@@ -61,7 +61,7 @@ Our Reichsbanner can learn much in paramilitary organization and training from t
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: seeheimer_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
+on-arrival: seeheimer_strength += 8; resources -= 1; moderate_plan_support += 1
 
 The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
 
@@ -82,7 +82,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; labor_strength += 10; labor_dissent -= 10; left_dissent += 5
 
-Fred Redmond greatly appreciates our aid and the Trade Union Confederation of the Americas helps us organize strikes. However, the Confederation's uncritically pro-American bias angers some of our membership.
+Fred Redmond greatly appreciates our aid and the Trade Union Confederation of the Americas helps us organize strikes. However, the Confederation's previous support for the United States and pro-American dictatorships angers some of our membership.
 
 @return
 
