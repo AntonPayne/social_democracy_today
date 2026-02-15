@@ -405,6 +405,7 @@ Q.unemployment_insurance_seen = 0;
 // unemployment insurance event is seen if the unemployment level is at least 4 more than the threshold...
 Q.unemployment_insurance_threshold = 10;
 Q.blutmai = 0;
+Q.pole_election_seen = 0;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
