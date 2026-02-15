@@ -1,7 +1,8 @@
 title: Polish Parliamentary Elections
 subtitle: The reign of the right-wing Law and Justice is to be challenged...
-view-if: year = 2023 and month = 10
+view-if: year = 2023 and month = 10 and pole_election_seen = 0
 max-visits: 1
+tags: event
 new-page: true
 on-arrival: pole_election_seen += 1
 face-image: img/download.jpg
