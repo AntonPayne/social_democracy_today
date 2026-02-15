@@ -77,28 +77,27 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Bundestag composition:
 
-# 1928: 30, 1930: 25, 1932: 22
+
 SPD: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
-# 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+
+[? if bsw_formed and bsw_r > 0: BSW: [+ bsw_r +]% ?]
+ 
+CDU + CSU: [+ z_r +]%
+
+Linke: [+ kpd_r +]%
+
+FDP: [+ fdp_r +]%
+
+Greens: [+ greens_r +]%
+
+AfD: [+ afd_r +]%
+
 Others: [+ other_r +]%
 
 SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_germany_coalition and spd_in_government: Germany Coalition ?][? if in_social_liberal_coalition and spd_in_government: Social-Liberal Coalition ?][? if in_traffic_light_coalition and spd_in_government: Traffic Light Coalition ?][? if in_red_green and spd_in_government: Red-Green Coalition ?][? if in_kenya_coalition and spd_in_government: Kenya Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Red-Red-Green Coalition ?][? if in_zimbabwe_coalition and spd_in_government: Zimbabwe Coalition ?][? if in_left_coalition and spd_in_government: Left Coalition ?][? if in_spd_majority and spd_in_government: SPD Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if in_emergency_government and spd_in_government: Emergency Government ?]
+[? if in_germany_coalition and spd_in_government: Germany Coalition ?][? if in_social_liberal_coalition and spd_in_government: Red-Yellow Coalition ?][? if in_traffic_light_coalition and spd_in_government: Traffic Light Coalition ?][? if in_red_green and spd_in_government: Red-Green Coalition ?][? if in_kenya_coalition and spd_in_government: Kenya Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Red-Red-Green Coalition ?][? if in_zimbabwe_coalition and spd_in_government: Zimbabwe Coalition ?][? if in_left_coalition and spd_in_government: Left Coalition ?][? if in_spd_majority and spd_in_government: SPD Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if in_emergency_government and spd_in_government: Emergency Government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_coalition : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -146,7 +145,6 @@ go-to: menu
 
 **Muslims** account for between 6.4% to 6.7% of the population, and ironically tend to support the conservative CDU, although substantial numbers support the SPD or Greens.
 
-
 @public_opinion
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
@@ -171,28 +169,21 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-# 2017: 20, 2021: 25, 2025: 22
-SPD: [+ spd_r +]%
+SPD: [+ spd_votes +]%
 
-[? if bsw_formed and bsw_r > 0: BSW: [+ bsw_r +]% ?]
+[? if bsw_formed: BSW: [+ bsw_votes +]% ?]
 
-# 2017: 33, 2021: 15, 2025: 
-CDU + CSU: [+ cdu_r +]%
+CDU + CSU: [+ cdu_votes +]%
 
-# 2017: 9, 2021: 13
-Linke: [+ linke_r +]%
+Linke: [+ linke_votes +]%
 
-# 2017: 11, 2021: 4, 2025: 0
-FDP: [+ fdp_r +]%
+FDP: [+ fdp_votes +]%
 
-# 2017: 9, 2021: 5
-Greens: [+ greens_r +]%
+Greens: [+ greens_votes +]%
 
-# 2017: 13, 2021: 7
-AfD: [+ afd_r +]%
+AfD: [+ afd_votes +]%
 
-# 2017: 0, 2021: 1, 2025: 1
-Others: [+ other_r +]%
+Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
@@ -213,7 +204,9 @@ Muslims: SPD: [+ muslims_spd_display +]%, CDU: [+ muslims_cdu_display +]%, FDP: 
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Brandt and Schröder. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the West and East German branches of the SPD in 1990. Save for a period between 2009 to 2013, we have always been part of a governing coalition.
+**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Brandt and Schröder. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the West and East German branches of the SPD in 1990. Save for a period between 2009 to 2013, we have always been part of a governing coalition for the course of the 21st century.
+
+Internal dissent: [+ dissent_percent : dissent +]
 
 **CDU** - *Christlich Demokratische Union* (Christian Democratic Union) - a centrist to center-right Christian conservative party that supports the Republic, and has been historically responsible for watering down many of our labor, welfare, and environmentalist schemes. They have often been in coalitions with us. They are in a political alliance with the **CSU** (Christian Social Union), which represents Christian democrats in Bavaria. They have governed for sixteen long years under Angela Merkel.
 
@@ -224,15 +217,15 @@ Current relations: [+ cdu_relation : relationships +]
 
 Current relations: [+ fdp_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**Greens** - *Bündnis 90/Die Grünen* (Alliance 90/The Greens) - a center-left green political party formed in 1993, deriving much of its support from West Germany. They are our preferred coalition partners.
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ greens_relation : relationships +]
 
 **DNVP** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
 
 Current relations: [+ dnvp_relation : relationships +]
 
-**Linke** - *Die Linke* (The Left) - a democratic socialist offshoot of the SED that emerged in the aftermath of the 2007 PDS-WASG merger. [? if year < 2025: They have led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow since 2014. ?][? if year >= 2025: They led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow from 2014 to 2024. ?]
+**Linke** - *Die Linkespartei* (The Left Party) - a democratic socialist offshoot of the SED that emerged in the aftermath of the 2007 PDS-WASG merger. [? if year < 2025: They have led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow since 2014. ?][? if year >= 2025: They led a coalition in Thuringia with the SPD and Greens headed by Minister-President Bodo Ramelow from 2014 to 2024. ?]
 
 Current relations: [+ linke_relation : relationships +]
 
@@ -299,35 +292,35 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Left**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+Many leftists are either part of the Parlamentarische Linke or young radicals associated with the Jusos. Many are interested in closer cooperation with Die Linke. They are highly critical of the current social market philosophy guiding the German economy.
 
 Strength: [+ left_strength : strength +]
 
 Dissent: [+ left_dissent : dissent +]
 
-**Centrists**
+**Neoliberals**
 
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+Neoliberals in the SPD are followers of the "Third Way" doctrine as expounded by Gerhard Schröder. They embrace policies like privatizing utilities, tax cuts for the rich, and kickbacks to landlords. This faction is often blamed for our declining electoral performance.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ neoliberal_strength : strength +]
 
-Dissent: [+ center_dissent : dissent +]
+Dissent: [+ neoliberal_dissent : dissent +]
 
 **Labor**
 
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+Many SPD members are also part of the DGB, the federation of free trade unions. For some years, the DGB and its member unions have been campaigning for a minimum wage to be introduced in Germany.
 
 Strength: [+ labor_strength : strength +]
 
 Dissent: [+ labor_dissent : dissent +]
 
-**Reformists**
+**Seeheimers**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+Seeheimers are pragmatic participants in government, and generally take moderately liberal economic positions. The faction is named after its long-standing meeting place, Seeheim, just south of Frankfurt.
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ seeheimer_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
+Dissent: [+ seeheimer_dissent : dissent +]
 
 @neorevisionists
 go-to: menu
