@@ -4,6 +4,7 @@ view-if: year = 2023 and month = 10
 max-visits: 1
 tags: event
 new-page: true
+on-arrival: pole_election_seen += 1
 face-image: img/download.jpg
 
 = 2023 Polish Parliamentary Elections
