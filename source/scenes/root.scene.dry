@@ -420,10 +420,10 @@ Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
 Q.wtb_implemented = 0;
-// Relations with the EU countries
-Q.eu_relation = 0;
-// Relations with the USA
-Q.usa_relation = 0;
+// Relations with the Western EU countries
+Q.west_relation = 0;
+// Relations with the Eastern EU countries
+Q.east_relation = 0;
 // Relations with Russia
 Q.russia_relation = 0;
 // How much have we exposed the secret rearmament programs?
