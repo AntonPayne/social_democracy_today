@@ -33,12 +33,14 @@ Meanwhile, several communist and workers' parties are drafting up a joint statem
 @bundeswehr
 subtitle: We are living through a watershed era. To keep warmongers like Putin in check, we must improve our defenses.
 view-if: bundeswehr_minister_party == "SPD"
-on-arrival: greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3
+on-arrival: greens_relations -= 2 if foreign_minister == "Trittin"; pacifism -= 1; nationalism += 5; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; left_dissent += 5; economic_growth -= 0.2; workers_afd += 4; unemployed_afd += 4; new_middle_afd += 3; east_relation += 1
 on-departure: budget -= 2
 
 Chancellor [+ chancellor +] proclaims that the Russo-Ukrainian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
 
 [? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?][? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
+
+The countries in Eastern Europe, particularly Poland and the Baltics, are thrilled at the prospect of a militarily capable Germany.
 
 @sanctions
 subtitle: We must be quick to provide aid to Zelenskyy’s struggle. At the same time, we must cut economic ties with Russia.
@@ -49,9 +51,11 @@ Even if Germany does not militarily intervene in the Russo-Ukranian conflict, we
 @affirm
 subtitle: This invasion gives us a chance to atone for our militaristic past. As such, avoiding unnecessary escalation should be our priority.
 view-if: foreign_minister == "Trittin" and foreign_minister_party == "Greens"
-on-arrival: pacifism += 1; workers_greens += 1; workers_linke -= 1; workers_afd += 4; left_strength += 2; left_dissent -= 3; unemployed_afd += 3; new_middle_afd += 3; economic_growth -= 0.2; seeheimer_dissent += 3; neoliberal_dissent += 3
+on-arrival: pacifism += 1; workers_greens += 1; workers_linke -= 1; workers_afd += 4; left_strength += 2; left_dissent -= 3; unemployed_afd += 3; new_middle_afd += 3; economic_growth -= 0.3; seeheimer_dissent += 3; neoliberal_dissent += 3; east_relation -= 1
 
-We mirror [+ foreign_minister +]'s stance on this conflict and promote diplomacy instead of military intervention. As such, we avoid placing sanctions on Russia. Still, it is clear that the invasion has sent shockwaves throughout the global economy, and Germany has suffered too. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on the anti-Russian crowd.
+We mirror [+ foreign_minister +]'s stance on this conflict and promote diplomacy instead of military intervention. Still, he agrees to impose strict sanctions against Russia. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on the anti-Russian crowd.
+
+The countries in Eastern Europe, particularly Poland and the Baltics, are concerned by our indifference towards the supposed need to combat Russia.
 
 @criticize_hawkish
 subtitle: Such rhetoric is highly dangerous and runs the risk of avoidable escalation.
@@ -71,9 +75,11 @@ We criticize [+ foreign_minister +]'s naivety and call for a more aggressive for
 @ostenpolitik
 subtitle: Just like Willy Brandt spearheaded a new era of East-West relations, we too must seek peace.
 view-if: foreign_minister_party == "SPD"
-on-arrival: economic_growth -= 0.3; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1; left_strength += 3; left_dissent -= 5; seeheimer_dissent += 3; neoliberal_dissent += 3
+on-arrival: economic_growth -= 0.2; pacifism += 1; greens_relations -= 4; cdu_relations -= 3; nationalism += 2; new_middle_spd -= 2; new_middle_greens -= 2; workers_afd += 2; unemployed_afd += 3; new_middle_afd += 3; coalition_dissent += 1; left_strength += 3; left_dissent -= 5; seeheimer_dissent += 3; neoliberal_dissent += 3; east_relation -= 1
 
 We advocate for easing tensions with the East, promoting a peaceful end to the Russo-Ukrainian conflict. The newfound hawks in the [? if not in_grand_coalition : Greens ?][? if in_grand_coalition : CDU ?] are shocked by our intransigence. Amidst rising criticism of Putin, we are forced to impose slight restrictions on Russian goods into Germany. However, the non-leftist segments of our party oppose our friendly attitude towards Russia. The AfD immediately capitalizes on locking up the hawkish vote.
+
+The countries in Eastern Europe, particularly Poland and the Baltics, are concerned by our indifference towards the supposed need to combat Russia.
 
 @oppo_menu
 
@@ -83,6 +89,11 @@ As we are the leader of the opposition, we are expected to provide a response to
 
 Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
-# - @support
-# - @no_comment
-# - @join
+# - @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
+# - @sanctions: We shall merely support placing punitive sanctions on Russia.
+# - @no_comment: We shall refuse to comment on the invasion.
+# - @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
+# - @join: Could we join the Solidnet parties in their joint statement?
+
+@full_support
+on-arrival:
