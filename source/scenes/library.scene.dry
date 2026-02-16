@@ -292,7 +292,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Left**
 
-Many leftists are either part of the Parlamentarische Linke or young radicals associated with the Jusos. Many are interested in closer cooperation with Die Linke. They are highly critical of the current social market philosophy guiding the German economy.
+Many leftists are either part of the Parliamentary Left or young radicals associated with the Jusos. Many are interested in closer cooperation with Die Linke. They are highly critical of the current social market philosophy guiding the German economy.
 
 Strength: [+ left_strength : strength +]
 
@@ -300,7 +300,7 @@ Dissent: [+ left_dissent : dissent +]
 
 **Neoliberals**
 
-Neoliberals in the SPD are followers of the "Third Way" doctrine as expounded by Gerhard Schröder. They embrace policies like privatizing utilities, tax cuts for the rich, and kickbacks to landlords. This faction is often blamed for our declining electoral performance.
+Neoliberals in the SPD are followers of the "Third Way" doctrine as expounded by Gerhard Schröder. They disavow any talk of socialism and seek greater cooperation with the bourgeoise parties. This faction is often blamed for our declining electoral performance.
 
 Strength: [+ neoliberal_strength : strength +]
 
@@ -341,17 +341,18 @@ on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Q.kpd_r*5,
-    }];
-if (Q.sapd_formed && Q.sapd_r) {
+        "id": "linke",
+        "legend": "Linke",
+        "name": "Linke",
+        "seats": Math.max(2, Math.round(Q.linke_r*5)),
+    }
+];
+if (Q.bsw_formed && Q.bsw_r) {
     data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
+            "id": "bsw",
+            "legend": "BSW",
+            "name": "BSW",
+            "seats": Math.round(Q.bsw_r*5),
             });
 }
 data = data.concat([
@@ -359,49 +360,43 @@ data = data.concat([
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Q.spd_r*5,
+        "seats": Math.round(Q.spd_r*5),
     },
     {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_r*5),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": (Q.z_r - 3)*5,
+        "id": "CDU",
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Math.round((Q.cdu_r - 7)*5),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": 3*5,
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
+        "seats": Math.round(3*5),
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "greens",
+        "legend": "Greens",
+        "name": "Greens",
+        "seats": Math.round(Q.greens_r*5),
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Q.other_r*5,
+        "seats": Math.round(Q.other_r*5),
     },
     {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Q.dnvp_r*5,
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_r*5),
     },
 ]);
 if (d3 && window) {
@@ -458,30 +453,29 @@ if (d3 && window) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
+{!<tr><td>Party</td><td>Vote share</td><td>Bundestag Seats</td><td>% Change</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_votes +]%** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
+[? if bsw_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ bsw_r +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}Linke: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ linke_r +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} FDP: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_votes - 7 +]% {!</td><td>!} [+ cdu_minus_csu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0570C9'> </div> !} CSU: {!</td><td>!} 7% {!</td><td>!} 7% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !} Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ greens_r +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
+ 
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes +] % {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0489DB'> </div> !} AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ afd_r +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
 {!</table>!}
 
 = Election history
 
-[? if year = 1928 and month < 5 : No new elections yet. ?]
+[? if year = 2021 and month < 9 : No new elections yet. ?]
 
 {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
 
