@@ -2,7 +2,7 @@ title: Russia Invades Ukraine!
 new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
-view-if: year == 2022 and month >= 2 and russia_ukraine == 0
+view-if: year == 2022 and month >= 2 and russia_ukraine == 0 and and presidential_election_seen = 1
 on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
