@@ -1,6 +1,6 @@
 title: Presidential Election
 subtitle: Steinmeier runs for re-election...
-view-if: year = 2022 and (month = 2) and presidential_election_seen = 0 and russia_ukraine = 1
+view-if: year = 2022 and (month = 2) and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
