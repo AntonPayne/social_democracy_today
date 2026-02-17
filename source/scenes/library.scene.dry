@@ -56,17 +56,21 @@ go-to: menu
 
 **2003**: The Schröder government launches Agenda 2010 and the Hartz labor market reforms, restructuring welfare and unemployment benefits. The reforms are controversial within the SPD and among trade unions. Schröder joins French President Chirac in preventing a consensus that would allow Operation Iraqi Freedom to become a NATO operation, arguing instead for continued diplomacy and weapons inspections.
 
-**2005**: After early elections, the SPD enters a Grand Coalition with the CDU under Angela Merkel. Schröder leaves federal politics.
+**2005**: Leftist dissidents opposed to the SPD's neoliberal policies split to form the WASG. After early elections, the SPD enters a Grand Coalition with the CDU under Angela Merkel. Schröder leaves federal politics.
+
+**2007**: Germany assumes presidency of the G8 for the year and presidency of the Council of the European Union for six months. The left-wing PDS and WASG merge to form Die Linke.
 
 **2009**: The SPD suffers significant electoral losses and returns to opposition. The CDU and FDP form a coalition government, allowing Merkel to remain chancellor.
 
 **2013**: Following federal elections, the SPD once again enters a Grand Coalition under Chancellor Angela Merkel after a membership referendum approves the coalition agreement. The AfD is founded as a Eurosceptic party opposing Eurozone bailouts.
 
-**2017**: The SPD records its worst postwar federal election result. After initial refusal, it reenters a Grand Coalition under Merkel.
+**2015**: Escalating civil wars in North Africa and the Middle East caused around two million people to seek refuge in Europe. Merkel unilaterally decide to welcome a large portion into Germany, causing around 400k Syrians to flee to Germany.
+
+**2017**: The SPD records its worst postwar federal election result. After initial refusal, it reenters a Grand Coalition under Merkel. The far-right AfD entered the Bundestag for the first time.
 
 **2019**: Internal dissatisfaction grows within the party over coalition compromises and electoral decline. A new leadership duo, Saskia Esken and Norbert Walter-Borjans, is elected, signaling a shift toward the party’s left wing.
 
-**2020**: The COVID-19 pandemic reshapes political priorities. The SPD supports expansive fiscal measures within Merkel’s coalition government, earning goodwill for Vice Chancellor and Finance Minister Olaf Scholz.
+**2020**: The COVID-19 pandemic causes several German states to impose harsh lockdowns. The SPD supports expansive fiscal measures within Merkel’s coalition government, earning goodwill for Vice Chancellor and Finance Minister Olaf Scholz.
 
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
@@ -300,7 +304,7 @@ Dissent: [+ left_dissent : dissent +]
 
 **Neoliberals**
 
-Neoliberals in the SPD are followers of the "Third Way" doctrine as expounded by Gerhard Schröder. They disavow any talk of socialism and seek greater cooperation with the bourgeoise parties. This faction is often blamed for our declining electoral performance.
+Neoliberals in the SPD are followers of the "Third Way" doctrine expounded by Gerhard Schröder. They disavow any talk of socialism and seek greater cooperation with the bourgeoise parties. This faction is often blamed for our declining electoral performance.
 
 Strength: [+ neoliberal_strength : strength +]
 
