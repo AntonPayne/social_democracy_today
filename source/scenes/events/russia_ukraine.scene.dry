@@ -2,7 +2,7 @@ title: Russia Invades Ukraine!
 new-page: true
 subtitle: A "special military operation" has surprised Europe
 tags: event
-view-if: year == 2022 and month >= 2 and russia_ukraine == 0 and and presidential_election_seen = 1
+view-if: year == 2022 and month >= 2 and russia_ukraine == 0 and presidential_election_seen = 1
 on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
 max-visits: 1
 go-to: gov_menu if spd_in_government; oppo_menu if not spd_in_government and in_jamaica_coalition
@@ -90,10 +90,28 @@ As we are the leader of the opposition, we are expected to provide a response to
 Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
 # - @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
-# - @sanctions: We shall merely support placing punitive sanctions on Russia.
+# - @sanctions: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
 # - @no_comment: We shall refuse to comment on the invasion.
 # - @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
 # - @join: Could we join the Solidnet parties in their joint statement?
 
 @full_support
+subtitle: In times of war, party politics must take a backseat. Germany’s credibility in Europe and abroad depends on unity.
 on-arrival:
+
+@sanctions
+subtitle: We must use every economic tool available to punish Russian warmongering, but the SPD refuses to fuel the military-industrial complex by sending arms that could escalate this conflict.
+
+@no_comment
+subtitle: This is not our war to instrumentalize. Germany has enough problems of its own.
+
+@criticize
+subtitle: The basic fundamentals of the governing coalition's plans for Ukraine are flawed. It is the duty of the opposition to expose these flaws.
+
+As the leader of the opposition, it is our duty to point out the failings of the governing coalition. The question is: what is the Jamaica Coalition doing wrong?
+
+- @defence: The coalition has not done anything to improve Germany's defenses.
+- @hawkish: The coalition has not taken any steps towards deescalating the situation.
+
+@join
+subtitle: If the capitalist governments of East and West are dragging Europe toward catastrophe, perhaps a principled anti-imperialist stance is the only morally consistent option.
