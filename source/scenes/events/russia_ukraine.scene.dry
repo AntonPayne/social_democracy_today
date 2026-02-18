@@ -90,7 +90,7 @@ As we are the leader of the opposition, we are expected to provide a response to
 Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
 # - @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
-# - @sanctions: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
+# - @sanctions_only: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
 # - @no_comment: We shall refuse to comment on the invasion.
 # - @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
 # - @join: Could we join the Solidnet parties in their joint statement?
@@ -99,7 +99,7 @@ Meanwhile, several communist and workers' parties are drafting up a joint statem
 subtitle: In times of war, party politics must take a backseat. Germany’s credibility in Europe and abroad depends on unity.
 on-arrival:
 
-@sanctions
+@sanctions_only
 subtitle: We must use every economic tool available to punish Russian warmongering, but the SPD refuses to fuel the military-industrial complex by sending arms that could escalate this conflict.
 
 @no_comment
