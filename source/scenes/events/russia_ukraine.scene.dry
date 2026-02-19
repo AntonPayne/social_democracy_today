@@ -38,7 +38,7 @@ on-departure: budget -= 2
 
 Chancellor [+ chancellor +] proclaims that the Russo-Ukrainian conflict is a historic turning point. An off-budget fund is approved to increase the combat effectiveness of the Bundeswehr. A quick scuffle follows to make Germany independent of Russian gas and oil. However, the anti-war segments of our party oppose this move. The AfD immediately capitalizes on this growing anti-war sentiment.
 
-[? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?][? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
+[? if budget - 2 < 0 : The Bundestag allows exceptions to the debt ceiling in order to fund these military extravagences. ?] [? if foreign_minister == "Trittin" : Foreign Minister [+ foreign_minister +] is displeased by such an aggressive stance. ?]
 
 The countries in Eastern Europe, particularly Poland and the Baltics, are thrilled at the prospect of a militarily capable Germany.
 
@@ -113,5 +113,16 @@ As the leader of the opposition, it is our duty to point out the failings of the
 - @defence: The coalition has not done anything to improve Germany's defenses.
 - @hawkish: The coalition has not taken any steps towards deescalating the situation.
 
+@defence
+on-arrival: budget -= 2; merkelism += 2; left_dissent += 3; nationalism += 3; bundeswehr_loyalty += 0.12 if bundeswehr_loyalty < 1; bundeswehr_strength += 20; economic_growth -= 0.2;
+
+We criticize the coalition for sending arms to Ukraine without any investments in the Bundeswehr. Upon their priorities being exposed as incorrect, the center-right coalition cowardly has to bend to our demands and modify their off-budget fund to redirect the money intended for Ukraine to be put into the Bundeswehr. The SPD and AfD benefit among those who are disappointed with the coalition.
+
+@hawkish
+on-arrival: budget -= 2; left_dissent -= 2
+
+We criticize the coalition for sending arms to Ukraine without any attempts to broker a peace deal. While this pleases the dovish vote, it is not an argument that the center-right coalition is sympathetic to. The off-budget fund passes without our support, imposing sanctions on Russia and supply weapons to Ukraine.
+
 @join
 subtitle: If the capitalist governments of East and West are dragging Europe toward catastrophe, perhaps a principled anti-imperialist stance is the only morally consistent option.
+view-if: mutzenich_advisor = 1 and left_strength > seeheimer_strength + neoliberal_strength and left_strength >= 50
