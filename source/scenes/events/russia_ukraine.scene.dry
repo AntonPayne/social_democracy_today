@@ -89,11 +89,11 @@ As we are the leader of the opposition, we are expected to provide a response to
 
 Meanwhile, several communist and workers' parties are drafting up a joint statement unequivocally condemning the conflict, criticizing the bourgeoise governments of both Russia and Ukraine.
 
-# - @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
-# - @sanctions_only: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
-# - @no_comment: We shall refuse to comment on the invasion.
-# - @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
-# - @join: Could we join the Solidnet parties in their joint statement?
+- @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
+- @sanctions_only: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
+- @no_comment: We shall refuse to comment on the invasion.
+- @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
+- @join: Could we join the Solidnet parties in their joint statement?
 
 @full_support
 subtitle: In times of war, party politics must take a backseat. Germany’s credibility in Europe and abroad depends on unity.
