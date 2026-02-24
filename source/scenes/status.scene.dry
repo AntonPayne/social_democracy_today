@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-[? if not ww3: [+ month : month +] ?][? if ww3: [+ month : ww3_seasons +] ?] [+ year +]
+[+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
