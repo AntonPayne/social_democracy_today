@@ -582,7 +582,7 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 // Franco Stuff
 Q.ukraine_stance = "None";
 Q.dovish = "1";
-Q.warhawkish = "0;
+Q.warhawkish = "0";
 
 !}
 set-bg: img/map_2.jpg
