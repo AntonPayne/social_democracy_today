@@ -482,6 +482,15 @@ if (this.ui && this.ui.show_portraits) {
 
 if (typeof window !== "undefined" && window.generateBar) {
 }
+
+if (Q.ukraine_stance == "Dove") {
+    Q.workers_afd -= 0.5; Q.workers_linke -= 0.5;
+}
+
+if (Q.ukraine_stance == "Warhawk") {
+    Q.workers_afd += 0.5; Q.workers_linke += 0.5;
+}
+
 !}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
