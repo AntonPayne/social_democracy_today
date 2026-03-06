@@ -1,9 +1,11 @@
-title: 1930
+title: 2023
 subtitle: A new year 
-audio: clear shuffle music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1930_1933/ironfront_normalized.mp3 music/1930_1933/KommSusserTod.mp3 music/1930_1933/Warszawianka.mp3 music/1928_1933/Liebesleid_normalized.mp3 
+audio: clear shuffle music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/2023_1933/Internationale-de_normalized.ogg music/2023_1933/ironfront_normalized.mp3 music/2023_1933/KommSusserTod.mp3 music/2023_1933/Warszawianka.mp3 music/1928_1933/Liebesleid_normalized.mp3 
 on-arrival: {!
-// increase NSDAP vote share 
+// increase AfD vote share 
 Q.unemployed += 6.8; 
+// Ukraine will now become a less important issue
+Q.ukraine_stance = 0;
 Q.inflation -= 4;
 if (Q.budget > 0) {
     Q.budget -= 1;
@@ -13,8 +15,8 @@ Q.economic_growth -= 1;
 // moved demographic changes to post_event
 !}
 tags: event
-view-if: year = 1930 and month = 1 
+view-if: year = 2023 and month = 1 
 priority: 2
 max-visits: 1
 
-A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The NSDAP seems to be strengthening in local elections. All very worrisome trends.
+A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The AfD seems to be strengthening in local elections. All very worrisome trends.
