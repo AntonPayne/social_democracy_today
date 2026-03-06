@@ -490,8 +490,8 @@ if (Q.ukraine_stance == "Dove") {
 }
 
 if (Q.ukraine_stance == "Warhawk") {
-    Q.new_middle_afd += 0.25*((Q.dovish+1)*(Q.warhawkish+1)/10 + 1); Q.new_middle_linke += 0.25*((Q.dovish+1)*(Q.warhawkish+1)/10 + 1);
-    Q.old_middle_afd += 0.25*((Q.dovish+1)*(Q.warhawkish+1)/10 + 1); Q.old_middle_linke += 0.25*((Q.dovish+1)*(Q.warhawkish+1)/10 + 1);
+    Q.new_middle_afd += 0.1*((Q.dovish+1)*(Q.warhawkish+1)/10); Q.new_middle_linke += 0.1*((Q.dovish+1)*(Q.warhawkish+1)/10);
+    Q.old_middle_afd += 0.1*((Q.dovish+1)*(Q.warhawkish+1)/10); Q.old_middle_linke += 0.1*((Q.dovish+1)*(Q.warhawkish+1)/10);
 
 }
 
