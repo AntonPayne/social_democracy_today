@@ -1,6 +1,6 @@
 title: Russia Invades Ukraine!
 new-page: true
-subtitle: A "special military operation" has surprised Europe
+subtitle: A "special military operation" has taken Europe by surprise
 tags: event
 view-if: year == 2022 and month >= 2 and russia_ukraine == 0 and presidential_election_seen = 1
 on-arrival: russia_ukraine += 1; merkelism -= 7; world_tension += 1
@@ -90,7 +90,6 @@ Meanwhile, several communist and workers' parties are drafting up a joint statem
 
 - @full_support: We shall provide full support to the Jamaica Coalition in their plans for ensuring European security. 
 - @sanctions_only: We shall support placing punitive sanctions on Russia, but refrain from endorsing any further military escalation.
-- @no_comment: We shall refuse to comment on the invasion.
 - @criticize: We shall criticize the Jamaica Coalition's handling of the invasion.
 - @join: Could we join the Solidnet parties in their joint statement?
 
@@ -101,10 +100,6 @@ on-arrival: ukraine_stance = "Dove"
 @sanctions_only
 subtitle: We must use every economic tool available to punish Russian warmongering, but the SPD refuses to fuel the military-industrial complex by sending arms that could escalate this conflict.
 on-arrival: ukraine_stance = "Warhawk"
-
-@no_comment
-subtitle: This is not our war to instrumentalize. Germany has enough problems of its own.
-on-arrival: ukraine_stance = "None"; merkelism -= 2; nationalism -= 1; economic_growth -= 0.2; workers_spd -= 3; new_middle_spd -= 2; workers_afd += 3; unemployed_afd += 3; new_middle_afd += 2; workers_cdu += 3; new_middle_cdu += 2; workers_greens += 2; workers_linke += 2; coalition_dissent += 2; left_dissent += 2; seeheimer_dissent += 3; neoliberal_dissent += 3
 
 @criticize
 subtitle: The basic fundamentals of the governing coalition's plans for Ukraine are flawed. It is the duty of the opposition to expose these flaws.
